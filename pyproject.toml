@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kanpo-rss"
+version = "0.1.0"
+description = "RSS feed generator for the Japanese Official Gazette (kanpo.go.jp)"
+requires-python = ">=3.11"
+license = "MIT"
+dependencies = [
+    "requests>=2.31",
+    "beautifulsoup4>=4.12",
+    "feedgen>=1.0",
+    "lxml>=4.9",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "requests-mock>=1.11",
+]
+
+[project.scripts]
+kanpo-rss = "kanpo_rss.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

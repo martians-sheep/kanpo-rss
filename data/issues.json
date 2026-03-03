@@ -1,0 +1,1502 @@
+{
+  "version": 1,
+  "last_updated": "2026-03-03T11:11:20.446810+09:00",
+  "issues": [
+    {
+      "date": "2026-03-03",
+      "gazette_type": "h",
+      "issue_number": 1657,
+      "issue_id": "20260303h01657",
+      "url": "https://www.kanpo.go.jp/20260303/20260303.fullcontents.html",
+      "title": "2026-03-03 本紙 第1657号"
+    },
+    {
+      "date": "2026-03-03",
+      "gazette_type": "g",
+      "issue_number": 43,
+      "issue_id": "20260303g00043",
+      "url": "https://www.kanpo.go.jp/20260303/20260303.fullcontents.html",
+      "title": "2026-03-03 号外 第43号"
+    },
+    {
+      "date": "2026-03-03",
+      "gazette_type": "c",
+      "issue_number": 39,
+      "issue_id": "20260303c00039",
+      "url": "https://www.kanpo.go.jp/20260303/20260303.fullcontents.html",
+      "title": "2026-03-03 政府調達 第39号"
+    },
+    {
+      "date": "2026-03-02",
+      "gazette_type": "h",
+      "issue_number": 1656,
+      "issue_id": "20260302h01656",
+      "url": "https://www.kanpo.go.jp/20260302/20260302.fullcontents.html",
+      "title": "2026-03-02 本紙 第1656号"
+    },
+    {
+      "date": "2026-03-02",
+      "gazette_type": "g",
+      "issue_number": 42,
+      "issue_id": "20260302g00042",
+      "url": "https://www.kanpo.go.jp/20260302/20260302.fullcontents.html",
+      "title": "2026-03-02 号外 第42号"
+    },
+    {
+      "date": "2026-03-02",
+      "gazette_type": "c",
+      "issue_number": 38,
+      "issue_id": "20260302c00038",
+      "url": "https://www.kanpo.go.jp/20260302/20260302.fullcontents.html",
+      "title": "2026-03-02 政府調達 第38号"
+    },
+    {
+      "date": "2026-02-27",
+      "gazette_type": "h",
+      "issue_number": 1655,
+      "issue_id": "20260227h01655",
+      "url": "https://www.kanpo.go.jp/20260227/20260227.fullcontents.html",
+      "title": "2026-02-27 本紙 第1655号"
+    },
+    {
+      "date": "2026-02-27",
+      "gazette_type": "g",
+      "issue_number": 41,
+      "issue_id": "20260227g00041",
+      "url": "https://www.kanpo.go.jp/20260227/20260227.fullcontents.html",
+      "title": "2026-02-27 号外 第41号"
+    },
+    {
+      "date": "2026-02-27",
+      "gazette_type": "g",
+      "issue_number": 40,
+      "issue_id": "20260227g00040",
+      "url": "https://www.kanpo.go.jp/20260227/20260227.fullcontents.html",
+      "title": "2026-02-27 号外 第40号"
+    },
+    {
+      "date": "2026-02-27",
+      "gazette_type": "c",
+      "issue_number": 37,
+      "issue_id": "20260227c00037",
+      "url": "https://www.kanpo.go.jp/20260227/20260227.fullcontents.html",
+      "title": "2026-02-27 政府調達 第37号"
+    },
+    {
+      "date": "2026-02-26",
+      "gazette_type": "h",
+      "issue_number": 1654,
+      "issue_id": "20260226h01654",
+      "url": "https://www.kanpo.go.jp/20260226/20260226.fullcontents.html",
+      "title": "2026-02-26 本紙 第1654号"
+    },
+    {
+      "date": "2026-02-26",
+      "gazette_type": "g",
+      "issue_number": 39,
+      "issue_id": "20260226g00039",
+      "url": "https://www.kanpo.go.jp/20260226/20260226.fullcontents.html",
+      "title": "2026-02-26 号外 第39号"
+    },
+    {
+      "date": "2026-02-26",
+      "gazette_type": "c",
+      "issue_number": 36,
+      "issue_id": "20260226c00036",
+      "url": "https://www.kanpo.go.jp/20260226/20260226.fullcontents.html",
+      "title": "2026-02-26 政府調達 第36号"
+    },
+    {
+      "date": "2026-02-25",
+      "gazette_type": "h",
+      "issue_number": 1653,
+      "issue_id": "20260225h01653",
+      "url": "https://www.kanpo.go.jp/20260225/20260225.fullcontents.html",
+      "title": "2026-02-25 本紙 第1653号"
+    },
+    {
+      "date": "2026-02-25",
+      "gazette_type": "g",
+      "issue_number": 38,
+      "issue_id": "20260225g00038",
+      "url": "https://www.kanpo.go.jp/20260225/20260225.fullcontents.html",
+      "title": "2026-02-25 号外 第38号"
+    },
+    {
+      "date": "2026-02-25",
+      "gazette_type": "c",
+      "issue_number": 35,
+      "issue_id": "20260225c00035",
+      "url": "https://www.kanpo.go.jp/20260225/20260225.fullcontents.html",
+      "title": "2026-02-25 政府調達 第35号"
+    },
+    {
+      "date": "2026-02-24",
+      "gazette_type": "h",
+      "issue_number": 1652,
+      "issue_id": "20260224h01652",
+      "url": "https://www.kanpo.go.jp/20260224/20260224.fullcontents.html",
+      "title": "2026-02-24 本紙 第1652号"
+    },
+    {
+      "date": "2026-02-24",
+      "gazette_type": "g",
+      "issue_number": 37,
+      "issue_id": "20260224g00037",
+      "url": "https://www.kanpo.go.jp/20260224/20260224.fullcontents.html",
+      "title": "2026-02-24 号外 第37号"
+    },
+    {
+      "date": "2026-02-24",
+      "gazette_type": "c",
+      "issue_number": 34,
+      "issue_id": "20260224c00034",
+      "url": "https://www.kanpo.go.jp/20260224/20260224.fullcontents.html",
+      "title": "2026-02-24 政府調達 第34号"
+    },
+    {
+      "date": "2026-02-20",
+      "gazette_type": "h",
+      "issue_number": 1651,
+      "issue_id": "20260220h01651",
+      "url": "https://www.kanpo.go.jp/20260220/20260220.fullcontents.html",
+      "title": "2026-02-20 本紙 第1651号"
+    },
+    {
+      "date": "2026-02-20",
+      "gazette_type": "g",
+      "issue_number": 36,
+      "issue_id": "20260220g00036",
+      "url": "https://www.kanpo.go.jp/20260220/20260220.fullcontents.html",
+      "title": "2026-02-20 号外 第36号"
+    },
+    {
+      "date": "2026-02-20",
+      "gazette_type": "c",
+      "issue_number": 33,
+      "issue_id": "20260220c00033",
+      "url": "https://www.kanpo.go.jp/20260220/20260220.fullcontents.html",
+      "title": "2026-02-20 政府調達 第33号"
+    },
+    {
+      "date": "2026-02-19",
+      "gazette_type": "h",
+      "issue_number": 1650,
+      "issue_id": "20260219h01650",
+      "url": "https://www.kanpo.go.jp/20260219/20260219.fullcontents.html",
+      "title": "2026-02-19 本紙 第1650号"
+    },
+    {
+      "date": "2026-02-19",
+      "gazette_type": "g",
+      "issue_number": 35,
+      "issue_id": "20260219g00035",
+      "url": "https://www.kanpo.go.jp/20260219/20260219.fullcontents.html",
+      "title": "2026-02-19 号外 第35号"
+    },
+    {
+      "date": "2026-02-19",
+      "gazette_type": "c",
+      "issue_number": 32,
+      "issue_id": "20260219c00032",
+      "url": "https://www.kanpo.go.jp/20260219/20260219.fullcontents.html",
+      "title": "2026-02-19 政府調達 第32号"
+    },
+    {
+      "date": "2026-02-18",
+      "gazette_type": "t",
+      "issue_number": 9,
+      "issue_id": "20260218t00009",
+      "url": "https://www.kanpo.go.jp/20260218/20260218.fullcontents.html",
+      "title": "2026-02-18 特別号外 第9号"
+    },
+    {
+      "date": "2026-02-18",
+      "gazette_type": "h",
+      "issue_number": 1649,
+      "issue_id": "20260218h01649",
+      "url": "https://www.kanpo.go.jp/20260218/20260218.fullcontents.html",
+      "title": "2026-02-18 本紙 第1649号"
+    },
+    {
+      "date": "2026-02-18",
+      "gazette_type": "g",
+      "issue_number": 34,
+      "issue_id": "20260218g00034",
+      "url": "https://www.kanpo.go.jp/20260218/20260218.fullcontents.html",
+      "title": "2026-02-18 号外 第34号"
+    },
+    {
+      "date": "2026-02-18",
+      "gazette_type": "c",
+      "issue_number": 31,
+      "issue_id": "20260218c00031",
+      "url": "https://www.kanpo.go.jp/20260218/20260218.fullcontents.html",
+      "title": "2026-02-18 政府調達 第31号"
+    },
+    {
+      "date": "2026-02-17",
+      "gazette_type": "h",
+      "issue_number": 1648,
+      "issue_id": "20260217h01648",
+      "url": "https://www.kanpo.go.jp/20260217/20260217.fullcontents.html",
+      "title": "2026-02-17 本紙 第1648号"
+    },
+    {
+      "date": "2026-02-17",
+      "gazette_type": "g",
+      "issue_number": 33,
+      "issue_id": "20260217g00033",
+      "url": "https://www.kanpo.go.jp/20260217/20260217.fullcontents.html",
+      "title": "2026-02-17 号外 第33号"
+    },
+    {
+      "date": "2026-02-17",
+      "gazette_type": "c",
+      "issue_number": 30,
+      "issue_id": "20260217c00030",
+      "url": "https://www.kanpo.go.jp/20260217/20260217.fullcontents.html",
+      "title": "2026-02-17 政府調達 第30号"
+    },
+    {
+      "date": "2026-02-16",
+      "gazette_type": "h",
+      "issue_number": 1647,
+      "issue_id": "20260216h01647",
+      "url": "https://www.kanpo.go.jp/20260216/20260216.fullcontents.html",
+      "title": "2026-02-16 本紙 第1647号"
+    },
+    {
+      "date": "2026-02-16",
+      "gazette_type": "g",
+      "issue_number": 32,
+      "issue_id": "20260216g00032",
+      "url": "https://www.kanpo.go.jp/20260216/20260216.fullcontents.html",
+      "title": "2026-02-16 号外 第32号"
+    },
+    {
+      "date": "2026-02-16",
+      "gazette_type": "c",
+      "issue_number": 29,
+      "issue_id": "20260216c00029",
+      "url": "https://www.kanpo.go.jp/20260216/20260216.fullcontents.html",
+      "title": "2026-02-16 政府調達 第29号"
+    },
+    {
+      "date": "2026-02-14",
+      "gazette_type": "t",
+      "issue_number": 8,
+      "issue_id": "20260214t00008",
+      "url": "https://www.kanpo.go.jp/20260214/20260214.fullcontents.html",
+      "title": "2026-02-14 特別号外 第8号"
+    },
+    {
+      "date": "2026-02-13",
+      "gazette_type": "t",
+      "issue_number": 7,
+      "issue_id": "20260213t00007",
+      "url": "https://www.kanpo.go.jp/20260213/20260213.fullcontents.html",
+      "title": "2026-02-13 特別号外 第7号"
+    },
+    {
+      "date": "2026-02-13",
+      "gazette_type": "h",
+      "issue_number": 1646,
+      "issue_id": "20260213h01646",
+      "url": "https://www.kanpo.go.jp/20260213/20260213.fullcontents.html",
+      "title": "2026-02-13 本紙 第1646号"
+    },
+    {
+      "date": "2026-02-13",
+      "gazette_type": "g",
+      "issue_number": 31,
+      "issue_id": "20260213g00031",
+      "url": "https://www.kanpo.go.jp/20260213/20260213.fullcontents.html",
+      "title": "2026-02-13 号外 第31号"
+    },
+    {
+      "date": "2026-02-13",
+      "gazette_type": "c",
+      "issue_number": 28,
+      "issue_id": "20260213c00028",
+      "url": "https://www.kanpo.go.jp/20260213/20260213.fullcontents.html",
+      "title": "2026-02-13 政府調達 第28号"
+    },
+    {
+      "date": "2026-02-12",
+      "gazette_type": "h",
+      "issue_number": 1645,
+      "issue_id": "20260212h01645",
+      "url": "https://www.kanpo.go.jp/20260212/20260212.fullcontents.html",
+      "title": "2026-02-12 本紙 第1645号"
+    },
+    {
+      "date": "2026-02-12",
+      "gazette_type": "g",
+      "issue_number": 30,
+      "issue_id": "20260212g00030",
+      "url": "https://www.kanpo.go.jp/20260212/20260212.fullcontents.html",
+      "title": "2026-02-12 号外 第30号"
+    },
+    {
+      "date": "2026-02-12",
+      "gazette_type": "c",
+      "issue_number": 27,
+      "issue_id": "20260212c00027",
+      "url": "https://www.kanpo.go.jp/20260212/20260212.fullcontents.html",
+      "title": "2026-02-12 政府調達 第27号"
+    },
+    {
+      "date": "2026-02-10",
+      "gazette_type": "h",
+      "issue_number": 1644,
+      "issue_id": "20260210h01644",
+      "url": "https://www.kanpo.go.jp/20260210/20260210.fullcontents.html",
+      "title": "2026-02-10 本紙 第1644号"
+    },
+    {
+      "date": "2026-02-10",
+      "gazette_type": "g",
+      "issue_number": 29,
+      "issue_id": "20260210g00029",
+      "url": "https://www.kanpo.go.jp/20260210/20260210.fullcontents.html",
+      "title": "2026-02-10 号外 第29号"
+    },
+    {
+      "date": "2026-02-10",
+      "gazette_type": "c",
+      "issue_number": 26,
+      "issue_id": "20260210c00026",
+      "url": "https://www.kanpo.go.jp/20260210/20260210.fullcontents.html",
+      "title": "2026-02-10 政府調達 第26号"
+    },
+    {
+      "date": "2026-02-09",
+      "gazette_type": "h",
+      "issue_number": 1643,
+      "issue_id": "20260209h01643",
+      "url": "https://www.kanpo.go.jp/20260209/20260209.fullcontents.html",
+      "title": "2026-02-09 本紙 第1643号"
+    },
+    {
+      "date": "2026-02-09",
+      "gazette_type": "g",
+      "issue_number": 28,
+      "issue_id": "20260209g00028",
+      "url": "https://www.kanpo.go.jp/20260209/20260209.fullcontents.html",
+      "title": "2026-02-09 号外 第28号"
+    },
+    {
+      "date": "2026-02-09",
+      "gazette_type": "c",
+      "issue_number": 25,
+      "issue_id": "20260209c00025",
+      "url": "https://www.kanpo.go.jp/20260209/20260209.fullcontents.html",
+      "title": "2026-02-09 政府調達 第25号"
+    },
+    {
+      "date": "2026-02-06",
+      "gazette_type": "h",
+      "issue_number": 1642,
+      "issue_id": "20260206h01642",
+      "url": "https://www.kanpo.go.jp/20260206/20260206.fullcontents.html",
+      "title": "2026-02-06 本紙 第1642号"
+    },
+    {
+      "date": "2026-02-06",
+      "gazette_type": "g",
+      "issue_number": 27,
+      "issue_id": "20260206g00027",
+      "url": "https://www.kanpo.go.jp/20260206/20260206.fullcontents.html",
+      "title": "2026-02-06 号外 第27号"
+    },
+    {
+      "date": "2026-02-06",
+      "gazette_type": "c",
+      "issue_number": 24,
+      "issue_id": "20260206c00024",
+      "url": "https://www.kanpo.go.jp/20260206/20260206.fullcontents.html",
+      "title": "2026-02-06 政府調達 第24号"
+    },
+    {
+      "date": "2026-02-05",
+      "gazette_type": "t",
+      "issue_number": 6,
+      "issue_id": "20260205t00006",
+      "url": "https://www.kanpo.go.jp/20260205/20260205.fullcontents.html",
+      "title": "2026-02-05 特別号外 第6号"
+    },
+    {
+      "date": "2026-02-05",
+      "gazette_type": "h",
+      "issue_number": 1641,
+      "issue_id": "20260205h01641",
+      "url": "https://www.kanpo.go.jp/20260205/20260205.fullcontents.html",
+      "title": "2026-02-05 本紙 第1641号"
+    },
+    {
+      "date": "2026-02-05",
+      "gazette_type": "g",
+      "issue_number": 26,
+      "issue_id": "20260205g00026",
+      "url": "https://www.kanpo.go.jp/20260205/20260205.fullcontents.html",
+      "title": "2026-02-05 号外 第26号"
+    },
+    {
+      "date": "2026-02-05",
+      "gazette_type": "c",
+      "issue_number": 23,
+      "issue_id": "20260205c00023",
+      "url": "https://www.kanpo.go.jp/20260205/20260205.fullcontents.html",
+      "title": "2026-02-05 政府調達 第23号"
+    },
+    {
+      "date": "2026-02-04",
+      "gazette_type": "h",
+      "issue_number": 1640,
+      "issue_id": "20260204h01640",
+      "url": "https://www.kanpo.go.jp/20260204/20260204.fullcontents.html",
+      "title": "2026-02-04 本紙 第1640号"
+    },
+    {
+      "date": "2026-02-04",
+      "gazette_type": "g",
+      "issue_number": 25,
+      "issue_id": "20260204g00025",
+      "url": "https://www.kanpo.go.jp/20260204/20260204.fullcontents.html",
+      "title": "2026-02-04 号外 第25号"
+    },
+    {
+      "date": "2026-02-04",
+      "gazette_type": "c",
+      "issue_number": 22,
+      "issue_id": "20260204c00022",
+      "url": "https://www.kanpo.go.jp/20260204/20260204.fullcontents.html",
+      "title": "2026-02-04 政府調達 第22号"
+    },
+    {
+      "date": "2026-02-03",
+      "gazette_type": "h",
+      "issue_number": 1639,
+      "issue_id": "20260203h01639",
+      "url": "https://www.kanpo.go.jp/20260203/20260203.fullcontents.html",
+      "title": "2026-02-03 本紙 第1639号"
+    },
+    {
+      "date": "2026-02-03",
+      "gazette_type": "g",
+      "issue_number": 24,
+      "issue_id": "20260203g00024",
+      "url": "https://www.kanpo.go.jp/20260203/20260203.fullcontents.html",
+      "title": "2026-02-03 号外 第24号"
+    },
+    {
+      "date": "2026-02-03",
+      "gazette_type": "g",
+      "issue_number": 23,
+      "issue_id": "20260203g00023",
+      "url": "https://www.kanpo.go.jp/20260203/20260203.fullcontents.html",
+      "title": "2026-02-03 号外 第23号"
+    },
+    {
+      "date": "2026-02-03",
+      "gazette_type": "c",
+      "issue_number": 21,
+      "issue_id": "20260203c00021",
+      "url": "https://www.kanpo.go.jp/20260203/20260203.fullcontents.html",
+      "title": "2026-02-03 政府調達 第21号"
+    },
+    {
+      "date": "2026-02-02",
+      "gazette_type": "h",
+      "issue_number": 1638,
+      "issue_id": "20260202h01638",
+      "url": "https://www.kanpo.go.jp/20260202/20260202.fullcontents.html",
+      "title": "2026-02-02 本紙 第1638号"
+    },
+    {
+      "date": "2026-02-02",
+      "gazette_type": "g",
+      "issue_number": 22,
+      "issue_id": "20260202g00022",
+      "url": "https://www.kanpo.go.jp/20260202/20260202.fullcontents.html",
+      "title": "2026-02-02 号外 第22号"
+    },
+    {
+      "date": "2026-02-02",
+      "gazette_type": "c",
+      "issue_number": 20,
+      "issue_id": "20260202c00020",
+      "url": "https://www.kanpo.go.jp/20260202/20260202.fullcontents.html",
+      "title": "2026-02-02 政府調達 第20号"
+    },
+    {
+      "date": "2026-01-30",
+      "gazette_type": "h",
+      "issue_number": 1637,
+      "issue_id": "20260130h01637",
+      "url": "https://www.kanpo.go.jp/20260130/20260130.fullcontents.html",
+      "title": "2026-01-30 本紙 第1637号"
+    },
+    {
+      "date": "2026-01-30",
+      "gazette_type": "g",
+      "issue_number": 21,
+      "issue_id": "20260130g00021",
+      "url": "https://www.kanpo.go.jp/20260130/20260130.fullcontents.html",
+      "title": "2026-01-30 号外 第21号"
+    },
+    {
+      "date": "2026-01-30",
+      "gazette_type": "g",
+      "issue_number": 20,
+      "issue_id": "20260130g00020",
+      "url": "https://www.kanpo.go.jp/20260130/20260130.fullcontents.html",
+      "title": "2026-01-30 号外 第20号"
+    },
+    {
+      "date": "2026-01-30",
+      "gazette_type": "c",
+      "issue_number": 19,
+      "issue_id": "20260130c00019",
+      "url": "https://www.kanpo.go.jp/20260130/20260130.fullcontents.html",
+      "title": "2026-01-30 政府調達 第19号"
+    },
+    {
+      "date": "2026-01-29",
+      "gazette_type": "h",
+      "issue_number": 1636,
+      "issue_id": "20260129h01636",
+      "url": "https://www.kanpo.go.jp/20260129/20260129.fullcontents.html",
+      "title": "2026-01-29 本紙 第1636号"
+    },
+    {
+      "date": "2026-01-29",
+      "gazette_type": "g",
+      "issue_number": 19,
+      "issue_id": "20260129g00019",
+      "url": "https://www.kanpo.go.jp/20260129/20260129.fullcontents.html",
+      "title": "2026-01-29 号外 第19号"
+    },
+    {
+      "date": "2026-01-29",
+      "gazette_type": "c",
+      "issue_number": 18,
+      "issue_id": "20260129c00018",
+      "url": "https://www.kanpo.go.jp/20260129/20260129.fullcontents.html",
+      "title": "2026-01-29 政府調達 第18号"
+    },
+    {
+      "date": "2026-01-28",
+      "gazette_type": "h",
+      "issue_number": 1635,
+      "issue_id": "20260128h01635",
+      "url": "https://www.kanpo.go.jp/20260128/20260128.fullcontents.html",
+      "title": "2026-01-28 本紙 第1635号"
+    },
+    {
+      "date": "2026-01-28",
+      "gazette_type": "g",
+      "issue_number": 18,
+      "issue_id": "20260128g00018",
+      "url": "https://www.kanpo.go.jp/20260128/20260128.fullcontents.html",
+      "title": "2026-01-28 号外 第18号"
+    },
+    {
+      "date": "2026-01-28",
+      "gazette_type": "c",
+      "issue_number": 17,
+      "issue_id": "20260128c00017",
+      "url": "https://www.kanpo.go.jp/20260128/20260128.fullcontents.html",
+      "title": "2026-01-28 政府調達 第17号"
+    },
+    {
+      "date": "2026-01-27",
+      "gazette_type": "h",
+      "issue_number": 1634,
+      "issue_id": "20260127h01634",
+      "url": "https://www.kanpo.go.jp/20260127/20260127.fullcontents.html",
+      "title": "2026-01-27 本紙 第1634号"
+    },
+    {
+      "date": "2026-01-27",
+      "gazette_type": "g",
+      "issue_number": 17,
+      "issue_id": "20260127g00017",
+      "url": "https://www.kanpo.go.jp/20260127/20260127.fullcontents.html",
+      "title": "2026-01-27 号外 第17号"
+    },
+    {
+      "date": "2026-01-27",
+      "gazette_type": "c",
+      "issue_number": 16,
+      "issue_id": "20260127c00016",
+      "url": "https://www.kanpo.go.jp/20260127/20260127.fullcontents.html",
+      "title": "2026-01-27 政府調達 第16号"
+    },
+    {
+      "date": "2026-01-26",
+      "gazette_type": "t",
+      "issue_number": 5,
+      "issue_id": "20260126t00005",
+      "url": "https://www.kanpo.go.jp/20260126/20260126.fullcontents.html",
+      "title": "2026-01-26 特別号外 第5号"
+    },
+    {
+      "date": "2026-01-26",
+      "gazette_type": "h",
+      "issue_number": 1633,
+      "issue_id": "20260126h01633",
+      "url": "https://www.kanpo.go.jp/20260126/20260126.fullcontents.html",
+      "title": "2026-01-26 本紙 第1633号"
+    },
+    {
+      "date": "2026-01-26",
+      "gazette_type": "g",
+      "issue_number": 16,
+      "issue_id": "20260126g00016",
+      "url": "https://www.kanpo.go.jp/20260126/20260126.fullcontents.html",
+      "title": "2026-01-26 号外 第16号"
+    },
+    {
+      "date": "2026-01-26",
+      "gazette_type": "c",
+      "issue_number": 15,
+      "issue_id": "20260126c00015",
+      "url": "https://www.kanpo.go.jp/20260126/20260126.fullcontents.html",
+      "title": "2026-01-26 政府調達 第15号"
+    },
+    {
+      "date": "2026-01-23",
+      "gazette_type": "t",
+      "issue_number": 4,
+      "issue_id": "20260123t00004",
+      "url": "https://www.kanpo.go.jp/20260123/20260123.fullcontents.html",
+      "title": "2026-01-23 特別号外 第4号"
+    },
+    {
+      "date": "2026-01-23",
+      "gazette_type": "t",
+      "issue_number": 3,
+      "issue_id": "20260123t00003",
+      "url": "https://www.kanpo.go.jp/20260123/20260123.fullcontents.html",
+      "title": "2026-01-23 特別号外 第3号"
+    },
+    {
+      "date": "2026-01-23",
+      "gazette_type": "h",
+      "issue_number": 1632,
+      "issue_id": "20260123h01632",
+      "url": "https://www.kanpo.go.jp/20260123/20260123.fullcontents.html",
+      "title": "2026-01-23 本紙 第1632号"
+    },
+    {
+      "date": "2026-01-23",
+      "gazette_type": "g",
+      "issue_number": 15,
+      "issue_id": "20260123g00015",
+      "url": "https://www.kanpo.go.jp/20260123/20260123.fullcontents.html",
+      "title": "2026-01-23 号外 第15号"
+    },
+    {
+      "date": "2026-01-23",
+      "gazette_type": "c",
+      "issue_number": 14,
+      "issue_id": "20260123c00014",
+      "url": "https://www.kanpo.go.jp/20260123/20260123.fullcontents.html",
+      "title": "2026-01-23 政府調達 第14号"
+    },
+    {
+      "date": "2026-01-22",
+      "gazette_type": "h",
+      "issue_number": 1631,
+      "issue_id": "20260122h01631",
+      "url": "https://www.kanpo.go.jp/20260122/20260122.fullcontents.html",
+      "title": "2026-01-22 本紙 第1631号"
+    },
+    {
+      "date": "2026-01-22",
+      "gazette_type": "g",
+      "issue_number": 14,
+      "issue_id": "20260122g00014",
+      "url": "https://www.kanpo.go.jp/20260122/20260122.fullcontents.html",
+      "title": "2026-01-22 号外 第14号"
+    },
+    {
+      "date": "2026-01-22",
+      "gazette_type": "c",
+      "issue_number": 13,
+      "issue_id": "20260122c00013",
+      "url": "https://www.kanpo.go.jp/20260122/20260122.fullcontents.html",
+      "title": "2026-01-22 政府調達 第13号"
+    },
+    {
+      "date": "2026-01-21",
+      "gazette_type": "h",
+      "issue_number": 1630,
+      "issue_id": "20260121h01630",
+      "url": "https://www.kanpo.go.jp/20260121/20260121.fullcontents.html",
+      "title": "2026-01-21 本紙 第1630号"
+    },
+    {
+      "date": "2026-01-21",
+      "gazette_type": "g",
+      "issue_number": 13,
+      "issue_id": "20260121g00013",
+      "url": "https://www.kanpo.go.jp/20260121/20260121.fullcontents.html",
+      "title": "2026-01-21 号外 第13号"
+    },
+    {
+      "date": "2026-01-21",
+      "gazette_type": "c",
+      "issue_number": 12,
+      "issue_id": "20260121c00012",
+      "url": "https://www.kanpo.go.jp/20260121/20260121.fullcontents.html",
+      "title": "2026-01-21 政府調達 第12号"
+    },
+    {
+      "date": "2026-01-20",
+      "gazette_type": "h",
+      "issue_number": 1629,
+      "issue_id": "20260120h01629",
+      "url": "https://www.kanpo.go.jp/20260120/20260120.fullcontents.html",
+      "title": "2026-01-20 本紙 第1629号"
+    },
+    {
+      "date": "2026-01-20",
+      "gazette_type": "g",
+      "issue_number": 12,
+      "issue_id": "20260120g00012",
+      "url": "https://www.kanpo.go.jp/20260120/20260120.fullcontents.html",
+      "title": "2026-01-20 号外 第12号"
+    },
+    {
+      "date": "2026-01-20",
+      "gazette_type": "c",
+      "issue_number": 11,
+      "issue_id": "20260120c00011",
+      "url": "https://www.kanpo.go.jp/20260120/20260120.fullcontents.html",
+      "title": "2026-01-20 政府調達 第11号"
+    },
+    {
+      "date": "2026-01-19",
+      "gazette_type": "h",
+      "issue_number": 1628,
+      "issue_id": "20260119h01628",
+      "url": "https://www.kanpo.go.jp/20260119/20260119.fullcontents.html",
+      "title": "2026-01-19 本紙 第1628号"
+    },
+    {
+      "date": "2026-01-19",
+      "gazette_type": "g",
+      "issue_number": 11,
+      "issue_id": "20260119g00011",
+      "url": "https://www.kanpo.go.jp/20260119/20260119.fullcontents.html",
+      "title": "2026-01-19 号外 第11号"
+    },
+    {
+      "date": "2026-01-19",
+      "gazette_type": "g",
+      "issue_number": 10,
+      "issue_id": "20260119g00010",
+      "url": "https://www.kanpo.go.jp/20260119/20260119.fullcontents.html",
+      "title": "2026-01-19 号外 第10号"
+    },
+    {
+      "date": "2026-01-19",
+      "gazette_type": "c",
+      "issue_number": 10,
+      "issue_id": "20260119c00010",
+      "url": "https://www.kanpo.go.jp/20260119/20260119.fullcontents.html",
+      "title": "2026-01-19 政府調達 第10号"
+    },
+    {
+      "date": "2026-01-16",
+      "gazette_type": "h",
+      "issue_number": 1627,
+      "issue_id": "20260116h01627",
+      "url": "https://www.kanpo.go.jp/20260116/20260116.fullcontents.html",
+      "title": "2026-01-16 本紙 第1627号"
+    },
+    {
+      "date": "2026-01-16",
+      "gazette_type": "g",
+      "issue_number": 9,
+      "issue_id": "20260116g00009",
+      "url": "https://www.kanpo.go.jp/20260116/20260116.fullcontents.html",
+      "title": "2026-01-16 号外 第9号"
+    },
+    {
+      "date": "2026-01-16",
+      "gazette_type": "c",
+      "issue_number": 9,
+      "issue_id": "20260116c00009",
+      "url": "https://www.kanpo.go.jp/20260116/20260116.fullcontents.html",
+      "title": "2026-01-16 政府調達 第9号"
+    },
+    {
+      "date": "2026-01-15",
+      "gazette_type": "h",
+      "issue_number": 1626,
+      "issue_id": "20260115h01626",
+      "url": "https://www.kanpo.go.jp/20260115/20260115.fullcontents.html",
+      "title": "2026-01-15 本紙 第1626号"
+    },
+    {
+      "date": "2026-01-15",
+      "gazette_type": "g",
+      "issue_number": 8,
+      "issue_id": "20260115g00008",
+      "url": "https://www.kanpo.go.jp/20260115/20260115.fullcontents.html",
+      "title": "2026-01-15 号外 第8号"
+    },
+    {
+      "date": "2026-01-15",
+      "gazette_type": "c",
+      "issue_number": 8,
+      "issue_id": "20260115c00008",
+      "url": "https://www.kanpo.go.jp/20260115/20260115.fullcontents.html",
+      "title": "2026-01-15 政府調達 第8号"
+    },
+    {
+      "date": "2026-01-14",
+      "gazette_type": "h",
+      "issue_number": 1625,
+      "issue_id": "20260114h01625",
+      "url": "https://www.kanpo.go.jp/20260114/20260114.fullcontents.html",
+      "title": "2026-01-14 本紙 第1625号"
+    },
+    {
+      "date": "2026-01-14",
+      "gazette_type": "g",
+      "issue_number": 7,
+      "issue_id": "20260114g00007",
+      "url": "https://www.kanpo.go.jp/20260114/20260114.fullcontents.html",
+      "title": "2026-01-14 号外 第7号"
+    },
+    {
+      "date": "2026-01-14",
+      "gazette_type": "c",
+      "issue_number": 7,
+      "issue_id": "20260114c00007",
+      "url": "https://www.kanpo.go.jp/20260114/20260114.fullcontents.html",
+      "title": "2026-01-14 政府調達 第7号"
+    },
+    {
+      "date": "2026-01-13",
+      "gazette_type": "t",
+      "issue_number": 2,
+      "issue_id": "20260113t00002",
+      "url": "https://www.kanpo.go.jp/20260113/20260113.fullcontents.html",
+      "title": "2026-01-13 特別号外 第2号"
+    },
+    {
+      "date": "2026-01-13",
+      "gazette_type": "h",
+      "issue_number": 1624,
+      "issue_id": "20260113h01624",
+      "url": "https://www.kanpo.go.jp/20260113/20260113.fullcontents.html",
+      "title": "2026-01-13 本紙 第1624号"
+    },
+    {
+      "date": "2026-01-13",
+      "gazette_type": "g",
+      "issue_number": 6,
+      "issue_id": "20260113g00006",
+      "url": "https://www.kanpo.go.jp/20260113/20260113.fullcontents.html",
+      "title": "2026-01-13 号外 第6号"
+    },
+    {
+      "date": "2026-01-13",
+      "gazette_type": "c",
+      "issue_number": 6,
+      "issue_id": "20260113c00006",
+      "url": "https://www.kanpo.go.jp/20260113/20260113.fullcontents.html",
+      "title": "2026-01-13 政府調達 第6号"
+    },
+    {
+      "date": "2026-01-09",
+      "gazette_type": "t",
+      "issue_number": 1,
+      "issue_id": "20260109t00001",
+      "url": "https://www.kanpo.go.jp/20260109/20260109.fullcontents.html",
+      "title": "2026-01-09 特別号外 第1号"
+    },
+    {
+      "date": "2026-01-09",
+      "gazette_type": "h",
+      "issue_number": 1623,
+      "issue_id": "20260109h01623",
+      "url": "https://www.kanpo.go.jp/20260109/20260109.fullcontents.html",
+      "title": "2026-01-09 本紙 第1623号"
+    },
+    {
+      "date": "2026-01-09",
+      "gazette_type": "g",
+      "issue_number": 5,
+      "issue_id": "20260109g00005",
+      "url": "https://www.kanpo.go.jp/20260109/20260109.fullcontents.html",
+      "title": "2026-01-09 号外 第5号"
+    },
+    {
+      "date": "2026-01-09",
+      "gazette_type": "c",
+      "issue_number": 5,
+      "issue_id": "20260109c00005",
+      "url": "https://www.kanpo.go.jp/20260109/20260109.fullcontents.html",
+      "title": "2026-01-09 政府調達 第5号"
+    },
+    {
+      "date": "2026-01-08",
+      "gazette_type": "h",
+      "issue_number": 1622,
+      "issue_id": "20260108h01622",
+      "url": "https://www.kanpo.go.jp/20260108/20260108.fullcontents.html",
+      "title": "2026-01-08 本紙 第1622号"
+    },
+    {
+      "date": "2026-01-08",
+      "gazette_type": "g",
+      "issue_number": 4,
+      "issue_id": "20260108g00004",
+      "url": "https://www.kanpo.go.jp/20260108/20260108.fullcontents.html",
+      "title": "2026-01-08 号外 第4号"
+    },
+    {
+      "date": "2026-01-08",
+      "gazette_type": "c",
+      "issue_number": 4,
+      "issue_id": "20260108c00004",
+      "url": "https://www.kanpo.go.jp/20260108/20260108.fullcontents.html",
+      "title": "2026-01-08 政府調達 第4号"
+    },
+    {
+      "date": "2026-01-07",
+      "gazette_type": "h",
+      "issue_number": 1621,
+      "issue_id": "20260107h01621",
+      "url": "https://www.kanpo.go.jp/20260107/20260107.fullcontents.html",
+      "title": "2026-01-07 本紙 第1621号"
+    },
+    {
+      "date": "2026-01-07",
+      "gazette_type": "g",
+      "issue_number": 3,
+      "issue_id": "20260107g00003",
+      "url": "https://www.kanpo.go.jp/20260107/20260107.fullcontents.html",
+      "title": "2026-01-07 号外 第3号"
+    },
+    {
+      "date": "2026-01-07",
+      "gazette_type": "c",
+      "issue_number": 3,
+      "issue_id": "20260107c00003",
+      "url": "https://www.kanpo.go.jp/20260107/20260107.fullcontents.html",
+      "title": "2026-01-07 政府調達 第3号"
+    },
+    {
+      "date": "2026-01-06",
+      "gazette_type": "h",
+      "issue_number": 1620,
+      "issue_id": "20260106h01620",
+      "url": "https://www.kanpo.go.jp/20260106/20260106.fullcontents.html",
+      "title": "2026-01-06 本紙 第1620号"
+    },
+    {
+      "date": "2026-01-06",
+      "gazette_type": "g",
+      "issue_number": 2,
+      "issue_id": "20260106g00002",
+      "url": "https://www.kanpo.go.jp/20260106/20260106.fullcontents.html",
+      "title": "2026-01-06 号外 第2号"
+    },
+    {
+      "date": "2026-01-06",
+      "gazette_type": "c",
+      "issue_number": 2,
+      "issue_id": "20260106c00002",
+      "url": "https://www.kanpo.go.jp/20260106/20260106.fullcontents.html",
+      "title": "2026-01-06 政府調達 第2号"
+    },
+    {
+      "date": "2026-01-05",
+      "gazette_type": "h",
+      "issue_number": 1619,
+      "issue_id": "20260105h01619",
+      "url": "https://www.kanpo.go.jp/20260105/20260105.fullcontents.html",
+      "title": "2026-01-05 本紙 第1619号"
+    },
+    {
+      "date": "2026-01-05",
+      "gazette_type": "g",
+      "issue_number": 1,
+      "issue_id": "20260105g00001",
+      "url": "https://www.kanpo.go.jp/20260105/20260105.fullcontents.html",
+      "title": "2026-01-05 号外 第1号"
+    },
+    {
+      "date": "2026-01-05",
+      "gazette_type": "c",
+      "issue_number": 1,
+      "issue_id": "20260105c00001",
+      "url": "https://www.kanpo.go.jp/20260105/20260105.fullcontents.html",
+      "title": "2026-01-05 政府調達 第1号"
+    },
+    {
+      "date": "2025-12-26",
+      "gazette_type": "t",
+      "issue_number": 34,
+      "issue_id": "20251226t00034",
+      "url": "https://www.kanpo.go.jp/20251226/20251226.fullcontents.html",
+      "title": "2025-12-26 特別号外 第34号"
+    },
+    {
+      "date": "2025-12-26",
+      "gazette_type": "h",
+      "issue_number": 1618,
+      "issue_id": "20251226h01618",
+      "url": "https://www.kanpo.go.jp/20251226/20251226.fullcontents.html",
+      "title": "2025-12-26 本紙 第1618号"
+    },
+    {
+      "date": "2025-12-26",
+      "gazette_type": "g",
+      "issue_number": 286,
+      "issue_id": "20251226g00286",
+      "url": "https://www.kanpo.go.jp/20251226/20251226.fullcontents.html",
+      "title": "2025-12-26 号外 第286号"
+    },
+    {
+      "date": "2025-12-26",
+      "gazette_type": "g",
+      "issue_number": 285,
+      "issue_id": "20251226g00285",
+      "url": "https://www.kanpo.go.jp/20251226/20251226.fullcontents.html",
+      "title": "2025-12-26 号外 第285号"
+    },
+    {
+      "date": "2025-12-26",
+      "gazette_type": "c",
+      "issue_number": 241,
+      "issue_id": "20251226c00241",
+      "url": "https://www.kanpo.go.jp/20251226/20251226.fullcontents.html",
+      "title": "2025-12-26 政府調達 第241号"
+    },
+    {
+      "date": "2025-12-25",
+      "gazette_type": "h",
+      "issue_number": 1617,
+      "issue_id": "20251225h01617",
+      "url": "https://www.kanpo.go.jp/20251225/20251225.fullcontents.html",
+      "title": "2025-12-25 本紙 第1617号"
+    },
+    {
+      "date": "2025-12-25",
+      "gazette_type": "g",
+      "issue_number": 284,
+      "issue_id": "20251225g00284",
+      "url": "https://www.kanpo.go.jp/20251225/20251225.fullcontents.html",
+      "title": "2025-12-25 号外 第284号"
+    },
+    {
+      "date": "2025-12-25",
+      "gazette_type": "c",
+      "issue_number": 240,
+      "issue_id": "20251225c00240",
+      "url": "https://www.kanpo.go.jp/20251225/20251225.fullcontents.html",
+      "title": "2025-12-25 政府調達 第240号"
+    },
+    {
+      "date": "2025-12-24",
+      "gazette_type": "h",
+      "issue_number": 1616,
+      "issue_id": "20251224h01616",
+      "url": "https://www.kanpo.go.jp/20251224/20251224.fullcontents.html",
+      "title": "2025-12-24 本紙 第1616号"
+    },
+    {
+      "date": "2025-12-24",
+      "gazette_type": "g",
+      "issue_number": 283,
+      "issue_id": "20251224g00283",
+      "url": "https://www.kanpo.go.jp/20251224/20251224.fullcontents.html",
+      "title": "2025-12-24 号外 第283号"
+    },
+    {
+      "date": "2025-12-24",
+      "gazette_type": "g",
+      "issue_number": 282,
+      "issue_id": "20251224g00282",
+      "url": "https://www.kanpo.go.jp/20251224/20251224.fullcontents.html",
+      "title": "2025-12-24 号外 第282号"
+    },
+    {
+      "date": "2025-12-24",
+      "gazette_type": "c",
+      "issue_number": 239,
+      "issue_id": "20251224c00239",
+      "url": "https://www.kanpo.go.jp/20251224/20251224.fullcontents.html",
+      "title": "2025-12-24 政府調達 第239号"
+    },
+    {
+      "date": "2025-12-23",
+      "gazette_type": "h",
+      "issue_number": 1615,
+      "issue_id": "20251223h01615",
+      "url": "https://www.kanpo.go.jp/20251223/20251223.fullcontents.html",
+      "title": "2025-12-23 本紙 第1615号"
+    },
+    {
+      "date": "2025-12-23",
+      "gazette_type": "g",
+      "issue_number": 281,
+      "issue_id": "20251223g00281",
+      "url": "https://www.kanpo.go.jp/20251223/20251223.fullcontents.html",
+      "title": "2025-12-23 号外 第281号"
+    },
+    {
+      "date": "2025-12-23",
+      "gazette_type": "g",
+      "issue_number": 280,
+      "issue_id": "20251223g00280",
+      "url": "https://www.kanpo.go.jp/20251223/20251223.fullcontents.html",
+      "title": "2025-12-23 号外 第280号"
+    },
+    {
+      "date": "2025-12-23",
+      "gazette_type": "c",
+      "issue_number": 238,
+      "issue_id": "20251223c00238",
+      "url": "https://www.kanpo.go.jp/20251223/20251223.fullcontents.html",
+      "title": "2025-12-23 政府調達 第238号"
+    },
+    {
+      "date": "2025-12-22",
+      "gazette_type": "h",
+      "issue_number": 1614,
+      "issue_id": "20251222h01614",
+      "url": "https://www.kanpo.go.jp/20251222/20251222.fullcontents.html",
+      "title": "2025-12-22 本紙 第1614号"
+    },
+    {
+      "date": "2025-12-22",
+      "gazette_type": "g",
+      "issue_number": 279,
+      "issue_id": "20251222g00279",
+      "url": "https://www.kanpo.go.jp/20251222/20251222.fullcontents.html",
+      "title": "2025-12-22 号外 第279号"
+    },
+    {
+      "date": "2025-12-22",
+      "gazette_type": "g",
+      "issue_number": 278,
+      "issue_id": "20251222g00278",
+      "url": "https://www.kanpo.go.jp/20251222/20251222.fullcontents.html",
+      "title": "2025-12-22 号外 第278号"
+    },
+    {
+      "date": "2025-12-22",
+      "gazette_type": "c",
+      "issue_number": 237,
+      "issue_id": "20251222c00237",
+      "url": "https://www.kanpo.go.jp/20251222/20251222.fullcontents.html",
+      "title": "2025-12-22 政府調達 第237号"
+    },
+    {
+      "date": "2025-12-19",
+      "gazette_type": "h",
+      "issue_number": 1613,
+      "issue_id": "20251219h01613",
+      "url": "https://www.kanpo.go.jp/20251219/20251219.fullcontents.html",
+      "title": "2025-12-19 本紙 第1613号"
+    },
+    {
+      "date": "2025-12-19",
+      "gazette_type": "g",
+      "issue_number": 277,
+      "issue_id": "20251219g00277",
+      "url": "https://www.kanpo.go.jp/20251219/20251219.fullcontents.html",
+      "title": "2025-12-19 号外 第277号"
+    },
+    {
+      "date": "2025-12-19",
+      "gazette_type": "c",
+      "issue_number": 236,
+      "issue_id": "20251219c00236",
+      "url": "https://www.kanpo.go.jp/20251219/20251219.fullcontents.html",
+      "title": "2025-12-19 政府調達 第236号"
+    },
+    {
+      "date": "2025-12-18",
+      "gazette_type": "h",
+      "issue_number": 1612,
+      "issue_id": "20251218h01612",
+      "url": "https://www.kanpo.go.jp/20251218/20251218.fullcontents.html",
+      "title": "2025-12-18 本紙 第1612号"
+    },
+    {
+      "date": "2025-12-18",
+      "gazette_type": "g",
+      "issue_number": 276,
+      "issue_id": "20251218g00276",
+      "url": "https://www.kanpo.go.jp/20251218/20251218.fullcontents.html",
+      "title": "2025-12-18 号外 第276号"
+    },
+    {
+      "date": "2025-12-18",
+      "gazette_type": "c",
+      "issue_number": 235,
+      "issue_id": "20251218c00235",
+      "url": "https://www.kanpo.go.jp/20251218/20251218.fullcontents.html",
+      "title": "2025-12-18 政府調達 第235号"
+    },
+    {
+      "date": "2025-12-17",
+      "gazette_type": "h",
+      "issue_number": 1611,
+      "issue_id": "20251217h01611",
+      "url": "https://www.kanpo.go.jp/20251217/20251217.fullcontents.html",
+      "title": "2025-12-17 本紙 第1611号"
+    },
+    {
+      "date": "2025-12-17",
+      "gazette_type": "g",
+      "issue_number": 275,
+      "issue_id": "20251217g00275",
+      "url": "https://www.kanpo.go.jp/20251217/20251217.fullcontents.html",
+      "title": "2025-12-17 号外 第275号"
+    },
+    {
+      "date": "2025-12-17",
+      "gazette_type": "c",
+      "issue_number": 234,
+      "issue_id": "20251217c00234",
+      "url": "https://www.kanpo.go.jp/20251217/20251217.fullcontents.html",
+      "title": "2025-12-17 政府調達 第234号"
+    },
+    {
+      "date": "2025-12-16",
+      "gazette_type": "t",
+      "issue_number": 33,
+      "issue_id": "20251216t00033",
+      "url": "https://www.kanpo.go.jp/20251216/20251216.fullcontents.html",
+      "title": "2025-12-16 特別号外 第33号"
+    },
+    {
+      "date": "2025-12-16",
+      "gazette_type": "h",
+      "issue_number": 1610,
+      "issue_id": "20251216h01610",
+      "url": "https://www.kanpo.go.jp/20251216/20251216.fullcontents.html",
+      "title": "2025-12-16 本紙 第1610号"
+    },
+    {
+      "date": "2025-12-16",
+      "gazette_type": "g",
+      "issue_number": 274,
+      "issue_id": "20251216g00274",
+      "url": "https://www.kanpo.go.jp/20251216/20251216.fullcontents.html",
+      "title": "2025-12-16 号外 第274号"
+    },
+    {
+      "date": "2025-12-16",
+      "gazette_type": "c",
+      "issue_number": 233,
+      "issue_id": "20251216c00233",
+      "url": "https://www.kanpo.go.jp/20251216/20251216.fullcontents.html",
+      "title": "2025-12-16 政府調達 第233号"
+    },
+    {
+      "date": "2025-12-15",
+      "gazette_type": "h",
+      "issue_number": 1609,
+      "issue_id": "20251215h01609",
+      "url": "https://www.kanpo.go.jp/20251215/20251215.fullcontents.html",
+      "title": "2025-12-15 本紙 第1609号"
+    },
+    {
+      "date": "2025-12-15",
+      "gazette_type": "g",
+      "issue_number": 273,
+      "issue_id": "20251215g00273",
+      "url": "https://www.kanpo.go.jp/20251215/20251215.fullcontents.html",
+      "title": "2025-12-15 号外 第273号"
+    },
+    {
+      "date": "2025-12-15",
+      "gazette_type": "c",
+      "issue_number": 232,
+      "issue_id": "20251215c00232",
+      "url": "https://www.kanpo.go.jp/20251215/20251215.fullcontents.html",
+      "title": "2025-12-15 政府調達 第232号"
+    },
+    {
+      "date": "2025-12-12",
+      "gazette_type": "h",
+      "issue_number": 1608,
+      "issue_id": "20251212h01608",
+      "url": "https://www.kanpo.go.jp/20251212/20251212.fullcontents.html",
+      "title": "2025-12-12 本紙 第1608号"
+    },
+    {
+      "date": "2025-12-12",
+      "gazette_type": "g",
+      "issue_number": 272,
+      "issue_id": "20251212g00272",
+      "url": "https://www.kanpo.go.jp/20251212/20251212.fullcontents.html",
+      "title": "2025-12-12 号外 第272号"
+    },
+    {
+      "date": "2025-12-12",
+      "gazette_type": "c",
+      "issue_number": 231,
+      "issue_id": "20251212c00231",
+      "url": "https://www.kanpo.go.jp/20251212/20251212.fullcontents.html",
+      "title": "2025-12-12 政府調達 第231号"
+    },
+    {
+      "date": "2025-12-11",
+      "gazette_type": "h",
+      "issue_number": 1607,
+      "issue_id": "20251211h01607",
+      "url": "https://www.kanpo.go.jp/20251211/20251211.fullcontents.html",
+      "title": "2025-12-11 本紙 第1607号"
+    },
+    {
+      "date": "2025-12-11",
+      "gazette_type": "g",
+      "issue_number": 271,
+      "issue_id": "20251211g00271",
+      "url": "https://www.kanpo.go.jp/20251211/20251211.fullcontents.html",
+      "title": "2025-12-11 号外 第271号"
+    },
+    {
+      "date": "2025-12-11",
+      "gazette_type": "c",
+      "issue_number": 230,
+      "issue_id": "20251211c00230",
+      "url": "https://www.kanpo.go.jp/20251211/20251211.fullcontents.html",
+      "title": "2025-12-11 政府調達 第230号"
+    },
+    {
+      "date": "2025-12-10",
+      "gazette_type": "h",
+      "issue_number": 1606,
+      "issue_id": "20251210h01606",
+      "url": "https://www.kanpo.go.jp/20251210/20251210.fullcontents.html",
+      "title": "2025-12-10 本紙 第1606号"
+    },
+    {
+      "date": "2025-12-10",
+      "gazette_type": "g",
+      "issue_number": 270,
+      "issue_id": "20251210g00270",
+      "url": "https://www.kanpo.go.jp/20251210/20251210.fullcontents.html",
+      "title": "2025-12-10 号外 第270号"
+    },
+    {
+      "date": "2025-12-10",
+      "gazette_type": "c",
+      "issue_number": 229,
+      "issue_id": "20251210c00229",
+      "url": "https://www.kanpo.go.jp/20251210/20251210.fullcontents.html",
+      "title": "2025-12-10 政府調達 第229号"
+    },
+    {
+      "date": "2025-12-09",
+      "gazette_type": "h",
+      "issue_number": 1605,
+      "issue_id": "20251209h01605",
+      "url": "https://www.kanpo.go.jp/20251209/20251209.fullcontents.html",
+      "title": "2025-12-09 本紙 第1605号"
+    },
+    {
+      "date": "2025-12-09",
+      "gazette_type": "g",
+      "issue_number": 269,
+      "issue_id": "20251209g00269",
+      "url": "https://www.kanpo.go.jp/20251209/20251209.fullcontents.html",
+      "title": "2025-12-09 号外 第269号"
+    },
+    {
+      "date": "2025-12-09",
+      "gazette_type": "c",
+      "issue_number": 228,
+      "issue_id": "20251209c00228",
+      "url": "https://www.kanpo.go.jp/20251209/20251209.fullcontents.html",
+      "title": "2025-12-09 政府調達 第228号"
+    },
+    {
+      "date": "2025-12-08",
+      "gazette_type": "h",
+      "issue_number": 1604,
+      "issue_id": "20251208h01604",
+      "url": "https://www.kanpo.go.jp/20251208/20251208.fullcontents.html",
+      "title": "2025-12-08 本紙 第1604号"
+    },
+    {
+      "date": "2025-12-08",
+      "gazette_type": "g",
+      "issue_number": 268,
+      "issue_id": "20251208g00268",
+      "url": "https://www.kanpo.go.jp/20251208/20251208.fullcontents.html",
+      "title": "2025-12-08 号外 第268号"
+    },
+    {
+      "date": "2025-12-08",
+      "gazette_type": "c",
+      "issue_number": 227,
+      "issue_id": "20251208c00227",
+      "url": "https://www.kanpo.go.jp/20251208/20251208.fullcontents.html",
+      "title": "2025-12-08 政府調達 第227号"
+    },
+    {
+      "date": "2025-12-05",
+      "gazette_type": "h",
+      "issue_number": 1603,
+      "issue_id": "20251205h01603",
+      "url": "https://www.kanpo.go.jp/20251205/20251205.fullcontents.html",
+      "title": "2025-12-05 本紙 第1603号"
+    },
+    {
+      "date": "2025-12-05",
+      "gazette_type": "g",
+      "issue_number": 267,
+      "issue_id": "20251205g00267",
+      "url": "https://www.kanpo.go.jp/20251205/20251205.fullcontents.html",
+      "title": "2025-12-05 号外 第267号"
+    },
+    {
+      "date": "2025-12-05",
+      "gazette_type": "c",
+      "issue_number": 226,
+      "issue_id": "20251205c00226",
+      "url": "https://www.kanpo.go.jp/20251205/20251205.fullcontents.html",
+      "title": "2025-12-05 政府調達 第226号"
+    },
+    {
+      "date": "2025-12-04",
+      "gazette_type": "h",
+      "issue_number": 1602,
+      "issue_id": "20251204h01602",
+      "url": "https://www.kanpo.go.jp/20251204/20251204.fullcontents.html",
+      "title": "2025-12-04 本紙 第1602号"
+    },
+    {
+      "date": "2025-12-04",
+      "gazette_type": "g",
+      "issue_number": 266,
+      "issue_id": "20251204g00266",
+      "url": "https://www.kanpo.go.jp/20251204/20251204.fullcontents.html",
+      "title": "2025-12-04 号外 第266号"
+    },
+    {
+      "date": "2025-12-04",
+      "gazette_type": "c",
+      "issue_number": 225,
+      "issue_id": "20251204c00225",
+      "url": "https://www.kanpo.go.jp/20251204/20251204.fullcontents.html",
+      "title": "2025-12-04 政府調達 第225号"
+    }
+  ]
+}
