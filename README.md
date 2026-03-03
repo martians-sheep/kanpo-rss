@@ -8,6 +8,7 @@
 
 - 官報サイトから本紙・号外・政府調達・特別号外の発刊情報を取得
 - 全種別をまとめた単一のRSSフィード（`feed.xml`）を生成
+- 記事レベルRSSフィード（`feed-articles.xml`）— 個別記事ごとのRSS（キーワードフィルタ向き）
 - アーカイブRSSフィード（`feed-archive.xml`）— 全件を含むRSS
 - データ蓄積機能：`data/issues.json` に過去データを永続保存（90日超のデータも保持）
 - 全件JSONデータ（`issues.json`）をGitHub Pagesで公開
@@ -19,7 +20,8 @@ GitHub Pages で配信中: <https://martians-sheep.github.io/kanpo-rss/>
 
 | URL | 内容 |
 |---|---|
-| [`feed.xml`](https://martians-sheep.github.io/kanpo-rss/feed.xml) | 最新100件のRSSフィード |
+| [`feed.xml`](https://martians-sheep.github.io/kanpo-rss/feed.xml) | 最新100件のRSSフィード（号レベル） |
+| [`feed-articles.xml`](https://martians-sheep.github.io/kanpo-rss/feed-articles.xml) | 記事レベルRSSフィード（個別記事ごと） |
 | [`feed-archive.xml`](https://martians-sheep.github.io/kanpo-rss/feed-archive.xml) | 全件RSSフィード（アーカイブ） |
 | [`issues.json`](https://martians-sheep.github.io/kanpo-rss/issues.json) | 全件JSONデータ |
 
@@ -54,6 +56,7 @@ python -m kanpo_rss --data-dir ""
 | `--max-items` | `100` | RSSアイテムの最大件数 |
 | `--self-url` | なし | フィードの自己参照URL（rel=self） |
 | `--data-dir` | `data` | 蓄積データの保存先。空文字で蓄積無効 |
+| `--no-articles` | off | 記事レベルフィードの生成をスキップ |
 | `-v, --verbose` | off | 詳細ログ出力 |
 
 ## テスト
@@ -67,9 +70,9 @@ pytest --cov=kanpo_rss --cov-report=term-missing
 
 ```
 src/kanpo_rss/
-├── models.py          # データクラス（GazetteType, GazetteIssue）
+├── models.py          # データクラス（GazetteType, GazetteIssue, GazetteArticle）
 ├── scraper.py         # HTTP取得（リトライ・レート制限付き）
-├── parser.py          # HTML解析（BeautifulSoup）
+├── parser.py          # HTML解析（トップページ・号ページ）
 ├── feed_generator.py  # RSS生成（feedgen）
 ├── storage.py         # データ蓄積（JSON永続化・マージ）
 └── cli.py             # エントリーポイント
