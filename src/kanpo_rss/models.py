@@ -28,6 +28,14 @@ _GAZETTE_TYPE_LABELS: dict[GazetteType, str] = {
     GazetteType.TOKUBETSU_GOUGAI: "特別号外",
 }
 
+# 官報サイトの掲載順に準拠した表示順序
+GAZETTE_TYPE_ORDER: dict[GazetteType, int] = {
+    GazetteType.HONSHI: 0,
+    GazetteType.GOUGAI: 1,
+    GazetteType.TOKUBETSU_GOUGAI: 2,
+    GazetteType.SEIFU_CHOUTATSU: 3,
+}
+
 
 @dataclass(frozen=True)
 class GazetteArticle:

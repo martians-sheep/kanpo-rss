@@ -8,7 +8,7 @@ from pathlib import Path
 
 from feedgen.feed import FeedGenerator
 
-from kanpo_rss.models import GazetteArticle, GazetteIssue
+from kanpo_rss.models import GAZETTE_TYPE_ORDER, GazetteArticle, GazetteIssue
 
 logger = logging.getLogger(__name__)
 
@@ -97,12 +97,19 @@ class KanpoFeedGenerator:
         # issue_id → issue のマップ（日付・種別の参照用）
         issue_map: dict[str, GazetteIssue] = {i.issue_id: i for i in issues}
 
-        # 全記事をフラット化し、親号の日付でソート
-        article_entries: list[tuple[GazetteIssue, GazetteArticle]] = []
+        # 全記事をフラット化し、号内の出現順を保持してソート
+        # (issue, article, 号内の出現位置)
+        article_entries: list[tuple[GazetteIssue, GazetteArticle, int]] = []
         for issue in issues:
-            for article in issue.articles:
-                article_entries.append((issue, article))
-        article_entries.sort(key=lambda x: x[0].date, reverse=True)
+            for pos, article in enumerate(issue.articles):
+                article_entries.append((issue, article, pos))
+        article_entries.sort(
+            key=lambda x: (
+                -x[0].date.toordinal(),  # 日付降順
+                GAZETTE_TYPE_ORDER.get(x[0].gazette_type, 99),  # 種別順
+                x[2],  # 号内の出現順
+            ),
+        )
 
         truncated = (
             article_entries[:max_items]
@@ -111,7 +118,7 @@ class KanpoFeedGenerator:
         )
 
         fg = self._build_feed(title_suffix=title_suffix)
-        for issue, article in truncated:
+        for issue, article, _pos in truncated:
             self._add_article_entry(fg, issue, article)
 
         output = Path(output_path)

@@ -254,3 +254,46 @@ class TestArticleFeedGenerator:
             root = ET.parse(output).getroot()
         title = root.findtext(".//channel/title") or ""
         assert "記事" in title
+
+    def test_article_order_within_issue(self) -> None:
+        """同一号内の記事はページ出現順を維持する。"""
+        issues = [_make_issue_with_articles()]
+        gen = KanpoFeedGenerator()
+        with tempfile.TemporaryDirectory() as tmpdir:
+            output = str(Path(tmpdir) / "feed-articles.xml")
+            gen.generate_article_feed(issues, output)
+            root = ET.parse(output).getroot()
+        titles = [item.findtext("title") for item in root.findall(".//item")]
+        assert titles == ["テスト記事A", "テスト記事B", "国会事項"]
+
+    def test_article_order_across_types_same_date(self) -> None:
+        """同日の記事は本紙→号外→政府調達の順で並ぶ。"""
+        d = date(2026, 3, 3)
+        # 入力を逆順（政府調達→号外→本紙）にしても正しい順序になること
+        issues = [
+            _make_issue_with_articles(
+                pub_date=d,
+                gazette_type=GazetteType.SEIFU_CHOUTATSU,
+                issue_number=39,
+            ),
+            _make_issue_with_articles(
+                pub_date=d,
+                gazette_type=GazetteType.GOUGAI,
+                issue_number=43,
+            ),
+            _make_issue_with_articles(
+                pub_date=d,
+                gazette_type=GazetteType.HONSHI,
+                issue_number=1657,
+            ),
+        ]
+        gen = KanpoFeedGenerator()
+        with tempfile.TemporaryDirectory() as tmpdir:
+            output = str(Path(tmpdir) / "feed-articles.xml")
+            gen.generate_article_feed(issues, output)
+            root = ET.parse(output).getroot()
+        items = root.findall(".//item")
+        guids = [item.findtext("guid") or "" for item in items]
+        # 本紙の記事が最初、政府調達の記事が最後
+        assert "h01657" in guids[0]
+        assert "c00039" in guids[-1]
