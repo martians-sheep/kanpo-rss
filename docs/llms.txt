@@ -38,5 +38,5 @@
 
 ## Optional
 
-- [ソースコード](https://github.com/sugiyamadaisuke/kanpo-rss): MITライセンス
+- [ソースコード](https://github.com/martians-sheep/kanpo-rss): MITライセンス
 - [官報サイト](https://www.kanpo.go.jp/): データ元。直近90日分が無料閲覧可能
