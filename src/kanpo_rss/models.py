@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 import datetime
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from enum import Enum
 
 
@@ -30,6 +30,18 @@ _GAZETTE_TYPE_LABELS: dict[GazetteType, str] = {
 
 
 @dataclass(frozen=True)
+class GazetteArticle:
+    """1記事分の官報情報。号の目次ページから抽出される個別記事。"""
+
+    article_id: str  # GUID用 e.g. "20260303h01657:0001:0"
+    title: str  # e.g. "パラオ共和国政府に対する贈与に関する件（外務七六）"
+    url: str  # 該当ページへの直リンク
+    section: str  # セクション見出し e.g. "その他告示"
+    parent_issue_id: str  # 親号の issue_id
+    page_number: int  # 官報ページ番号（URL末尾4桁）
+
+
+@dataclass(frozen=True)
 class GazetteIssue:
     """1号分の官報情報。"""
 
@@ -39,3 +51,4 @@ class GazetteIssue:
     issue_id: str  # e.g. "20260303h01657"
     url: str
     title: str  # e.g. "令和8年3月3日 本紙 第1657号"
+    articles: list[GazetteArticle] = field(default_factory=list)

@@ -6,7 +6,7 @@ from pathlib import Path
 from xml.etree import ElementTree as ET
 
 from kanpo_rss.feed_generator import KanpoFeedGenerator
-from kanpo_rss.models import GazetteIssue, GazetteType
+from kanpo_rss.models import GazetteArticle, GazetteIssue, GazetteType
 
 
 def _make_issue(
@@ -144,3 +144,113 @@ class TestFeedGenerator:
             root = tree.getroot()
         items = root.findall(".//item")
         assert len(items) == 20
+
+
+def _make_issue_with_articles(
+    pub_date: date = date(2026, 3, 3),
+    gazette_type: GazetteType = GazetteType.HONSHI,
+    issue_number: int = 1657,
+) -> GazetteIssue:
+    date_str = pub_date.strftime("%Y%m%d")
+    prefix = gazette_type.value
+    issue_id = f"{date_str}{prefix}{issue_number:05d}"
+    articles = [
+        GazetteArticle(
+            article_id=f"{issue_id}:0001:0",
+            title="テスト記事A",
+            url=f"https://www.kanpo.go.jp/{date_str}/{issue_id}/{issue_id}0001f.html",
+            section="その他告示",
+            parent_issue_id=issue_id,
+            page_number=1,
+        ),
+        GazetteArticle(
+            article_id=f"{issue_id}:0001:1",
+            title="テスト記事B",
+            url=f"https://www.kanpo.go.jp/{date_str}/{issue_id}/{issue_id}0001f.html",
+            section="その他告示",
+            parent_issue_id=issue_id,
+            page_number=1,
+        ),
+        GazetteArticle(
+            article_id=f"{issue_id}:0008:0",
+            title="国会事項",
+            url=f"https://www.kanpo.go.jp/{date_str}/{issue_id}/{issue_id}0008f.html",
+            section="国会事項",
+            parent_issue_id=issue_id,
+            page_number=8,
+        ),
+    ]
+    return GazetteIssue(
+        date=pub_date,
+        gazette_type=gazette_type,
+        issue_number=issue_number,
+        issue_id=issue_id,
+        url=f"https://www.kanpo.go.jp/{date_str}/{issue_id}/{issue_id}0000f.html",
+        title=f"{pub_date.isoformat()} {gazette_type.label} 第{issue_number}号",
+        articles=articles,
+    )
+
+
+class TestArticleFeedGenerator:
+    def test_generates_valid_rss(self) -> None:
+        issues = [_make_issue_with_articles()]
+        gen = KanpoFeedGenerator()
+        with tempfile.TemporaryDirectory() as tmpdir:
+            output = str(Path(tmpdir) / "feed-articles.xml")
+            gen.generate_article_feed(issues, output)
+            root = ET.parse(output).getroot()
+        assert root.tag == "rss"
+        assert root.attrib["version"] == "2.0"
+
+    def test_article_count(self) -> None:
+        issues = [_make_issue_with_articles()]
+        gen = KanpoFeedGenerator()
+        with tempfile.TemporaryDirectory() as tmpdir:
+            output = str(Path(tmpdir) / "feed-articles.xml")
+            gen.generate_article_feed(issues, output)
+            root = ET.parse(output).getroot()
+        items = root.findall(".//item")
+        assert len(items) == 3
+
+    def test_article_guid_uniqueness(self) -> None:
+        issues = [_make_issue_with_articles()]
+        gen = KanpoFeedGenerator()
+        with tempfile.TemporaryDirectory() as tmpdir:
+            output = str(Path(tmpdir) / "feed-articles.xml")
+            gen.generate_article_feed(issues, output)
+            root = ET.parse(output).getroot()
+        guids = [item.findtext("guid") for item in root.findall(".//item")]
+        assert len(guids) == len(set(guids))
+
+    def test_article_has_categories(self) -> None:
+        issues = [_make_issue_with_articles()]
+        gen = KanpoFeedGenerator()
+        with tempfile.TemporaryDirectory() as tmpdir:
+            output = str(Path(tmpdir) / "feed-articles.xml")
+            gen.generate_article_feed(issues, output)
+            root = ET.parse(output).getroot()
+        first_item = root.findall(".//item")[0]
+        categories = [c.text for c in first_item.findall("category")]
+        assert "本紙" in categories
+        assert "その他告示" in categories
+
+    def test_empty_articles_generates_valid_feed(self) -> None:
+        issues = [_make_issue()]  # no articles
+        gen = KanpoFeedGenerator()
+        with tempfile.TemporaryDirectory() as tmpdir:
+            output = str(Path(tmpdir) / "feed-articles.xml")
+            gen.generate_article_feed(issues, output)
+            root = ET.parse(output).getroot()
+        assert root.tag == "rss"
+        items = root.findall(".//item")
+        assert len(items) == 0
+
+    def test_title_suffix(self) -> None:
+        issues = [_make_issue_with_articles()]
+        gen = KanpoFeedGenerator()
+        with tempfile.TemporaryDirectory() as tmpdir:
+            output = str(Path(tmpdir) / "feed-articles.xml")
+            gen.generate_article_feed(issues, output)
+            root = ET.parse(output).getroot()
+        title = root.findtext(".//channel/title") or ""
+        assert "記事" in title

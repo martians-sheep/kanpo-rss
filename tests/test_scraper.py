@@ -16,15 +16,14 @@ class TestKanpoScraper:
         result = scraper.fetch_top_page()
         assert result == html
 
-    def test_fetch_fullcontents_success(
+    def test_fetch_issue_page_success(
         self, requests_mock: rm.Mocker
     ) -> None:
-        html = "<html><body>fullcontents</body></html>"
-        date_str = "20260303"
-        url = f"{BASE_URL}/{date_str}/{date_str}.fullcontents.html"
+        html = "<html><body>issue page</body></html>"
+        url = f"{BASE_URL}/20260303/20260303h01657/20260303h016570000f.html"
         requests_mock.get(url, text=html)
         scraper = KanpoScraper()
-        result = scraper.fetch_fullcontents(date_str)
+        result = scraper.fetch_issue_page(url)
         assert result == html
 
     def test_raises_on_server_error(self, requests_mock: rm.Mocker) -> None:

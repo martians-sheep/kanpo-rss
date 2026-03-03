@@ -43,6 +43,11 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         help="Directory for accumulated data (default: data). Empty string disables accumulation.",
     )
     parser.add_argument(
+        "--no-articles",
+        action="store_true",
+        help="Skip fetching article-level data from issue pages",
+    )
+    parser.add_argument(
         "-v", "--verbose",
         action="store_true",
         help="Enable verbose logging",
@@ -94,13 +99,27 @@ def main(argv: list[str] | None = None) -> int:
     # Merge and save
     if use_storage:
         issues = storage.merge(existing_issues, new_issues)
-        storage.save(data_path, issues)
     else:
         issues = new_issues
+
+    # Fetch article-level data from issue pages
+    if not args.no_articles:
+        issues = _fetch_articles(scraper, parser, issues)
+
+    # Save after article enrichment
+    if use_storage:
+        storage.save(data_path, issues)
 
     # Generate feed
     output_path = str(Path(args.output_dir) / "feed.xml")
     generator.generate(issues, output_path, max_items=args.max_items)
+
+    # Generate article-level feed
+    if not args.no_articles:
+        articles_path = str(Path(args.output_dir) / "feed-articles.xml")
+        generator.generate_article_feed(
+            issues, articles_path, max_items=args.max_items,
+        )
 
     # Generate archive feed and copy issues.json for public access
     if use_storage:
@@ -118,6 +137,37 @@ def main(argv: list[str] | None = None) -> int:
     logger.info("Done! Feed written to %s", output_path)
 
     return 0
+
+
+def _fetch_articles(
+    scraper: KanpoScraper,
+    parser: KanpoParser,
+    issues: list,
+) -> list:
+    """記事未取得の号について、目次ページから記事を取得する。"""
+    from dataclasses import replace
+
+    enriched = []
+    for issue in issues:
+        if issue.articles:
+            enriched.append(issue)
+            continue
+
+        try:
+            html = scraper.fetch_issue_page(issue.url)
+        except Exception:
+            logger.warning(
+                "Failed to fetch issue page: %s", issue.url
+            )
+            enriched.append(issue)
+            continue
+
+        articles = parser.parse_issue_page(html, issue)
+        enriched.append(replace(issue, articles=articles))
+
+    total = sum(len(i.articles) for i in enriched)
+    logger.info("Fetched articles: %d total from %d issues", total, len(enriched))
+    return enriched
 
 
 if __name__ == "__main__":

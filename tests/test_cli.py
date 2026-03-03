@@ -48,6 +48,7 @@ class TestMain:
             ) as mock_scraper_cls:
                 mock_scraper = mock_scraper_cls.return_value
                 mock_scraper.fetch_top_page.return_value = top_page_html
+                mock_scraper.fetch_issue_page.return_value = "<html><body></body></html>"
 
                 data_dir = str(Path(tmpdir) / "data")
                 result = main([
@@ -84,6 +85,7 @@ class TestMain:
             ) as mock_scraper_cls:
                 mock_scraper = mock_scraper_cls.return_value
                 mock_scraper.fetch_top_page.return_value = top_page_html
+                mock_scraper.fetch_issue_page.return_value = "<html><body></body></html>"
                 result = main([
                     "--output-dir", tmpdir,
                     "--data-dir", data_dir,
@@ -100,6 +102,7 @@ class TestMain:
             ) as mock_scraper_cls:
                 mock_scraper = mock_scraper_cls.return_value
                 mock_scraper.fetch_top_page.return_value = top_page_html
+                mock_scraper.fetch_issue_page.return_value = "<html><body></body></html>"
                 result = main([
                     "--output-dir", tmpdir,
                     "--data-dir", data_dir,
@@ -117,6 +120,7 @@ class TestMain:
             ) as mock_scraper_cls:
                 mock_scraper = mock_scraper_cls.return_value
                 mock_scraper.fetch_top_page.return_value = top_page_html
+                mock_scraper.fetch_issue_page.return_value = "<html><body></body></html>"
 
                 result = main([
                     "--output-dir", tmpdir,
@@ -140,6 +144,7 @@ class TestMain:
             ) as mock_scraper_cls:
                 mock_scraper = mock_scraper_cls.return_value
                 mock_scraper.fetch_top_page.return_value = top_page_html
+                mock_scraper.fetch_issue_page.return_value = "<html><body></body></html>"
 
                 result = main([
                     "--output-dir", tmpdir,
@@ -173,6 +178,7 @@ class TestMain:
             ) as mock_scraper_cls:
                 mock_scraper = mock_scraper_cls.return_value
                 mock_scraper.fetch_top_page.return_value = top_page_html
+                mock_scraper.fetch_issue_page.return_value = "<html><body></body></html>"
 
                 result = main([
                     "--output-dir", tmpdir,
@@ -195,6 +201,7 @@ class TestMain:
             ) as mock_scraper_cls:
                 mock_scraper = mock_scraper_cls.return_value
                 mock_scraper.fetch_top_page.return_value = top_page_html
+                mock_scraper.fetch_issue_page.return_value = "<html><body></body></html>"
 
                 result = main([
                     "--output-dir", tmpdir,
@@ -204,6 +211,55 @@ class TestMain:
             assert result == 0
             assert not (Path(tmpdir) / "feed-archive.xml").exists()
             assert not (Path(tmpdir) / "issues.json").exists()
+
+    def test_pipeline_generates_article_feed(
+        self, top_page_html: str, issue_page_honshi_html: str
+    ) -> None:
+        """Article feed is generated when issue pages return content."""
+        with tempfile.TemporaryDirectory() as tmpdir:
+            with patch(
+                "kanpo_rss.cli.KanpoScraper"
+            ) as mock_scraper_cls:
+                mock_scraper = mock_scraper_cls.return_value
+                mock_scraper.fetch_top_page.return_value = top_page_html
+                mock_scraper.fetch_issue_page.return_value = issue_page_honshi_html
+
+                result = main([
+                    "--output-dir", tmpdir,
+                    "--data-dir", "",
+                ])
+
+            assert result == 0
+            articles_path = Path(tmpdir) / "feed-articles.xml"
+            assert articles_path.exists()
+            root = ET.parse(articles_path).getroot()
+            items = root.findall(".//item")
+            assert len(items) > 0
+            # Check article has category tags
+            first_item = items[0]
+            categories = first_item.findall("category")
+            assert len(categories) >= 1
+
+    def test_no_articles_flag_skips_article_feed(self, top_page_html: str) -> None:
+        """--no-articles skips article fetching and feed generation."""
+        with tempfile.TemporaryDirectory() as tmpdir:
+            with patch(
+                "kanpo_rss.cli.KanpoScraper"
+            ) as mock_scraper_cls:
+                mock_scraper = mock_scraper_cls.return_value
+                mock_scraper.fetch_top_page.return_value = top_page_html
+
+                result = main([
+                    "--output-dir", tmpdir,
+                    "--data-dir", "",
+                    "--no-articles",
+                ])
+
+            assert result == 0
+            assert (Path(tmpdir) / "feed.xml").exists()
+            assert not (Path(tmpdir) / "feed-articles.xml").exists()
+            # fetch_issue_page should not be called
+            mock_scraper.fetch_issue_page.assert_not_called()
 
     def test_returns_1_on_fetch_failure(self) -> None:
         with patch(

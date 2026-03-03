@@ -28,9 +28,8 @@ class KanpoScraper:
         url = f"{BASE_URL}/"
         return self._fetch(url)
 
-    def fetch_fullcontents(self, date_str: str) -> str:
-        """Fetch the fullcontents page for a given date (YYYYMMDD)."""
-        url = f"{BASE_URL}/{date_str}/{date_str}.fullcontents.html"
+    def fetch_issue_page(self, url: str) -> str:
+        """Fetch an issue's table of contents page (0000f.html)."""
         return self._fetch(url)
 
     def _fetch(self, url: str) -> str:

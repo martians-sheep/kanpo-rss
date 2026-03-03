@@ -8,7 +8,7 @@ from pathlib import Path
 
 from feedgen.feed import FeedGenerator
 
-from kanpo_rss.models import GazetteIssue
+from kanpo_rss.models import GazetteArticle, GazetteIssue
 
 logger = logging.getLogger(__name__)
 
@@ -72,6 +72,68 @@ class KanpoFeedGenerator:
         entry.guid(issue.issue_id, permalink=False)
         entry.description(issue.gazette_type.label)
         entry.category(term=issue.gazette_type.label)
+
+        pub_dt = datetime(
+            issue.date.year,
+            issue.date.month,
+            issue.date.day,
+            8, 30, 0,
+            tzinfo=JST,
+        )
+        entry.pubDate(pub_dt)
+
+    def generate_article_feed(
+        self,
+        issues: list[GazetteIssue],
+        output_path: str,
+        max_items: int = 500,
+        title_suffix: str = " (記事)",
+    ) -> None:
+        """Generate article-level feed from issues with articles.
+
+        All articles from all issues are flattened, sorted by date descending,
+        and written as individual RSS entries.
+        """
+        # issue_id → issue のマップ（日付・種別の参照用）
+        issue_map: dict[str, GazetteIssue] = {i.issue_id: i for i in issues}
+
+        # 全記事をフラット化し、親号の日付でソート
+        article_entries: list[tuple[GazetteIssue, GazetteArticle]] = []
+        for issue in issues:
+            for article in issue.articles:
+                article_entries.append((issue, article))
+        article_entries.sort(key=lambda x: x[0].date, reverse=True)
+
+        truncated = (
+            article_entries[:max_items]
+            if max_items > 0
+            else article_entries
+        )
+
+        fg = self._build_feed(title_suffix=title_suffix)
+        for issue, article in truncated:
+            self._add_article_entry(fg, issue, article)
+
+        output = Path(output_path)
+        output.parent.mkdir(parents=True, exist_ok=True)
+        fg.rss_file(str(output), pretty=True)
+        logger.info(
+            "Generated %s with %d article items", output_path, len(truncated)
+        )
+
+    def _add_article_entry(
+        self, fg: FeedGenerator, issue: GazetteIssue, article: GazetteArticle
+    ) -> None:
+        entry = fg.add_entry(order="append")
+        entry.title(article.title)
+        entry.link(href=article.url)
+        entry.guid(article.article_id, permalink=False)
+        entry.description(
+            f"{issue.title} — {article.section}"
+        )
+        entry.category(term=issue.gazette_type.label)
+        if article.section:
+            entry.category(term=article.section)
 
         pub_dt = datetime(
             issue.date.year,

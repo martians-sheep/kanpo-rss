@@ -7,7 +7,7 @@ import logging
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
-from kanpo_rss.models import GazetteIssue, GazetteType
+from kanpo_rss.models import GazetteArticle, GazetteIssue, GazetteType
 
 logger = logging.getLogger(__name__)
 
@@ -88,7 +88,7 @@ class IssueStorage:
 
 
 def _issue_to_dict(issue: GazetteIssue) -> dict:
-    return {
+    d: dict = {
         "date": issue.date.isoformat(),
         "gazette_type": issue.gazette_type.value,
         "issue_number": issue.issue_number,
@@ -96,12 +96,18 @@ def _issue_to_dict(issue: GazetteIssue) -> dict:
         "url": issue.url,
         "title": issue.title,
     }
+    if issue.articles:
+        d["articles"] = [_article_to_dict(a) for a in issue.articles]
+    return d
 
 
 def _dict_to_issue(d: dict) -> GazetteIssue:
     from datetime import date as date_cls
 
     url = _migrate_url(d["url"], d["issue_id"])
+    articles = [
+        _dict_to_article(a) for a in d.get("articles", [])
+    ]
     return GazetteIssue(
         date=date_cls.fromisoformat(d["date"]),
         gazette_type=GazetteType(d["gazette_type"]),
@@ -109,6 +115,29 @@ def _dict_to_issue(d: dict) -> GazetteIssue:
         issue_id=d["issue_id"],
         url=url,
         title=d["title"],
+        articles=articles,
+    )
+
+
+def _article_to_dict(article: GazetteArticle) -> dict:
+    return {
+        "article_id": article.article_id,
+        "title": article.title,
+        "url": article.url,
+        "section": article.section,
+        "parent_issue_id": article.parent_issue_id,
+        "page_number": article.page_number,
+    }
+
+
+def _dict_to_article(d: dict) -> GazetteArticle:
+    return GazetteArticle(
+        article_id=d["article_id"],
+        title=d["title"],
+        url=d["url"],
+        section=d["section"],
+        parent_issue_id=d["parent_issue_id"],
+        page_number=d["page_number"],
     )
 
 
