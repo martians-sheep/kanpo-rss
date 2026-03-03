@@ -15,11 +15,13 @@
 
 ## 公開エンドポイント
 
+GitHub Pages で配信中: <https://martians-sheep.github.io/kanpo-rss/>
+
 | URL | 内容 |
 |---|---|
-| `/feed.xml` | 最新100件のRSSフィード |
-| `/feed-archive.xml` | 全件RSSフィード（アーカイブ） |
-| `/issues.json` | 全件JSONデータ |
+| [`feed.xml`](https://martians-sheep.github.io/kanpo-rss/feed.xml) | 最新100件のRSSフィード |
+| [`feed-archive.xml`](https://martians-sheep.github.io/kanpo-rss/feed-archive.xml) | 全件RSSフィード（アーカイブ） |
+| [`issues.json`](https://martians-sheep.github.io/kanpo-rss/issues.json) | 全件JSONデータ |
 
 ## セットアップ
 
