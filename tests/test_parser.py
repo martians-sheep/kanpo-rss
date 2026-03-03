@@ -33,11 +33,12 @@ class TestParseTopPage:
             assert len(issue.issue_id) == 14  # 8 date + 1 type + 5 number
             assert issue.issue_id[8] in "hgct"
 
-    def test_url_is_fullcontents(self, top_page_html: str) -> None:
+    def test_url_is_per_issue(self, top_page_html: str) -> None:
         issues = self.parser.parse_top_page(top_page_html)
         for issue in issues:
-            assert ".fullcontents.html" in issue.url
+            assert issue.issue_id in issue.url
             assert issue.url.startswith("https://www.kanpo.go.jp/")
+            assert issue.url.endswith("0000f.html")
 
     def test_title_format(self, top_page_html: str) -> None:
         issues = self.parser.parse_top_page(top_page_html)

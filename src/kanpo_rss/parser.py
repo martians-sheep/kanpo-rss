@@ -76,9 +76,7 @@ class KanpoParser:
 
         issue_number = int(issue_num_str)
         issue_id = f"{date_str}{type_prefix}{issue_num_str}"
-        fullcontents_url = (
-            f"{BASE_URL}/{date_str}/{date_str}.fullcontents.html"
-        )
+        issue_url = f"{BASE_URL}/{date_str}/{issue_id}/{issue_id}0000f.html"
         title = _build_title(pub_date, gazette_type, issue_number)
 
         return GazetteIssue(
@@ -86,7 +84,7 @@ class KanpoParser:
             gazette_type=gazette_type,
             issue_number=issue_number,
             issue_id=issue_id,
-            url=fullcontents_url,
+            url=issue_url,
             title=title,
         )
 

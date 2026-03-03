@@ -22,7 +22,7 @@ def _make_issue(
         gazette_type=gazette_type,
         issue_number=issue_number,
         issue_id=issue_id,
-        url=f"https://www.kanpo.go.jp/{date_str}/{date_str}.fullcontents.html",
+        url=f"https://www.kanpo.go.jp/{date_str}/{issue_id}/{issue_id}0000f.html",
         title=f"{pub_date.isoformat()} {gazette_type.label} 第{issue_number}号",
     )
 

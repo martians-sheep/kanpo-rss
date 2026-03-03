@@ -101,11 +101,27 @@ def _issue_to_dict(issue: GazetteIssue) -> dict:
 def _dict_to_issue(d: dict) -> GazetteIssue:
     from datetime import date as date_cls
 
+    url = _migrate_url(d["url"], d["issue_id"])
     return GazetteIssue(
         date=date_cls.fromisoformat(d["date"]),
         gazette_type=GazetteType(d["gazette_type"]),
         issue_number=d["issue_number"],
         issue_id=d["issue_id"],
-        url=d["url"],
+        url=url,
         title=d["title"],
     )
+
+
+KANPO_BASE_URL = "https://www.kanpo.go.jp"
+
+
+def _migrate_url(url: str, issue_id: str) -> str:
+    """旧形式の fullcontents.html URL を号ごとの個別URLに変換する。
+
+    旧: https://www.kanpo.go.jp/20260303/20260303.fullcontents.html
+    新: https://www.kanpo.go.jp/20260303/20260303h01657/20260303h016570000f.html
+    """
+    if ".fullcontents.html" not in url:
+        return url
+    date_str = issue_id[:8]
+    return f"{KANPO_BASE_URL}/{date_str}/{issue_id}/{issue_id}0000f.html"

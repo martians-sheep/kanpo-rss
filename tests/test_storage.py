@@ -10,7 +10,7 @@ from pathlib import Path
 import pytest
 
 from kanpo_rss.models import GazetteIssue, GazetteType
-from kanpo_rss.storage import CURRENT_VERSION, IssueStorage
+from kanpo_rss.storage import CURRENT_VERSION, IssueStorage, _migrate_url
 
 
 def _make_issue(
@@ -197,3 +197,60 @@ class TestMerge:
         existing = [_make_issue("2026-03-01")]
         result = storage.merge(existing, [])
         assert len(result) == 1
+
+
+class TestMigrateUrl:
+    def test_fullcontents_url_is_migrated(self) -> None:
+        old_url = "https://www.kanpo.go.jp/20260303/20260303.fullcontents.html"
+        result = _migrate_url(old_url, "20260303h01657")
+        assert result == (
+            "https://www.kanpo.go.jp/20260303/20260303h01657/20260303h016570000f.html"
+        )
+
+    def test_already_migrated_url_unchanged(self) -> None:
+        new_url = "https://www.kanpo.go.jp/20260303/20260303h01657/20260303h016570000f.html"
+        result = _migrate_url(new_url, "20260303h01657")
+        assert result == new_url
+
+    def test_other_url_unchanged(self) -> None:
+        url = "https://example.com/something.html"
+        result = _migrate_url(url, "20260303h01657")
+        assert result == url
+
+    def test_load_migrates_fullcontents_urls(self) -> None:
+        storage = IssueStorage()
+        data = {
+            "version": 1,
+            "last_updated": "2026-03-03T09:00:00+09:00",
+            "issues": [
+                {
+                    "date": "2026-03-03",
+                    "gazette_type": "h",
+                    "issue_number": 1657,
+                    "issue_id": "20260303h01657",
+                    "url": "https://www.kanpo.go.jp/20260303/20260303.fullcontents.html",
+                    "title": "2026-03-03 本紙 第1657号",
+                },
+                {
+                    "date": "2026-03-03",
+                    "gazette_type": "g",
+                    "issue_number": 43,
+                    "issue_id": "20260303g00043",
+                    "url": "https://www.kanpo.go.jp/20260303/20260303.fullcontents.html",
+                    "title": "2026-03-03 号外 第43号",
+                },
+            ],
+        }
+        with tempfile.NamedTemporaryFile(
+            mode="w", suffix=".json", delete=False
+        ) as f:
+            json.dump(data, f)
+            f.flush()
+            result = storage.load(f.name)
+
+        assert len(result) == 2
+        assert "20260303h01657" in result[0].url
+        assert "20260303g00043" in result[1].url
+        for issue in result:
+            assert ".fullcontents.html" not in issue.url
+            assert issue.url.endswith("0000f.html")
