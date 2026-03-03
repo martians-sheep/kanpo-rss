@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import argparse
 import logging
+import shutil
 import sys
 from pathlib import Path
 
@@ -100,7 +101,21 @@ def main(argv: list[str] | None = None) -> int:
     # Generate feed
     output_path = str(Path(args.output_dir) / "feed.xml")
     generator.generate(issues, output_path, max_items=args.max_items)
-    logger.info("Done! Feed written to %s (%d items)", output_path, len(issues))
+
+    # Generate archive feed and copy issues.json for public access
+    if use_storage:
+        archive_path = str(Path(args.output_dir) / "feed-archive.xml")
+        generator.generate(
+            issues, archive_path, max_items=0, title_suffix=" (アーカイブ)",
+        )
+        logger.info("Generated archive feed: %s (%d items)", archive_path, len(issues))
+
+        public_json = Path(args.output_dir) / "issues.json"
+        public_json.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(data_path, str(public_json))
+        logger.info("Copied %s to %s", data_path, public_json)
+
+    logger.info("Done! Feed written to %s", output_path)
 
     return 0
 

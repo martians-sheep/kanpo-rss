@@ -13,6 +13,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
   - `IssueStorage` クラス（JSON読み書き・マージ・重複排除）
   - `--data-dir` CLIオプション（デフォルト: `data`、空文字で無効化）
   - GitHub Actionsでデータファイルを自動コミット
+- アーカイブRSSフィード（`feed-archive.xml`）— 蓄積データ全件をRSSで配信
+- 全件JSONデータ公開（`issues.json`）— GitHub Pages経由でアクセス可能
 
 ## [0.1.0] - 2026-03-03
 

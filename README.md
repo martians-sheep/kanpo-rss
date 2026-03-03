@@ -8,8 +8,18 @@
 
 - 官報サイトから本紙・号外・政府調達・特別号外の発刊情報を取得
 - 全種別をまとめた単一のRSSフィード（`feed.xml`）を生成
+- アーカイブRSSフィード（`feed-archive.xml`）— 全件を含むRSS
 - データ蓄積機能：`data/issues.json` に過去データを永続保存（90日超のデータも保持）
+- 全件JSONデータ（`issues.json`）をGitHub Pagesで公開
 - GitHub Actionsで毎朝自動実行、GitHub Pagesで公開
+
+## 公開エンドポイント
+
+| URL | 内容 |
+|---|---|
+| `/feed.xml` | 最新100件のRSSフィード |
+| `/feed-archive.xml` | 全件RSSフィード（アーカイブ） |
+| `/issues.json` | 全件JSONデータ |
 
 ## セットアップ
 

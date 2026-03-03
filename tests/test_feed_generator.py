@@ -120,3 +120,27 @@ class TestFeedGenerator:
         root = _generate_and_parse([_make_issue()])
         pubdate = root.findtext(".//item/pubDate") or ""
         assert "+0900" in pubdate
+
+    def test_generate_with_title_suffix(self) -> None:
+        gen = KanpoFeedGenerator()
+        with tempfile.TemporaryDirectory() as tmpdir:
+            output = str(Path(tmpdir) / "feed-archive.xml")
+            gen.generate([_make_issue()], output, title_suffix=" (アーカイブ)")
+            tree = ET.parse(output)
+            root = tree.getroot()
+        title = root.findtext(".//channel/title") or ""
+        assert "アーカイブ" in title
+
+    def test_generate_max_items_zero_outputs_all(self) -> None:
+        issues = [
+            _make_issue(pub_date=date(2026, 1, i + 6), issue_number=1600 + i)
+            for i in range(20)
+        ]
+        gen = KanpoFeedGenerator()
+        with tempfile.TemporaryDirectory() as tmpdir:
+            output = str(Path(tmpdir) / "feed-archive.xml")
+            gen.generate(issues, output, max_items=0)
+            tree = ET.parse(output)
+            root = tree.getroot()
+        items = root.findall(".//item")
+        assert len(items) == 20

@@ -20,5 +20,7 @@ htmlcov/
 *.log
 
 docs/feed.xml
+docs/feed-archive.xml
+docs/issues.json
 
 .DS_Store

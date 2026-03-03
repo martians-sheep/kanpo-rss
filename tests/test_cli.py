@@ -131,6 +131,80 @@ class TestMain:
             # No data directory should have been created
             assert not (Path(tmpdir) / "data").exists()
 
+    def test_pipeline_generates_archive_feed(self, top_page_html: str) -> None:
+        """With storage enabled, feed-archive.xml is generated with all items."""
+        with tempfile.TemporaryDirectory() as tmpdir:
+            data_dir = str(Path(tmpdir) / "data")
+            with patch(
+                "kanpo_rss.cli.KanpoScraper"
+            ) as mock_scraper_cls:
+                mock_scraper = mock_scraper_cls.return_value
+                mock_scraper.fetch_top_page.return_value = top_page_html
+
+                result = main([
+                    "--output-dir", tmpdir,
+                    "--max-items", "5",
+                    "--data-dir", data_dir,
+                ])
+
+            assert result == 0
+
+            # Regular feed should be truncated
+            feed_path = Path(tmpdir) / "feed.xml"
+            assert feed_path.exists()
+            feed_items = ET.parse(feed_path).getroot().findall(".//item")
+            assert len(feed_items) == 5
+
+            # Archive feed should contain all items
+            archive_path = Path(tmpdir) / "feed-archive.xml"
+            assert archive_path.exists()
+            archive_root = ET.parse(archive_path).getroot()
+            archive_items = archive_root.findall(".//item")
+            assert len(archive_items) > 5
+            title = archive_root.findtext(".//channel/title") or ""
+            assert "アーカイブ" in title
+
+    def test_pipeline_copies_issues_json(self, top_page_html: str) -> None:
+        """With storage enabled, issues.json is copied to output dir."""
+        with tempfile.TemporaryDirectory() as tmpdir:
+            data_dir = str(Path(tmpdir) / "data")
+            with patch(
+                "kanpo_rss.cli.KanpoScraper"
+            ) as mock_scraper_cls:
+                mock_scraper = mock_scraper_cls.return_value
+                mock_scraper.fetch_top_page.return_value = top_page_html
+
+                result = main([
+                    "--output-dir", tmpdir,
+                    "--data-dir", data_dir,
+                ])
+
+            assert result == 0
+
+            public_json = Path(tmpdir) / "issues.json"
+            assert public_json.exists()
+            data = json.loads(public_json.read_text())
+            assert data["version"] == 1
+            assert len(data["issues"]) > 0
+
+    def test_pipeline_no_archive_without_data_dir(self, top_page_html: str) -> None:
+        """--data-dir '' skips archive feed and issues.json copy."""
+        with tempfile.TemporaryDirectory() as tmpdir:
+            with patch(
+                "kanpo_rss.cli.KanpoScraper"
+            ) as mock_scraper_cls:
+                mock_scraper = mock_scraper_cls.return_value
+                mock_scraper.fetch_top_page.return_value = top_page_html
+
+                result = main([
+                    "--output-dir", tmpdir,
+                    "--data-dir", "",
+                ])
+
+            assert result == 0
+            assert not (Path(tmpdir) / "feed-archive.xml").exists()
+            assert not (Path(tmpdir) / "issues.json").exists()
+
     def test_returns_1_on_fetch_failure(self) -> None:
         with patch(
             "kanpo_rss.cli.KanpoScraper"

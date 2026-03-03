@@ -33,15 +33,17 @@ class KanpoFeedGenerator:
         issues: list[GazetteIssue],
         output_path: str,
         max_items: int = 100,
+        title_suffix: str = "",
     ) -> None:
         """Generate feed.xml from issues.
 
         Issues are sorted by date descending and truncated to max_items.
+        If max_items is 0, all issues are included.
         """
         sorted_issues = sorted(issues, key=lambda i: i.date, reverse=True)
-        truncated = sorted_issues[:max_items]
+        truncated = sorted_issues[:max_items] if max_items > 0 else sorted_issues
 
-        fg = self._build_feed()
+        fg = self._build_feed(title_suffix=title_suffix)
         for issue in truncated:
             self._add_entry(fg, issue)
 
@@ -50,9 +52,9 @@ class KanpoFeedGenerator:
         fg.rss_file(str(output), pretty=True)
         logger.info("Generated %s with %d items", output_path, len(truncated))
 
-    def _build_feed(self) -> FeedGenerator:
+    def _build_feed(self, title_suffix: str = "") -> FeedGenerator:
         fg = FeedGenerator()
-        fg.title(FEED_TITLE)
+        fg.title(FEED_TITLE + title_suffix)
         fg.link(href=KANPO_URL, rel="alternate")
         if self._self_url:
             fg.link(href=self._self_url, rel="self")
