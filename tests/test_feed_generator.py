@@ -297,3 +297,82 @@ class TestArticleFeedGenerator:
         # 本紙の記事が最初、政府調達の記事が最後
         assert "h01657" in guids[0]
         assert "c00039" in guids[-1]
+
+
+class TestArticleFeedsByDate:
+    def test_generates_per_date_feeds(self) -> None:
+        issues = [
+            _make_issue_with_articles(pub_date=date(2026, 3, 3)),
+            _make_issue_with_articles(
+                pub_date=date(2026, 3, 2), issue_number=1656
+            ),
+        ]
+        gen = KanpoFeedGenerator()
+        with tempfile.TemporaryDirectory() as tmpdir:
+            dates = gen.generate_article_feeds_by_date(issues, tmpdir)
+            assert len(dates) == 2
+            assert (Path(tmpdir) / "articles" / "feed-20260303.xml").exists()
+            assert (Path(tmpdir) / "articles" / "feed-20260302.xml").exists()
+
+    def test_latest_date_copied_to_feed_articles(self) -> None:
+        issues = [
+            _make_issue_with_articles(pub_date=date(2026, 3, 3)),
+            _make_issue_with_articles(
+                pub_date=date(2026, 3, 2), issue_number=1656
+            ),
+        ]
+        gen = KanpoFeedGenerator()
+        with tempfile.TemporaryDirectory() as tmpdir:
+            gen.generate_article_feeds_by_date(issues, tmpdir)
+            default_feed = Path(tmpdir) / "feed-articles.xml"
+            assert default_feed.exists()
+            root = ET.parse(default_feed).getroot()
+            title = root.findtext(".//channel/title") or ""
+            assert "2026-03-03" in title
+
+    def test_per_date_feed_contains_only_that_date(self) -> None:
+        issues = [
+            _make_issue_with_articles(pub_date=date(2026, 3, 3)),
+            _make_issue_with_articles(
+                pub_date=date(2026, 3, 2), issue_number=1656
+            ),
+        ]
+        gen = KanpoFeedGenerator()
+        with tempfile.TemporaryDirectory() as tmpdir:
+            gen.generate_article_feeds_by_date(issues, tmpdir)
+            root = ET.parse(
+                Path(tmpdir) / "articles" / "feed-20260302.xml"
+            ).getroot()
+            items = root.findall(".//item")
+            assert len(items) == 3  # _make_issue_with_articles creates 3
+            for item in items:
+                assert "h01656" in (item.findtext("guid") or "")
+
+    def test_skips_issues_without_articles(self) -> None:
+        issues = [
+            _make_issue_with_articles(pub_date=date(2026, 3, 3)),
+            _make_issue(pub_date=date(2026, 3, 2), issue_number=1656),
+        ]
+        gen = KanpoFeedGenerator()
+        with tempfile.TemporaryDirectory() as tmpdir:
+            dates = gen.generate_article_feeds_by_date(issues, tmpdir)
+            assert len(dates) == 1
+            assert dates[0] == date(2026, 3, 3)
+
+    def test_generates_index_html(self) -> None:
+        dates = [date(2026, 3, 3), date(2026, 3, 2)]
+        with tempfile.TemporaryDirectory() as tmpdir:
+            KanpoFeedGenerator.generate_article_index(dates, tmpdir)
+            index = Path(tmpdir) / "articles" / "index.html"
+            assert index.exists()
+            content = index.read_text()
+            assert "2026-03-03" in content
+            assert "2026-03-02" in content
+            assert "feed-20260303.xml" in content
+
+    def test_empty_issues_no_crash(self) -> None:
+        gen = KanpoFeedGenerator()
+        with tempfile.TemporaryDirectory() as tmpdir:
+            dates = gen.generate_article_feeds_by_date([], tmpdir)
+            assert dates == []
+            assert not (Path(tmpdir) / "feed-articles.xml").exists()

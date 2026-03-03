@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import datetime as dt_module
 import logging
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
@@ -150,3 +151,105 @@ class KanpoFeedGenerator:
             tzinfo=JST,
         )
         entry.pubDate(pub_dt)
+
+    def generate_article_feeds_by_date(
+        self,
+        issues: list[GazetteIssue],
+        output_dir: str,
+    ) -> list[dt_module.date]:
+        """日付ごとに個別の記事フィードファイルを生成する。
+
+        output_dir/articles/feed-YYYYMMDD.xml を日付ごとに生成し、
+        output_dir/feed-articles.xml には最新日のフィードをコピーする。
+        生成された日付のリスト（降順）を返す。
+        """
+        import shutil
+
+        # 日付ごとにissuesをグループ化
+        date_issues: dict[dt_module.date, list[GazetteIssue]] = {}
+        for issue in issues:
+            if issue.articles:
+                date_issues.setdefault(issue.date, []).append(issue)
+
+        sorted_dates = sorted(date_issues.keys(), reverse=True)
+
+        articles_dir = Path(output_dir) / "articles"
+        articles_dir.mkdir(parents=True, exist_ok=True)
+
+        for pub_date in sorted_dates:
+            date_str = pub_date.strftime("%Y%m%d")
+            feed_path = str(articles_dir / f"feed-{date_str}.xml")
+            title_suffix = f" (記事 {pub_date.isoformat()})"
+            self.generate_article_feed(
+                date_issues[pub_date], feed_path,
+                max_items=0, title_suffix=title_suffix,
+            )
+
+        # 最新日のフィードを feed-articles.xml としてもコピー
+        if sorted_dates:
+            latest_date_str = sorted_dates[0].strftime("%Y%m%d")
+            latest_feed = articles_dir / f"feed-{latest_date_str}.xml"
+            default_feed = Path(output_dir) / "feed-articles.xml"
+            shutil.copy2(str(latest_feed), str(default_feed))
+
+        logger.info(
+            "Generated article feeds for %d dates in %s",
+            len(sorted_dates), articles_dir,
+        )
+        return sorted_dates
+
+    @staticmethod
+    def generate_article_index(
+        dates: list[dt_module.date],
+        output_dir: str,
+    ) -> None:
+        """日付選択用のHTMLインデックスページを生成する。"""
+        articles_dir = Path(output_dir) / "articles"
+        articles_dir.mkdir(parents=True, exist_ok=True)
+
+        rows = []
+        for pub_date in dates:
+            date_str = pub_date.strftime("%Y%m%d")
+            iso = pub_date.isoformat()
+            weekday = ["月", "火", "水", "木", "金", "土", "日"][pub_date.weekday()]
+            feed_file = f"feed-{date_str}.xml"
+            rows.append(
+                f'      <tr>'
+                f'<td>{iso} ({weekday})</td>'
+                f'<td><a href="{feed_file}">{feed_file}</a></td>'
+                f'</tr>'
+            )
+
+        rows_html = "\n".join(rows)
+        html = f"""<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>官報 記事フィード 日付別一覧</title>
+<style>
+  body {{ font-family: -apple-system, sans-serif; max-width: 700px; margin: 2rem auto; padding: 0 1rem; }}
+  h1 {{ font-size: 1.3rem; }}
+  table {{ border-collapse: collapse; width: 100%; }}
+  th, td {{ border: 1px solid #ccc; padding: 0.4rem 0.8rem; text-align: left; }}
+  th {{ background: #f5f5f5; }}
+  a {{ color: #0366d6; }}
+  p {{ color: #555; font-size: 0.9rem; }}
+</style>
+</head>
+<body>
+<h1>官報 記事フィード 日付別一覧</h1>
+<p>各日付のRSSフィードリンクです。RSSリーダーに登録してください。</p>
+<table>
+  <thead><tr><th>日付</th><th>フィード</th></tr></thead>
+  <tbody>
+{rows_html}
+  </tbody>
+</table>
+<p><a href="../feed-articles.xml">feed-articles.xml</a> は最新日のフィードです。</p>
+</body>
+</html>"""
+
+        index_path = articles_dir / "index.html"
+        index_path.write_text(html, encoding="utf-8")
+        logger.info("Generated article index: %s (%d dates)", index_path, len(dates))

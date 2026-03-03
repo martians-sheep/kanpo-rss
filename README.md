@@ -8,7 +8,7 @@
 
 - 官報サイトから本紙・号外・政府調達・特別号外の発刊情報を取得
 - 全種別をまとめた単一のRSSフィード（`feed.xml`）を生成
-- 記事レベルRSSフィード（`feed-articles.xml`）— 個別記事ごとのRSS（キーワードフィルタ向き）
+- 日付別の記事レベルRSSフィード（`articles/feed-YYYYMMDD.xml`）— 個別記事ごとのRSS（キーワードフィルタ向き）
 - アーカイブRSSフィード（`feed-archive.xml`）— 全件を含むRSS
 - データ蓄積機能：`data/issues.json` に過去データを永続保存（90日超のデータも保持）
 - 全件JSONデータ（`issues.json`）をGitHub Pagesで公開
@@ -21,7 +21,8 @@ GitHub Pages で配信中: <https://martians-sheep.github.io/kanpo-rss/>
 | URL | 内容 |
 |---|---|
 | [`feed.xml`](https://martians-sheep.github.io/kanpo-rss/feed.xml) | 最新100件のRSSフィード（号レベル） |
-| [`feed-articles.xml`](https://martians-sheep.github.io/kanpo-rss/feed-articles.xml) | 記事レベルRSSフィード（個別記事ごと） |
+| [`feed-articles.xml`](https://martians-sheep.github.io/kanpo-rss/feed-articles.xml) | 最新日の記事フィード |
+| [`articles/`](https://martians-sheep.github.io/kanpo-rss/articles/) | 日付別の記事フィード一覧 |
 | [`feed-archive.xml`](https://martians-sheep.github.io/kanpo-rss/feed-archive.xml) | 全件RSSフィード（アーカイブ） |
 | [`issues.json`](https://martians-sheep.github.io/kanpo-rss/issues.json) | 全件JSONデータ |
 

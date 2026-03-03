@@ -114,12 +114,11 @@ def main(argv: list[str] | None = None) -> int:
     output_path = str(Path(args.output_dir) / "feed.xml")
     generator.generate(issues, output_path, max_items=args.max_items)
 
-    # Generate article-level feed
+    # Generate per-date article feeds + index
     if not args.no_articles:
-        articles_path = str(Path(args.output_dir) / "feed-articles.xml")
-        generator.generate_article_feed(
-            issues, articles_path, max_items=args.max_items,
-        )
+        dates = generator.generate_article_feeds_by_date(issues, args.output_dir)
+        if dates:
+            generator.generate_article_index(dates, args.output_dir)
 
     # Generate archive feed and copy issues.json for public access
     if use_storage:
