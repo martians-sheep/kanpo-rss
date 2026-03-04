@@ -2,14 +2,14 @@
 
 ## プロジェクト概要
 
-官報（https://www.kanpo.go.jp/）の発刊情報をスクレイピングし、RSS 2.0フィードを自動生成するPythonツール。
-GitHub Actionsで毎朝実行し、GitHub Pagesで `feed.xml` を公開する。
+官報（https://www.kanpo.go.jp/）の発刊情報をスクレイピングし、RSS 2.0 および Atom 1.0 フィードを自動生成するPythonツール。
+GitHub Actionsで毎朝実行し、GitHub Pagesで `feed.xml`（RSS）/ `feed-atom.xml`（Atom）を公開する。
 
 ## 技術スタック
 
 - Python 3.11+
 - requests + BeautifulSoup4（スクレイピング）
-- feedgen（RSS生成）
+- feedgen（RSS / Atom生成）
 - pytest + requests-mock（テスト）
 - GitHub Actions（CI/CD）+ GitHub Pages（公開）
 
@@ -20,7 +20,7 @@ src/kanpo_rss/
 ├── models.py          # GazetteType(Enum), GazetteIssue(dataclass)
 ├── scraper.py         # KanpoScraper: HTTP取得（リトライ・レート制限）
 ├── parser.py          # KanpoParser: トップページHTML解析
-├── feed_generator.py  # KanpoFeedGenerator: RSS XML生成
+├── feed_generator.py  # KanpoFeedGenerator: RSS/Atom XML生成
 ├── storage.py         # IssueStorage: JSON永続化・マージ・重複排除
 ├── cli.py             # main(): パイプライン制御・CLIエントリーポイント
 └── __main__.py        # python -m kanpo_rss サポート
@@ -44,7 +44,7 @@ tests/
    → KanpoParser.parse_top_page()  → 新規 list[GazetteIssue]
 3. IssueStorage.merge(既存, 新規)   → マージ済み list[GazetteIssue]
 4. IssueStorage.save(data/issues.json) → 蓄積データ更新
-5. KanpoFeedGenerator.generate()      → docs/feed.xml
+5. KanpoFeedGenerator.generate()      → docs/feed.xml + docs/feed-atom.xml
 ```
 
 `--data-dir ""` で蓄積を無効化し、従来の1回完結方式で動作する。
@@ -62,7 +62,7 @@ tests/
 | TOKUBETSU_GOUGAI | "t" | 特別号外 |
 
 ### GazetteIssue (frozen dataclass)
-1号分の官報情報。`issue_id`（例: `20260303h01657`）がRSSのGUIDとなる。
+1号分の官報情報。`issue_id`（例: `20260303h01657`）がRSSのGUID / AtomのIDとなる。
 
 ## 官報サイトの構造
 

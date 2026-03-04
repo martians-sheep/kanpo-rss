@@ -126,7 +126,7 @@ def main(argv: list[str] | None = None) -> int:
         generator.generate(
             issues, archive_path, max_items=0, title_suffix=" (アーカイブ)",
         )
-        logger.info("Generated archive feed: %s (%d items)", archive_path, len(issues))
+        logger.info("Generated archive feed: %s (+atom) (%d items)", archive_path, len(issues))
 
         public_json = Path(args.output_dir) / "issues.json"
         public_json.parent.mkdir(parents=True, exist_ok=True)
