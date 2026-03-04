@@ -23,6 +23,9 @@ _ISSUE_HREF_RE = re.compile(
     r"\.?/?(\d{8})([hgct])(\d{5})/\1\2\3\d{4}f\.html"
 )
 
+# PDF link text: e.g. "1-32頁[5MB]"
+_PDF_INFO_RE = re.compile(r"(\d+)-(\d+)頁\[(\d+MB)\]")
+
 
 class KanpoParser:
     """Parser for kanpo.go.jp HTML pages."""
@@ -79,6 +82,8 @@ class KanpoParser:
         issue_url = f"{BASE_URL}/{date_str}/{issue_id}/{issue_id}0000f.html"
         title = _build_title(pub_date, gazette_type, issue_number)
 
+        page_count, pdf_size = _parse_pdf_info(tag)
+
         return GazetteIssue(
             date=pub_date,
             gazette_type=gazette_type,
@@ -86,6 +91,8 @@ class KanpoParser:
             issue_id=issue_id,
             url=issue_url,
             title=title,
+            page_count=page_count,
+            pdf_size=pdf_size,
         )
 
 
@@ -231,6 +238,33 @@ def _build_section(h2: str, h3: str, h4: str) -> str:
     """セクション階層を「/」区切りの文字列にする。"""
     parts = [p for p in (h2, h3, h4) if p]
     return " / ".join(parts) if parts else ""
+
+
+def _parse_pdf_info(article_tag: Tag) -> tuple[int | None, str | None]:
+    """<a class="articleTop"> の兄弟 <a class="pdfDlb"> からページ数とサイズを抽出する。
+
+    HTML構造:
+      <li class="articleBox">
+        <a class="articleTop">...</a>
+        <a class="pdfDlb">...<img ...>1-32頁[5MB]</a>
+      </li>
+    """
+    parent = article_tag.parent
+    if parent is None:
+        return None, None
+
+    pdf_link = parent.select_one("a.pdfDlb")
+    if pdf_link is None:
+        return None, None
+
+    text = pdf_link.get_text()
+    match = _PDF_INFO_RE.search(text)
+    if match is None:
+        return None, None
+
+    end_page = int(match.group(2))
+    pdf_size = match.group(3)
+    return end_page, pdf_size
 
 
 def _build_title(

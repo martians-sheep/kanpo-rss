@@ -59,4 +59,6 @@ class GazetteIssue:
     issue_id: str  # e.g. "20260303h01657"
     url: str
     title: str  # e.g. "令和8年3月3日 本紙 第1657号"
+    page_count: int | None = None
+    pdf_size: str | None = None
     articles: list[GazetteArticle] = field(default_factory=list)

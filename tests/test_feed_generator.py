@@ -5,7 +5,7 @@ from datetime import date
 from pathlib import Path
 from xml.etree import ElementTree as ET
 
-from kanpo_rss.feed_generator import KanpoFeedGenerator
+from kanpo_rss.feed_generator import KanpoFeedGenerator, _build_issue_description
 from kanpo_rss.models import GazetteArticle, GazetteIssue, GazetteType
 
 
@@ -144,6 +144,108 @@ class TestFeedGenerator:
             root = tree.getroot()
         items = root.findall(".//item")
         assert len(items) == 20
+
+    def test_description_with_page_count_and_size(self) -> None:
+        issue = GazetteIssue(
+            date=date(2026, 3, 3),
+            gazette_type=GazetteType.HONSHI,
+            issue_number=1657,
+            issue_id="20260303h01657",
+            url="https://example.com",
+            title="2026-03-03 本紙 第1657号",
+            page_count=32,
+            pdf_size="5MB",
+        )
+        root = _generate_and_parse([issue])
+        desc = root.findtext(".//item/description") or ""
+        assert "本紙" in desc
+        assert "32頁" in desc
+        assert "5MB" in desc
+
+    def test_description_without_metadata(self) -> None:
+        issue = _make_issue()  # no page_count/pdf_size
+        root = _generate_and_parse([issue])
+        desc = root.findtext(".//item/description") or ""
+        assert desc == "本紙"
+
+
+class TestBuildIssueDescription:
+    def test_type_only(self) -> None:
+        issue = _make_issue()
+        assert _build_issue_description(issue) == "本紙"
+
+    def test_with_page_count_and_size(self) -> None:
+        issue = GazetteIssue(
+            date=date(2026, 3, 3),
+            gazette_type=GazetteType.HONSHI,
+            issue_number=1657,
+            issue_id="20260303h01657",
+            url="https://example.com",
+            title="test",
+            page_count=32,
+            pdf_size="5MB",
+        )
+        assert _build_issue_description(issue) == "本紙 (32頁, 5MB)"
+
+    def test_with_page_count_only(self) -> None:
+        issue = GazetteIssue(
+            date=date(2026, 3, 3),
+            gazette_type=GazetteType.HONSHI,
+            issue_number=1657,
+            issue_id="20260303h01657",
+            url="https://example.com",
+            title="test",
+            page_count=32,
+        )
+        assert _build_issue_description(issue) == "本紙 (32頁)"
+
+    def test_with_articles(self) -> None:
+        articles = [
+            GazetteArticle(
+                article_id="a:0001:0", title="記事1", url="http://x",
+                section="告示 / 外務省", parent_issue_id="a", page_number=1,
+            ),
+            GazetteArticle(
+                article_id="a:0002:0", title="記事2", url="http://x",
+                section="告示 / 国土交通省", parent_issue_id="a", page_number=2,
+            ),
+            GazetteArticle(
+                article_id="a:0003:0", title="記事3", url="http://x",
+                section="国会事項", parent_issue_id="a", page_number=3,
+            ),
+        ]
+        issue = GazetteIssue(
+            date=date(2026, 3, 3),
+            gazette_type=GazetteType.HONSHI,
+            issue_number=1657,
+            issue_id="20260303h01657",
+            url="https://example.com",
+            title="test",
+            page_count=32,
+            pdf_size="5MB",
+            articles=articles,
+        )
+        desc = _build_issue_description(issue)
+        assert desc == "本紙 (32頁, 5MB)\n告示, 国会事項（全3件）"
+
+    def test_with_articles_no_metadata(self) -> None:
+        articles = [
+            GazetteArticle(
+                article_id="a:0001:0", title="記事1", url="http://x",
+                section="人事異動", parent_issue_id="a", page_number=1,
+            ),
+        ]
+        issue = GazetteIssue(
+            date=date(2026, 3, 3),
+            gazette_type=GazetteType.HONSHI,
+            issue_number=1657,
+            issue_id="20260303h01657",
+            url="https://example.com",
+            title="test",
+            articles=articles,
+        )
+        desc = _build_issue_description(issue)
+        assert desc == "本紙\n人事異動（全1件）"
 
 
 def _make_issue_with_articles(

@@ -96,6 +96,10 @@ def _issue_to_dict(issue: GazetteIssue) -> dict:
         "url": issue.url,
         "title": issue.title,
     }
+    if issue.page_count is not None:
+        d["page_count"] = issue.page_count
+    if issue.pdf_size is not None:
+        d["pdf_size"] = issue.pdf_size
     if issue.articles:
         d["articles"] = [_article_to_dict(a) for a in issue.articles]
     return d
@@ -115,6 +119,8 @@ def _dict_to_issue(d: dict) -> GazetteIssue:
         issue_id=d["issue_id"],
         url=url,
         title=d["title"],
+        page_count=d.get("page_count"),
+        pdf_size=d.get("pdf_size"),
         articles=articles,
     )
 

@@ -140,6 +140,56 @@ class TestSave:
             assert Path(path).exists()
 
 
+    def test_save_and_load_roundtrip_with_pdf_info(self) -> None:
+        storage = IssueStorage()
+        issue = GazetteIssue(
+            date=date(2026, 3, 3),
+            gazette_type=GazetteType.HONSHI,
+            issue_number=1657,
+            issue_id="20260303h01657",
+            url="https://example.com",
+            title="test",
+            page_count=32,
+            pdf_size="5MB",
+        )
+        with tempfile.TemporaryDirectory() as tmpdir:
+            path = str(Path(tmpdir) / "issues.json")
+            storage.save(path, [issue])
+            loaded = storage.load(path)
+
+        assert len(loaded) == 1
+        assert loaded[0].page_count == 32
+        assert loaded[0].pdf_size == "5MB"
+
+    def test_load_without_pdf_info_fields(self) -> None:
+        """既存データに page_count/pdf_size がなくても読める。"""
+        storage = IssueStorage()
+        data = {
+            "version": 1,
+            "last_updated": "2026-03-03T09:00:00+09:00",
+            "issues": [
+                {
+                    "date": "2026-03-03",
+                    "gazette_type": "h",
+                    "issue_number": 1657,
+                    "issue_id": "20260303h01657",
+                    "url": "https://example.com",
+                    "title": "test",
+                },
+            ],
+        }
+        with tempfile.NamedTemporaryFile(
+            mode="w", suffix=".json", delete=False
+        ) as f:
+            json.dump(data, f)
+            f.flush()
+            result = storage.load(f.name)
+
+        assert len(result) == 1
+        assert result[0].page_count is None
+        assert result[0].pdf_size is None
+
+
 class TestMerge:
     def test_merge_deduplication(self) -> None:
         storage = IssueStorage()

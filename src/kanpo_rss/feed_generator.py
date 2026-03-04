@@ -71,7 +71,7 @@ class KanpoFeedGenerator:
         entry.title(issue.title)
         entry.link(href=issue.url)
         entry.guid(issue.issue_id, permalink=False)
-        entry.description(issue.gazette_type.label)
+        entry.description(_build_issue_description(issue))
         entry.category(term=issue.gazette_type.label)
 
         pub_dt = datetime(
@@ -253,3 +253,47 @@ class KanpoFeedGenerator:
         index_path = articles_dir / "index.html"
         index_path.write_text(html, encoding="utf-8")
         logger.info("Generated article index: %s (%d dates)", index_path, len(dates))
+
+
+def _build_issue_description(issue: GazetteIssue) -> str:
+    """号のRSS description を組み立てる。
+
+    例（記事データあり）:
+      本紙 (32頁, 5MB)
+      告示, 国会事項, 人事異動, 叙位・叙勲（全28件）
+
+    例（記事データなし）:
+      本紙 (32頁, 5MB)
+
+    例（ページ数・サイズも不明）:
+      本紙
+    """
+    # 1行目: 種別 + ページ数・サイズ
+    line1 = issue.gazette_type.label
+    meta_parts: list[str] = []
+    if issue.page_count is not None:
+        meta_parts.append(f"{issue.page_count}頁")
+    if issue.pdf_size is not None:
+        meta_parts.append(issue.pdf_size)
+    if meta_parts:
+        line1 += f" ({', '.join(meta_parts)})"
+
+    # 2行目: 記事セクション要約
+    if not issue.articles:
+        return line1
+
+    # トップレベルセクション（h2相当 = section の最初の要素）を集約
+    top_sections: list[str] = []
+    seen: set[str] = set()
+    for article in issue.articles:
+        top = article.section.split(" / ")[0] if article.section else ""
+        if top and top not in seen:
+            seen.add(top)
+            top_sections.append(top)
+
+    if not top_sections:
+        return line1
+
+    total = len(issue.articles)
+    sections_str = ", ".join(top_sections)
+    return f"{line1}\n{sections_str}（全{total}件）"

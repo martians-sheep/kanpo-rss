@@ -66,6 +66,31 @@ class TestParseTopPage:
         assert issue.issue_number == 1657
         assert issue.issue_id == "20260303h01657"
 
+    def test_page_count_extracted(self, top_page_html: str) -> None:
+        issues = self.parser.parse_top_page(top_page_html)
+        honshi_0303 = [
+            i for i in issues
+            if i.issue_id == "20260303h01657"
+        ][0]
+        assert honshi_0303.page_count == 32
+
+    def test_pdf_size_extracted(self, top_page_html: str) -> None:
+        issues = self.parser.parse_top_page(top_page_html)
+        honshi_0303 = [
+            i for i in issues
+            if i.issue_id == "20260303h01657"
+        ][0]
+        assert honshi_0303.pdf_size == "5MB"
+
+    def test_page_count_varies_by_issue(self, top_page_html: str) -> None:
+        issues = self.parser.parse_top_page(top_page_html)
+        gougai_0303 = [
+            i for i in issues
+            if i.issue_id == "20260303g00043"
+        ][0]
+        assert gougai_0303.page_count == 64
+        assert gougai_0303.pdf_size == "9MB"
+
     def test_empty_html_returns_empty(self) -> None:
         issues = self.parser.parse_top_page("<html><body></body></html>")
         assert issues == []
