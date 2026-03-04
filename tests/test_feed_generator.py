@@ -5,8 +5,10 @@ from datetime import date
 from pathlib import Path
 from xml.etree import ElementTree as ET
 
-from kanpo_rss.feed_generator import KanpoFeedGenerator
+from kanpo_rss.feed_generator import KanpoFeedGenerator, _atom_path
 from kanpo_rss.models import GazetteArticle, GazetteIssue, GazetteType
+
+ATOM_NS = "http://www.w3.org/2005/Atom"
 
 
 def _make_issue(
@@ -35,6 +37,18 @@ def _generate_and_parse(
         output = str(Path(tmpdir) / "feed.xml")
         gen.generate(issues, output, max_items=max_items)
         tree = ET.parse(output)
+    return tree.getroot()
+
+
+def _generate_and_parse_atom(
+    issues: list[GazetteIssue], max_items: int = 100
+) -> ET.Element:
+    gen = KanpoFeedGenerator()
+    with tempfile.TemporaryDirectory() as tmpdir:
+        output = str(Path(tmpdir) / "feed.xml")
+        gen.generate(issues, output, max_items=max_items)
+        atom_file = str(Path(tmpdir) / "feed-atom.xml")
+        tree = ET.parse(atom_file)
     return tree.getroot()
 
 
@@ -376,3 +390,163 @@ class TestArticleFeedsByDate:
             dates = gen.generate_article_feeds_by_date([], tmpdir)
             assert dates == []
             assert not (Path(tmpdir) / "feed-articles.xml").exists()
+
+
+# --- Atom feed tests ---
+
+
+class TestAtomPath:
+    def test_basic(self) -> None:
+        assert _atom_path("docs/feed.xml") == "docs/feed-atom.xml"
+
+    def test_archive(self) -> None:
+        assert _atom_path("docs/feed-archive.xml") == "docs/feed-archive-atom.xml"
+
+    def test_nested(self) -> None:
+        assert _atom_path("a/b/c.xml") == "a/b/c-atom.xml"
+
+
+class TestAtomFeedGenerator:
+    def test_generates_valid_atom(self) -> None:
+        root = _generate_and_parse_atom([_make_issue()])
+        assert root.tag == f"{{{ATOM_NS}}}feed"
+
+    def test_feed_metadata(self) -> None:
+        root = _generate_and_parse_atom([_make_issue()])
+        assert "官報" in (root.findtext(f"{{{ATOM_NS}}}title") or "")
+        assert root.findtext(f"{{{ATOM_NS}}}id") is not None
+        assert root.findtext(f"{{{ATOM_NS}}}updated") is not None
+        author = root.find(f"{{{ATOM_NS}}}author")
+        assert author is not None
+        assert author.findtext(f"{{{ATOM_NS}}}name") == "kanpo-rss"
+
+    def test_entry_structure(self) -> None:
+        root = _generate_and_parse_atom([_make_issue()])
+        entries = root.findall(f"{{{ATOM_NS}}}entry")
+        assert len(entries) == 1
+        entry = entries[0]
+        assert entry.findtext(f"{{{ATOM_NS}}}title") is not None
+        assert entry.find(f"{{{ATOM_NS}}}link") is not None
+        assert entry.findtext(f"{{{ATOM_NS}}}id") is not None
+        assert entry.findtext(f"{{{ATOM_NS}}}updated") is not None
+        assert entry.findtext(f"{{{ATOM_NS}}}summary") is not None
+
+    def test_entry_id_content(self) -> None:
+        root = _generate_and_parse_atom([_make_issue()])
+        entry_id = root.findtext(f"{{{ATOM_NS}}}entry/{{{ATOM_NS}}}id")
+        assert entry_id is not None
+        assert "20260303h01657" in entry_id
+
+    def test_entry_ordering(self) -> None:
+        issues = [
+            _make_issue(pub_date=date(2026, 3, 1), issue_number=1655),
+            _make_issue(pub_date=date(2026, 3, 3), issue_number=1657),
+            _make_issue(pub_date=date(2026, 3, 2), issue_number=1656),
+        ]
+        root = _generate_and_parse_atom(issues)
+        entries = root.findall(f"{{{ATOM_NS}}}entry")
+        titles = [e.findtext(f"{{{ATOM_NS}}}title") or "" for e in entries]
+        assert "2026-03-03" in titles[0]
+        assert "2026-03-02" in titles[1]
+        assert "2026-03-01" in titles[2]
+
+    def test_max_items_truncation(self) -> None:
+        issues = [
+            _make_issue(pub_date=date(2026, 1, i + 6), issue_number=1600 + i)
+            for i in range(20)
+        ]
+        root = _generate_and_parse_atom(issues, max_items=10)
+        entries = root.findall(f"{{{ATOM_NS}}}entry")
+        assert len(entries) == 10
+
+    def test_empty_issues_generates_valid_atom(self) -> None:
+        root = _generate_and_parse_atom([])
+        assert root.tag == f"{{{ATOM_NS}}}feed"
+        entries = root.findall(f"{{{ATOM_NS}}}entry")
+        assert len(entries) == 0
+
+    def test_atom_file_created_alongside_rss(self) -> None:
+        gen = KanpoFeedGenerator()
+        with tempfile.TemporaryDirectory() as tmpdir:
+            output = str(Path(tmpdir) / "feed.xml")
+            gen.generate([_make_issue()], output)
+            assert Path(tmpdir, "feed.xml").exists()
+            assert Path(tmpdir, "feed-atom.xml").exists()
+
+    def test_atom_file_creates_parent_dirs(self) -> None:
+        gen = KanpoFeedGenerator()
+        with tempfile.TemporaryDirectory() as tmpdir:
+            output = str(Path(tmpdir) / "nested" / "dir" / "feed.xml")
+            gen.generate([_make_issue()], output)
+            assert Path(tmpdir, "nested", "dir", "feed-atom.xml").exists()
+
+
+class TestAtomArticleFeedGenerator:
+    def test_generates_valid_atom(self) -> None:
+        issues = [_make_issue_with_articles()]
+        gen = KanpoFeedGenerator()
+        with tempfile.TemporaryDirectory() as tmpdir:
+            output = str(Path(tmpdir) / "feed-articles.xml")
+            gen.generate_article_feed(issues, output)
+            atom_file = str(Path(tmpdir) / "feed-articles-atom.xml")
+            root = ET.parse(atom_file).getroot()
+        assert root.tag == f"{{{ATOM_NS}}}feed"
+
+    def test_article_count(self) -> None:
+        issues = [_make_issue_with_articles()]
+        gen = KanpoFeedGenerator()
+        with tempfile.TemporaryDirectory() as tmpdir:
+            output = str(Path(tmpdir) / "feed-articles.xml")
+            gen.generate_article_feed(issues, output)
+            atom_file = str(Path(tmpdir) / "feed-articles-atom.xml")
+            root = ET.parse(atom_file).getroot()
+        entries = root.findall(f"{{{ATOM_NS}}}entry")
+        assert len(entries) == 3
+
+    def test_article_id_uniqueness(self) -> None:
+        issues = [_make_issue_with_articles()]
+        gen = KanpoFeedGenerator()
+        with tempfile.TemporaryDirectory() as tmpdir:
+            output = str(Path(tmpdir) / "feed-articles.xml")
+            gen.generate_article_feed(issues, output)
+            atom_file = str(Path(tmpdir) / "feed-articles-atom.xml")
+            root = ET.parse(atom_file).getroot()
+        ids = [e.findtext(f"{{{ATOM_NS}}}id") for e in root.findall(f"{{{ATOM_NS}}}entry")]
+        assert len(ids) == len(set(ids))
+
+
+class TestAtomArticleFeedsByDate:
+    def test_generates_per_date_atom_feeds(self) -> None:
+        issues = [
+            _make_issue_with_articles(pub_date=date(2026, 3, 3)),
+            _make_issue_with_articles(pub_date=date(2026, 3, 2), issue_number=1656),
+        ]
+        gen = KanpoFeedGenerator()
+        with tempfile.TemporaryDirectory() as tmpdir:
+            gen.generate_article_feeds_by_date(issues, tmpdir)
+            assert (Path(tmpdir) / "articles" / "feed-20260303-atom.xml").exists()
+            assert (Path(tmpdir) / "articles" / "feed-20260302-atom.xml").exists()
+
+    def test_latest_atom_copied_to_feed_articles_atom(self) -> None:
+        issues = [
+            _make_issue_with_articles(pub_date=date(2026, 3, 3)),
+            _make_issue_with_articles(pub_date=date(2026, 3, 2), issue_number=1656),
+        ]
+        gen = KanpoFeedGenerator()
+        with tempfile.TemporaryDirectory() as tmpdir:
+            gen.generate_article_feeds_by_date(issues, tmpdir)
+            default_atom = Path(tmpdir) / "feed-articles-atom.xml"
+            assert default_atom.exists()
+            root = ET.parse(default_atom).getroot()
+            assert root.tag == f"{{{ATOM_NS}}}feed"
+            title = root.findtext(f"{{{ATOM_NS}}}title") or ""
+            assert "2026-03-03" in title
+
+    def test_index_html_has_atom_links(self) -> None:
+        dates = [date(2026, 3, 3), date(2026, 3, 2)]
+        with tempfile.TemporaryDirectory() as tmpdir:
+            KanpoFeedGenerator.generate_article_index(dates, tmpdir)
+            content = (Path(tmpdir) / "articles" / "index.html").read_text()
+            assert "feed-20260303-atom.xml" in content
+            assert "feed-20260302-atom.xml" in content
+            assert "Atom" in content

@@ -23,8 +23,17 @@ KANPO_URL = "https://www.kanpo.go.jp/"
 FEED_TTL = 60  # minutes
 
 
+def _atom_path(rss_path: str) -> str:
+    """Derive the Atom file path from an RSS file path.
+
+    Example: 'docs/feed.xml' -> 'docs/feed-atom.xml'
+    """
+    p = Path(rss_path)
+    return str(p.with_name(p.stem + "-atom" + p.suffix))
+
+
 class KanpoFeedGenerator:
-    """Generates an RSS feed from a list of GazetteIssue objects."""
+    """Generates RSS and Atom feeds from a list of GazetteIssue objects."""
 
     def __init__(self, self_url: str = "") -> None:
         self._self_url = self_url
@@ -51,10 +60,13 @@ class KanpoFeedGenerator:
         output = Path(output_path)
         output.parent.mkdir(parents=True, exist_ok=True)
         fg.rss_file(str(output), pretty=True)
-        logger.info("Generated %s with %d items", output_path, len(truncated))
+        atom_out = _atom_path(output_path)
+        fg.atom_file(atom_out, pretty=True)
+        logger.info("Generated %s (+atom) with %d items", output_path, len(truncated))
 
     def _build_feed(self, title_suffix: str = "") -> FeedGenerator:
         fg = FeedGenerator()
+        fg.id(KANPO_URL)
         fg.title(FEED_TITLE + title_suffix)
         fg.link(href=KANPO_URL, rel="alternate")
         if self._self_url:
@@ -63,6 +75,7 @@ class KanpoFeedGenerator:
         fg.language(FEED_LANGUAGE)
         fg.ttl(FEED_TTL)
         fg.generator("kanpo-rss")
+        fg.author({"name": "kanpo-rss"})
         fg.lastBuildDate(datetime.now(tz=JST))
         return fg
 
@@ -72,6 +85,7 @@ class KanpoFeedGenerator:
         entry.link(href=issue.url)
         entry.guid(issue.issue_id, permalink=False)
         entry.description(issue.gazette_type.label)
+        entry.summary(issue.gazette_type.label)
         entry.category(term=issue.gazette_type.label)
 
         pub_dt = datetime(
@@ -82,6 +96,7 @@ class KanpoFeedGenerator:
             tzinfo=JST,
         )
         entry.pubDate(pub_dt)
+        entry.updated(pub_dt)
 
     def generate_article_feed(
         self,
@@ -125,8 +140,10 @@ class KanpoFeedGenerator:
         output = Path(output_path)
         output.parent.mkdir(parents=True, exist_ok=True)
         fg.rss_file(str(output), pretty=True)
+        atom_out = _atom_path(output_path)
+        fg.atom_file(atom_out, pretty=True)
         logger.info(
-            "Generated %s with %d article items", output_path, len(truncated)
+            "Generated %s (+atom) with %d article items", output_path, len(truncated)
         )
 
     def _add_article_entry(
@@ -136,9 +153,9 @@ class KanpoFeedGenerator:
         entry.title(article.title)
         entry.link(href=article.url)
         entry.guid(article.article_id, permalink=False)
-        entry.description(
-            f"{issue.title} — {article.section}"
-        )
+        summary_text = f"{issue.title} — {article.section}"
+        entry.description(summary_text)
+        entry.summary(summary_text)
         entry.category(term=issue.gazette_type.label)
         if article.section:
             entry.category(term=article.section)
@@ -151,6 +168,7 @@ class KanpoFeedGenerator:
             tzinfo=JST,
         )
         entry.pubDate(pub_dt)
+        entry.updated(pub_dt)
 
     def generate_article_feeds_by_date(
         self,
@@ -191,6 +209,10 @@ class KanpoFeedGenerator:
             latest_feed = articles_dir / f"feed-{latest_date_str}.xml"
             default_feed = Path(output_dir) / "feed-articles.xml"
             shutil.copy2(str(latest_feed), str(default_feed))
+            # Atom版も同様にコピー
+            latest_atom = articles_dir / f"feed-{latest_date_str}-atom.xml"
+            default_atom = Path(output_dir) / "feed-articles-atom.xml"
+            shutil.copy2(str(latest_atom), str(default_atom))
 
         logger.info(
             "Generated article feeds for %d dates in %s",
@@ -213,10 +235,12 @@ class KanpoFeedGenerator:
             iso = pub_date.isoformat()
             weekday = ["月", "火", "水", "木", "金", "土", "日"][pub_date.weekday()]
             feed_file = f"feed-{date_str}.xml"
+            atom_file = f"feed-{date_str}-atom.xml"
             rows.append(
                 f'      <tr>'
                 f'<td>{iso} ({weekday})</td>'
-                f'<td><a href="{feed_file}">{feed_file}</a></td>'
+                f'<td><a href="{feed_file}">RSS</a></td>'
+                f'<td><a href="{atom_file}">Atom</a></td>'
                 f'</tr>'
             )
 
@@ -241,12 +265,12 @@ class KanpoFeedGenerator:
 <h1>官報 記事フィード 日付別一覧</h1>
 <p>各日付のRSSフィードリンクです。RSSリーダーに登録してください。</p>
 <table>
-  <thead><tr><th>日付</th><th>フィード</th></tr></thead>
+  <thead><tr><th>日付</th><th>RSS</th><th>Atom</th></tr></thead>
   <tbody>
 {rows_html}
   </tbody>
 </table>
-<p><a href="../feed-articles.xml">feed-articles.xml</a> は最新日のフィードです。</p>
+<p><a href="../feed-articles.xml">feed-articles.xml</a> (RSS) / <a href="../feed-articles-atom.xml">feed-articles-atom.xml</a> (Atom) は最新日のフィードです。</p>
 </body>
 </html>"""
 
