@@ -23,6 +23,12 @@ _ISSUE_HREF_RE = re.compile(
     r"\.?/?(\d{8})([hgct])(\d{5})/\1\2\3\d{4}f\.html"
 )
 
+# Regex for article hrefs in fullcontents page (no directory prefix)
+# e.g. "20260305h01659/20260305h016590001f.html"
+_FULLCONTENTS_ARTICLE_RE = re.compile(
+    r"(\d{8}[hgct]\d{5})(\d{4})f\.html"
+)
+
 
 class KanpoParser:
     """Parser for kanpo.go.jp HTML pages."""
@@ -185,6 +191,139 @@ class KanpoParser:
             "Parsed %d articles from issue %s", len(articles), issue.issue_id
         )
         return articles
+
+    def parse_fullcontents(
+        self, html: str, target_date: date,
+    ) -> dict[str, list[GazetteArticle]]:
+        """fullcontents.html から全号の記事情報を抽出する。
+
+        戻り値は issue_id → list[GazetteArticle] のマッピング。
+        """
+        soup = BeautifulSoup(html, "html.parser")
+        result: dict[str, list[GazetteArticle]] = {}
+        date_str = target_date.strftime("%Y%m%d")
+
+        for contents_box in soup.select("div.contentsBox"):
+            articles: list[GazetteArticle] = []
+            page_index: dict[int, int] = {}
+            current_issue_id: str = ""
+
+            current_h2 = ""
+            current_h3 = ""
+            current_h4 = ""
+
+            for element in contents_box.descendants:
+                if not isinstance(element, Tag):
+                    continue
+
+                if element.name == "h2" and "title" in element.get("class", []):
+                    text_span = element.select_one("span.text")
+                    if text_span:
+                        current_h2 = text_span.get_text(strip=True)
+                        current_h3 = ""
+                        current_h4 = ""
+                    link = element.select_one("a[href]")
+                    if link:
+                        article = self._parse_fullcontents_article(
+                            link, current_h2, date_str, page_index,
+                        )
+                        if article:
+                            current_issue_id = article.parent_issue_id
+                            articles.append(article)
+                    continue
+
+                if element.name == "h3" and "title" in element.get("class", []):
+                    text_span = element.select_one("span.text")
+                    if text_span:
+                        current_h3 = text_span.get_text(strip=True)
+                        current_h4 = ""
+                    continue
+
+                if element.name == "h4":
+                    text_span = element.select_one("span.text")
+                    if text_span:
+                        current_h4 = text_span.get_text(strip=True)
+                    link = element.select_one("a[href]")
+                    if link:
+                        section = _build_section(current_h2, current_h3, current_h4)
+                        article = self._parse_fullcontents_article(
+                            link, section, date_str, page_index,
+                        )
+                        if article:
+                            current_issue_id = article.parent_issue_id
+                            articles.append(article)
+                    continue
+
+                if (
+                    element.name == "a"
+                    and element.parent
+                    and element.parent.name == "li"
+                    and element.parent.parent
+                    and element.parent.parent.get("class") == ["iconList"]
+                ):
+                    section = _build_section(current_h2, current_h3, current_h4)
+                    article = self._parse_fullcontents_article(
+                        link=element,
+                        section=section,
+                        date_str=date_str,
+                        page_index=page_index,
+                    )
+                    if article:
+                        current_issue_id = article.parent_issue_id
+                        articles.append(article)
+
+            if current_issue_id and articles:
+                result[current_issue_id] = articles
+                logger.info(
+                    "Parsed %d articles from fullcontents for %s",
+                    len(articles), current_issue_id,
+                )
+
+        total = sum(len(a) for a in result.values())
+        logger.info(
+            "Parsed %d articles total from fullcontents (%d issues)",
+            total, len(result),
+        )
+        return result
+
+    def _parse_fullcontents_article(
+        self,
+        link: Tag,
+        section: str,
+        date_str: str,
+        page_index: dict[int, int],
+    ) -> GazetteArticle | None:
+        """fullcontents ページの記事リンクから GazetteArticle を生成する。"""
+        href = link.get("href", "")
+        if not isinstance(href, str):
+            return None
+
+        match = _FULLCONTENTS_ARTICLE_RE.search(href)
+        if match is None:
+            return None
+
+        issue_id = match.group(1)
+        page_number = int(match.group(2))
+
+        text_span = link.select_one("span.text")
+        title = text_span.get_text(strip=True) if text_span else link.get_text(strip=True)
+        if not title:
+            return None
+
+        idx = page_index.get(page_number, 0)
+        page_index[page_number] = idx + 1
+
+        article_id = f"{issue_id}:{page_number:04d}:{idx}"
+        url = f"{BASE_URL}/{date_str}/{issue_id}/{issue_id}{page_number:04d}f.html"
+
+        return GazetteArticle(
+            article_id=article_id,
+            title=title,
+            url=url,
+            section=section,
+            parent_issue_id=issue_id,
+            page_number=page_number,
+        )
 
     def _parse_article_entry(
         self,

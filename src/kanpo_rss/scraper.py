@@ -32,6 +32,11 @@ class KanpoScraper:
         """Fetch an issue's table of contents page (0000f.html)."""
         return self._fetch(url)
 
+    def fetch_fullcontents(self, date_str: str) -> str:
+        """Fetch the full contents page for a given date (YYYYMMDD)."""
+        url = f"{BASE_URL}/{date_str}/{date_str}.fullcontents.html"
+        return self._fetch(url)
+
     def _fetch(self, url: str) -> str:
         """Fetch a URL with rate limiting."""
         self._rate_limit()
