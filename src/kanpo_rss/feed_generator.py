@@ -38,32 +38,6 @@ class KanpoFeedGenerator:
     def __init__(self, self_url: str = "") -> None:
         self._self_url = self_url
 
-    def generate(
-        self,
-        issues: list[GazetteIssue],
-        output_path: str,
-        max_items: int = 100,
-        title_suffix: str = "",
-    ) -> None:
-        """Generate feed.xml from issues.
-
-        Issues are sorted by date descending and truncated to max_items.
-        If max_items is 0, all issues are included.
-        """
-        sorted_issues = sorted(issues, key=lambda i: i.date, reverse=True)
-        truncated = sorted_issues[:max_items] if max_items > 0 else sorted_issues
-
-        fg = self._build_feed(title_suffix=title_suffix)
-        for issue in truncated:
-            self._add_entry(fg, issue)
-
-        output = Path(output_path)
-        output.parent.mkdir(parents=True, exist_ok=True)
-        fg.rss_file(str(output), pretty=True)
-        atom_out = _atom_path(output_path)
-        fg.atom_file(atom_out, pretty=True)
-        logger.info("Generated %s (+atom) with %d items", output_path, len(truncated))
-
     def _build_feed(self, title_suffix: str = "") -> FeedGenerator:
         fg = FeedGenerator()
         fg.id(KANPO_URL)
@@ -78,73 +52,6 @@ class KanpoFeedGenerator:
         fg.author({"name": "kanpo-rss"})
         fg.lastBuildDate(datetime.now(tz=JST))
         return fg
-
-    def _add_entry(self, fg: FeedGenerator, issue: GazetteIssue) -> None:
-        entry = fg.add_entry(order="append")
-        entry.title(issue.title)
-        entry.link(href=issue.url)
-        entry.guid(issue.issue_id, permalink=False)
-        entry.description(issue.gazette_type.label)
-        entry.summary(issue.gazette_type.label)
-        entry.category(term=issue.gazette_type.label)
-
-        pub_dt = datetime(
-            issue.date.year,
-            issue.date.month,
-            issue.date.day,
-            8, 30, 0,
-            tzinfo=JST,
-        )
-        entry.pubDate(pub_dt)
-        entry.updated(pub_dt)
-
-    def generate_article_feed(
-        self,
-        issues: list[GazetteIssue],
-        output_path: str,
-        max_items: int = 500,
-        title_suffix: str = " (記事)",
-    ) -> None:
-        """Generate article-level feed from issues with articles.
-
-        All articles from all issues are flattened, sorted by date descending,
-        and written as individual RSS entries.
-        """
-        # issue_id → issue のマップ（日付・種別の参照用）
-        issue_map: dict[str, GazetteIssue] = {i.issue_id: i for i in issues}
-
-        # 全記事をフラット化し、号内の出現順を保持してソート
-        # (issue, article, 号内の出現位置)
-        article_entries: list[tuple[GazetteIssue, GazetteArticle, int]] = []
-        for issue in issues:
-            for pos, article in enumerate(issue.articles):
-                article_entries.append((issue, article, pos))
-        article_entries.sort(
-            key=lambda x: (
-                -x[0].date.toordinal(),  # 日付降順
-                GAZETTE_TYPE_ORDER.get(x[0].gazette_type, 99),  # 種別順
-                x[2],  # 号内の出現順
-            ),
-        )
-
-        truncated = (
-            article_entries[:max_items]
-            if max_items > 0
-            else article_entries
-        )
-
-        fg = self._build_feed(title_suffix=title_suffix)
-        for issue, article, _pos in truncated:
-            self._add_article_entry(fg, issue, article)
-
-        output = Path(output_path)
-        output.parent.mkdir(parents=True, exist_ok=True)
-        fg.rss_file(str(output), pretty=True)
-        atom_out = _atom_path(output_path)
-        fg.atom_file(atom_out, pretty=True)
-        logger.info(
-            "Generated %s (+atom) with %d article items", output_path, len(truncated)
-        )
 
     def _add_article_entry(
         self, fg: FeedGenerator, issue: GazetteIssue, article: GazetteArticle
@@ -170,110 +77,78 @@ class KanpoFeedGenerator:
         entry.pubDate(pub_dt)
         entry.updated(pub_dt)
 
-    def generate_article_feeds_by_date(
+    def generate_fullcontents_feed(
         self,
         issues: list[GazetteIssue],
+        target_date: dt_module.date,
         output_dir: str,
-    ) -> list[dt_module.date]:
-        """日付ごとに個別の記事フィードファイルを生成する。
+        days: int = 7,
+    ) -> None:
+        """fullcontents ベースのフィードを生成する。
 
-        output_dir/articles/feed-YYYYMMDD.xml を日付ごとに生成し、
-        output_dir/feed-articles.xml には最新日のフィードをコピーする。
-        生成された日付のリスト（降順）を返す。
+        直近 days 日分の全体目次ページをアイテムとして追加し、
+        各記事も個別アイテムとして追加する。
         """
         import shutil
 
-        # 日付ごとにissuesをグループ化
-        date_issues: dict[dt_module.date, list[GazetteIssue]] = {}
-        for issue in issues:
-            if issue.articles:
-                date_issues.setdefault(issue.date, []).append(issue)
+        cutoff = target_date - dt_module.timedelta(days=days - 1)
+        title_suffix = " (全体目次)"
+        fg = self._build_feed(title_suffix=title_suffix)
 
-        sorted_dates = sorted(date_issues.keys(), reverse=True)
-
-        articles_dir = Path(output_dir) / "articles"
-        articles_dir.mkdir(parents=True, exist_ok=True)
-
-        for pub_date in sorted_dates:
-            date_str = pub_date.strftime("%Y%m%d")
-            feed_path = str(articles_dir / f"feed-{date_str}.xml")
-            title_suffix = f" (記事 {pub_date.isoformat()})"
-            self.generate_article_feed(
-                date_issues[pub_date], feed_path,
-                max_items=0, title_suffix=title_suffix,
-            )
-
-        # 最新日のフィードを feed-articles.xml としてもコピー
-        if sorted_dates:
-            latest_date_str = sorted_dates[0].strftime("%Y%m%d")
-            latest_feed = articles_dir / f"feed-{latest_date_str}.xml"
-            default_feed = Path(output_dir) / "feed-articles.xml"
-            shutil.copy2(str(latest_feed), str(default_feed))
-            # Atom版も同様にコピー
-            latest_atom = articles_dir / f"feed-{latest_date_str}-atom.xml"
-            default_atom = Path(output_dir) / "feed-articles-atom.xml"
-            shutil.copy2(str(latest_atom), str(default_atom))
-
-        logger.info(
-            "Generated article feeds for %d dates in %s",
-            len(sorted_dates), articles_dir,
+        # 対象期間の issues を日付降順で収集
+        recent_issues = [
+            i for i in issues
+            if i.articles and cutoff <= i.date <= target_date
+        ]
+        recent_issues.sort(
+            key=lambda i: (
+                -i.date.toordinal(),
+                GAZETTE_TYPE_ORDER.get(i.gazette_type, 99),
+            ),
         )
-        return sorted_dates
 
-    @staticmethod
-    def generate_article_index(
-        dates: list[dt_module.date],
-        output_dir: str,
-    ) -> None:
-        """日付選択用のHTMLインデックスページを生成する。"""
-        articles_dir = Path(output_dir) / "articles"
-        articles_dir.mkdir(parents=True, exist_ok=True)
+        # 日付ごとに fullcontents ページアイテム + 記事アイテムを追加
+        seen_dates: set[dt_module.date] = set()
+        for issue in recent_issues:
+            if issue.date not in seen_dates:
+                seen_dates.add(issue.date)
+                date_str = issue.date.strftime("%Y%m%d")
+                fc_url = f"{KANPO_URL}{date_str}/{date_str}.fullcontents.html"
+                fc_entry = fg.add_entry(order="append")
+                fc_entry.title(f"官報 {issue.date.isoformat()} 全体目次")
+                fc_entry.link(href=fc_url)
+                fc_entry.guid(f"fullcontents-{date_str}", permalink=False)
+                fc_entry.description(f"{issue.date.isoformat()} の官報全体目次")
+                fc_entry.summary(f"{issue.date.isoformat()} の官報全体目次")
+                pub_dt = datetime(
+                    issue.date.year, issue.date.month, issue.date.day,
+                    8, 30, 0, tzinfo=JST,
+                )
+                fc_entry.pubDate(pub_dt)
+                fc_entry.updated(pub_dt)
 
-        rows = []
-        for pub_date in dates:
-            date_str = pub_date.strftime("%Y%m%d")
-            iso = pub_date.isoformat()
-            weekday = ["月", "火", "水", "木", "金", "土", "日"][pub_date.weekday()]
-            feed_file = f"feed-{date_str}.xml"
-            atom_file = f"feed-{date_str}-atom.xml"
-            rows.append(
-                f'      <tr>'
-                f'<td>{iso} ({weekday})</td>'
-                f'<td><a href="{feed_file}">RSS</a></td>'
-                f'<td><a href="{atom_file}">Atom</a></td>'
-                f'</tr>'
-            )
+            for article in issue.articles:
+                self._add_article_entry(fg, issue, article)
 
-        rows_html = "\n".join(rows)
-        html = f"""<!DOCTYPE html>
-<html lang="ja">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>官報 記事フィード 日付別一覧</title>
-<style>
-  body {{ font-family: -apple-system, sans-serif; max-width: 700px; margin: 2rem auto; padding: 0 1rem; }}
-  h1 {{ font-size: 1.3rem; }}
-  table {{ border-collapse: collapse; width: 100%; }}
-  th, td {{ border: 1px solid #ccc; padding: 0.4rem 0.8rem; text-align: left; }}
-  th {{ background: #f5f5f5; }}
-  a {{ color: #0366d6; }}
-  p {{ color: #555; font-size: 0.9rem; }}
-</style>
-</head>
-<body>
-<h1>官報 記事フィード 日付別一覧</h1>
-<p>各日付のRSSフィードリンクです。RSSリーダーに登録してください。</p>
-<table>
-  <thead><tr><th>日付</th><th>RSS</th><th>Atom</th></tr></thead>
-  <tbody>
-{rows_html}
-  </tbody>
-</table>
-<p><a href="../feed-articles.xml">feed-articles.xml</a> (RSS) / <a href="../feed-articles-atom.xml">feed-articles-atom.xml</a> (Atom) は最新日のフィードです。</p>
-</body>
-</html>"""
+        # 出力
+        fc_dir = Path(output_dir) / "fullcontents"
+        fc_dir.mkdir(parents=True, exist_ok=True)
 
-        index_path = articles_dir / "index.html"
-        index_path.write_text(html, encoding="utf-8")
-        logger.info("Generated article index: %s (%d dates)", index_path, len(dates))
+        date_str = target_date.strftime("%Y%m%d")
+        feed_path = str(fc_dir / f"feed-{date_str}.xml")
+        fg.rss_file(feed_path, pretty=True)
+        atom_path = _atom_path(feed_path)
+        fg.atom_file(atom_path, pretty=True)
+
+        # 最新版として docs 直下にもコピー
+        default_rss = Path(output_dir) / "feed-fullcontents.xml"
+        default_atom = Path(output_dir) / "feed-fullcontents-atom.xml"
+        shutil.copy2(feed_path, str(default_rss))
+        shutil.copy2(atom_path, str(default_atom))
+
+        total_articles = sum(len(i.articles) for i in recent_issues)
+        logger.info(
+            "Generated fullcontents feed: %s (+atom) with %d articles (%d days, %d dates)",
+            feed_path, total_articles, days, len(seen_dates),
+        )
+

@@ -6,6 +6,7 @@ import argparse
 import logging
 import shutil
 import sys
+from datetime import date
 from pathlib import Path
 
 from kanpo_rss.feed_generator import KanpoFeedGenerator
@@ -25,12 +26,6 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         "--output-dir",
         default="docs",
         help="Output directory for feed.xml (default: docs)",
-    )
-    parser.add_argument(
-        "--max-items",
-        type=int,
-        default=100,
-        help="Maximum number of RSS items (default: 100)",
     )
     parser.add_argument(
         "--self-url",
@@ -102,53 +97,78 @@ def main(argv: list[str] | None = None) -> int:
     else:
         issues = new_issues
 
-    # Fetch article-level data from issue pages
+    # Fetch article-level data
     if not args.no_articles:
-        issues = _fetch_articles(scraper, parser, issues)
+        if use_storage:
+            # 蓄積モード: fullcontents で当日分のみ取得
+            today = date.today()
+            today_str = today.strftime("%Y%m%d")
+            try:
+                fc_html = scraper.fetch_fullcontents(today_str)
+                articles_map = parser.parse_fullcontents(fc_html, today)
+                issues = _enrich_with_fullcontents(issues, articles_map)
+            except Exception:
+                logger.warning("Failed to fetch fullcontents for %s", today_str)
+        else:
+            # 非蓄積モード: 従来の号別fetch
+            issues = _fetch_articles(scraper, parser, issues)
 
     # Save after article enrichment
     if use_storage:
         storage.save(data_path, issues)
 
-    # Generate feed
-    output_path = str(Path(args.output_dir) / "feed.xml")
-    generator.generate(issues, output_path, max_items=args.max_items)
-
-    # Generate per-date article feeds + index
+    # Generate fullcontents feed
     if not args.no_articles:
-        dates = generator.generate_article_feeds_by_date(issues, args.output_dir)
-        if dates:
-            generator.generate_article_index(dates, args.output_dir)
+        today = date.today()
+        generator.generate_fullcontents_feed(issues, today, args.output_dir)
 
-    # Generate archive feed and copy issues.json for public access
+    # Copy issues.json for public access
     if use_storage:
-        archive_path = str(Path(args.output_dir) / "feed-archive.xml")
-        generator.generate(
-            issues, archive_path, max_items=0, title_suffix=" (アーカイブ)",
-        )
-        logger.info("Generated archive feed: %s (+atom) (%d items)", archive_path, len(issues))
-
         public_json = Path(args.output_dir) / "issues.json"
         public_json.parent.mkdir(parents=True, exist_ok=True)
         shutil.copy2(data_path, str(public_json))
         logger.info("Copied %s to %s", data_path, public_json)
 
-    logger.info("Done! Feed written to %s", output_path)
+    logger.info("Done!")
 
     return 0
+
+
+def _enrich_with_fullcontents(
+    issues: list,
+    articles_map: dict[str, list],
+) -> list:
+    """fullcontents から取得した記事データで issues を更新する。"""
+    from dataclasses import replace
+
+    enriched = []
+    for issue in issues:
+        if issue.issue_id in articles_map:
+            enriched.append(replace(issue, articles=articles_map[issue.issue_id]))
+        else:
+            enriched.append(issue)
+    return enriched
 
 
 def _fetch_articles(
     scraper: KanpoScraper,
     parser: KanpoParser,
     issues: list,
+    target_date: date | None = None,
 ) -> list:
-    """記事未取得の号について、目次ページから記事を取得する。"""
+    """記事未取得の号について、目次ページから記事を取得する。
+
+    target_date が指定された場合、その日付の号のみ取得する。
+    """
     from dataclasses import replace
 
     enriched = []
     for issue in issues:
         if issue.articles:
+            enriched.append(issue)
+            continue
+
+        if target_date and issue.date != target_date:
             enriched.append(issue)
             continue
 

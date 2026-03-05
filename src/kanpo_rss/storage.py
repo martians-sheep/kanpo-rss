@@ -7,6 +7,8 @@ import logging
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
+from dataclasses import replace
+
 from kanpo_rss.models import GazetteArticle, GazetteIssue, GazetteType
 
 logger = logging.getLogger(__name__)
@@ -72,7 +74,14 @@ class IssueStorage:
         for issue in existing:
             merged[issue.issue_id] = issue
         for issue in new:
-            merged[issue.issue_id] = issue  # 新しいデータで上書き
+            existing_issue = merged.get(issue.issue_id)
+            if existing_issue and existing_issue.articles and not issue.articles:
+                # 既存の記事データを保持しつつメタデータは更新
+                merged[issue.issue_id] = replace(
+                    existing_issue, url=issue.url, title=issue.title
+                )
+            else:
+                merged[issue.issue_id] = issue
 
         result = sorted(
             merged.values(), key=lambda i: (i.date, i.issue_id), reverse=True
