@@ -56,3 +56,31 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+  notify:
+    needs: [build, deploy]
+    runs-on: ubuntu-latest
+    if: always()
+    steps:
+      - name: Notify Slack
+        uses: slackapi/slack-github-action@v2
+        with:
+          webhook: ${{ secrets.SLACK_WEBHOOK_URL }}
+          webhook-type: incoming-webhook
+          payload: |
+            {
+              "attachments": [
+                {
+                  "color": "${{ needs.build.result == 'success' && needs.deploy.result == 'success' && '#36a64f' || '#dc3545' }}",
+                  "blocks": [
+                    {
+                      "type": "section",
+                      "text": {
+                        "type": "mrkdwn",
+                        "text": "${{ needs.build.result == 'success' && needs.deploy.result == 'success' && ':white_check_mark:' || ':x:' }} *官報RSSフィード生成* - ${{ needs.build.result == 'success' && needs.deploy.result == 'success' && '成功' || '失敗' }}\n<${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}|実行ログを確認>"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
