@@ -1,7 +1,333 @@
 {
   "version": 1,
-  "last_updated": "2026-04-22T09:48:12.320855+09:00",
+  "last_updated": "2026-04-23T09:52:27.212224+09:00",
   "issues": [
+    {
+      "date": "2026-04-23",
+      "gazette_type": "h",
+      "issue_number": 1693,
+      "issue_id": "20260423h01693",
+      "url": "https://www.kanpo.go.jp/20260423/20260423h01693/20260423h016930000f.html",
+      "title": "2026-04-23 本紙 第1693号",
+      "articles": [
+        {
+          "article_id": "20260423h01693:0002:0",
+          "title": "外国人の育成就労の適正な実施及び育成就労外国人の保護に関する法律施行規則の規定に基づき木材産業分野に特有の事情に鑑みて告示で定める基準を定める件（農林水産六二二）",
+          "url": "https://www.kanpo.go.jp/20260423/20260423h01693/20260423h016930002f.html",
+          "section": "法規的告示",
+          "parent_issue_id": "20260423h01693",
+          "page_number": 2
+        },
+        {
+          "article_id": "20260423h01693:0002:1",
+          "title": "外国人の育成就労の適正な実施及び育成就労外国人の保護に関する法律施行規則の規定に基づき林業分野に特有の事情に鑑みて告示で定める基準等を定める件（同六二三）",
+          "url": "https://www.kanpo.go.jp/20260423/20260423h01693/20260423h016930002f.html",
+          "section": "法規的告示",
+          "parent_issue_id": "20260423h01693",
+          "page_number": 2
+        },
+        {
+          "article_id": "20260423h01693:0004:0",
+          "title": "令和六年農林水産省告示第千七百七十六号（出入国管理及び難民認定法第七条第一項第二号の基準を定める省令（平成二年法務省令第十六号）の表の法別表第一の二の表の特定技能の項の下欄第一号に掲げる活動の項の下欄第六号並びに特定技能雇用契約及び一号特定技能外国人支援計画の基準等を定める省令（平成三十一年法務省令第五号）第二条第一項第十三号及び第二項第七号の規定に基づき林業分野に特有の事情に鑑みて定める基準）の一部を改正する告示（同六二四）",
+          "url": "https://www.kanpo.go.jp/20260423/20260423h01693/20260423h016930004f.html",
+          "section": "法規的告示",
+          "parent_issue_id": "20260423h01693",
+          "page_number": 4
+        },
+        {
+          "article_id": "20260423h01693:0005:0",
+          "title": "絶滅のおそれのある野生動植物の種の国際取引に関する条約の附属書の改正等に関する件（外務一五五）",
+          "url": "https://www.kanpo.go.jp/20260423/20260423h01693/20260423h016930005f.html",
+          "section": "その他告示",
+          "parent_issue_id": "20260423h01693",
+          "page_number": 5
+        },
+        {
+          "article_id": "20260423h01693:0007:0",
+          "title": "ヨルダン・ハシェミット王国政府に対する贈与に関する日本国政府とヨルダン・ハシェミット王国政府との間の書簡の交換に関する件（同一五六）",
+          "url": "https://www.kanpo.go.jp/20260423/20260423h01693/20260423h016930007f.html",
+          "section": "その他告示",
+          "parent_issue_id": "20260423h01693",
+          "page_number": 7
+        },
+        {
+          "article_id": "20260423h01693:0007:1",
+          "title": "アフガニスタン・イスラム共和国におけるポリオ撲滅計画のための贈与に関する日本国政府と国際連合児童基金との間の書簡の交換に関する件（同一五七）",
+          "url": "https://www.kanpo.go.jp/20260423/20260423h01693/20260423h016930007f.html",
+          "section": "その他告示",
+          "parent_issue_id": "20260423h01693",
+          "page_number": 7
+        },
+        {
+          "article_id": "20260423h01693:0007:2",
+          "title": "シリア・アラブ共和国における紛争の影響を受けた地域における電力供給安定化計画のための贈与に関する日本国政府と国際連合開発計画との間の書簡の交換に関する件（同一五八）",
+          "url": "https://www.kanpo.go.jp/20260423/20260423h01693/20260423h016930007f.html",
+          "section": "その他告示",
+          "parent_issue_id": "20260423h01693",
+          "page_number": 7
+        },
+        {
+          "article_id": "20260423h01693:0007:3",
+          "title": "シリア・アラブ共和国における紛争の影響を受けた地域における地雷及び不発弾除去並びに農業インフラ復旧計画のための贈与に関する日本国政府と国際連合との間の書簡の交換に関する件（同一五九）",
+          "url": "https://www.kanpo.go.jp/20260423/20260423h01693/20260423h016930007f.html",
+          "section": "その他告示",
+          "parent_issue_id": "20260423h01693",
+          "page_number": 7
+        },
+        {
+          "article_id": "20260423h01693:0007:4",
+          "title": "エジプト・アラブ共和国における周辺地域からの緊急避難民のための医療サービス強化計画のための贈与に関する日本国政府と世界保健機関との間の書簡の交換に関する件（同一六〇）",
+          "url": "https://www.kanpo.go.jp/20260423/20260423h01693/20260423h016930007f.html",
+          "section": "その他告示",
+          "parent_issue_id": "20260423h01693",
+          "page_number": 7
+        },
+        {
+          "article_id": "20260423h01693:0007:5",
+          "title": "飼料の安全性の確保及び品質の改善に関する法律第四十一条の規定に基づき、登録検定機関の業務の全部を廃止する旨の届出があった件（農林水産六二五）",
+          "url": "https://www.kanpo.go.jp/20260423/20260423h01693/20260423h016930007f.html",
+          "section": "その他告示",
+          "parent_issue_id": "20260423h01693",
+          "page_number": 7
+        },
+        {
+          "article_id": "20260423h01693:0007:6",
+          "title": "水先人に免許を与えた件（国土交通五七八）",
+          "url": "https://www.kanpo.go.jp/20260423/20260423h01693/20260423h016930007f.html",
+          "section": "その他告示",
+          "parent_issue_id": "20260423h01693",
+          "page_number": 7
+        },
+        {
+          "article_id": "20260423h01693:0007:7",
+          "title": "船舶安全法第二十八条第七項において準用する第二十五条の四十八第一項の規定に基づき、登録検査機関の登録の更新をした件（同五七九）",
+          "url": "https://www.kanpo.go.jp/20260423/20260423h01693/20260423h016930007f.html",
+          "section": "その他告示",
+          "parent_issue_id": "20260423h01693",
+          "page_number": 7
+        },
+        {
+          "article_id": "20260423h01693:0008:0",
+          "title": "道路に関する件（中部地方整備局五一）",
+          "url": "https://www.kanpo.go.jp/20260423/20260423h01693/20260423h016930008f.html",
+          "section": "その他告示",
+          "parent_issue_id": "20260423h01693",
+          "page_number": 8
+        },
+        {
+          "article_id": "20260423h01693:0008:1",
+          "title": "道路に関する件（近畿地方整備局七四、七五）",
+          "url": "https://www.kanpo.go.jp/20260423/20260423h01693/20260423h016930008f.html",
+          "section": "その他告示",
+          "parent_issue_id": "20260423h01693",
+          "page_number": 8
+        },
+        {
+          "article_id": "20260423h01693:0008:2",
+          "title": "道路に関する件（北海道開発局三九、四〇）",
+          "url": "https://www.kanpo.go.jp/20260423/20260423h01693/20260423h016930008f.html",
+          "section": "その他告示",
+          "parent_issue_id": "20260423h01693",
+          "page_number": 8
+        },
+        {
+          "article_id": "20260423h01693:0009:0",
+          "title": "国会事項",
+          "url": "https://www.kanpo.go.jp/20260423/20260423h01693/20260423h016930009f.html",
+          "section": "国会事項",
+          "parent_issue_id": "20260423h01693",
+          "page_number": 9
+        },
+        {
+          "article_id": "20260423h01693:0009:1",
+          "title": "内閣　法務省",
+          "url": "https://www.kanpo.go.jp/20260423/20260423h01693/20260423h016930009f.html",
+          "section": "人事異動",
+          "parent_issue_id": "20260423h01693",
+          "page_number": 9
+        },
+        {
+          "article_id": "20260423h01693:0009:2",
+          "title": "皇室事項",
+          "url": "https://www.kanpo.go.jp/20260423/20260423h01693/20260423h016930009f.html",
+          "section": "皇室事項",
+          "parent_issue_id": "20260423h01693",
+          "page_number": 9
+        },
+        {
+          "article_id": "20260423h01693:0009:3",
+          "title": "近畿地方整備局公示（近畿地方整備局）",
+          "url": "https://www.kanpo.go.jp/20260423/20260423h01693/20260423h016930009f.html",
+          "section": "官庁報告 / 官庁事項",
+          "parent_issue_id": "20260423h01693",
+          "page_number": 9
+        },
+        {
+          "article_id": "20260423h01693:0009:4",
+          "title": "北海道開発局公示（北海道開発局）",
+          "url": "https://www.kanpo.go.jp/20260423/20260423h01693/20260423h016930009f.html",
+          "section": "官庁報告 / 官庁事項",
+          "parent_issue_id": "20260423h01693",
+          "page_number": 9
+        },
+        {
+          "article_id": "20260423h01693:0009:5",
+          "title": "保障契約証明書の無効について（関東運輸局）",
+          "url": "https://www.kanpo.go.jp/20260423/20260423h01693/20260423h016930009f.html",
+          "section": "官庁報告 / 官庁事項",
+          "parent_issue_id": "20260423h01693",
+          "page_number": 9
+        },
+        {
+          "article_id": "20260423h01693:0009:6",
+          "title": "令和八年参議院事務局職員採用試験公告（参議院事務局）",
+          "url": "https://www.kanpo.go.jp/20260423/20260423h01693/20260423h016930009f.html",
+          "section": "官庁報告 / 国家試験",
+          "parent_issue_id": "20260423h01693",
+          "page_number": 9
+        },
+        {
+          "article_id": "20260423h01693:0010:0",
+          "title": "財団関係",
+          "url": "https://www.kanpo.go.jp/20260423/20260423h01693/20260423h016930010f.html",
+          "section": "公告 / 諸事項 / 官庁",
+          "parent_issue_id": "20260423h01693",
+          "page_number": 10
+        },
+        {
+          "article_id": "20260423h01693:0010:1",
+          "title": "相続、失踪、破産、再生、所有者不明関係",
+          "url": "https://www.kanpo.go.jp/20260423/20260423h01693/20260423h016930010f.html",
+          "section": "公告 / 諸事項 / 裁判所",
+          "parent_issue_id": "20260423h01693",
+          "page_number": 10
+        },
+        {
+          "article_id": "20260423h01693:0029:0",
+          "title": "企業年金基金解散関係",
+          "url": "https://www.kanpo.go.jp/20260423/20260423h01693/20260423h016930029f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20260423h01693",
+          "page_number": 29
+        },
+        {
+          "article_id": "20260423h01693:0029:1",
+          "title": "会社その他",
+          "url": "https://www.kanpo.go.jp/20260423/20260423h01693/20260423h016930029f.html",
+          "section": "公告 / 諸事項 / 会社その他",
+          "parent_issue_id": "20260423h01693",
+          "page_number": 29
+        }
+      ]
+    },
+    {
+      "date": "2026-04-23",
+      "gazette_type": "g",
+      "issue_number": 95,
+      "issue_id": "20260423g00095",
+      "url": "https://www.kanpo.go.jp/20260423/20260423g00095/20260423g000950000f.html",
+      "title": "2026-04-23 号外 第95号",
+      "articles": [
+        {
+          "article_id": "20260423g00095:0001:0",
+          "title": "社会生活基本調査規則の一部を改正する省令（総務六五）",
+          "url": "https://www.kanpo.go.jp/20260423/20260423g00095/20260423g000950001f.html",
+          "section": "省令",
+          "parent_issue_id": "20260423g00095",
+          "page_number": 1
+        },
+        {
+          "article_id": "20260423g00095:0004:0",
+          "title": "船川港における高度港湾工事を国土交通大臣が代行する件（国土交通五八〇）",
+          "url": "https://www.kanpo.go.jp/20260423/20260423g00095/20260423g000950004f.html",
+          "section": "その他告示",
+          "parent_issue_id": "20260423g00095",
+          "page_number": 4
+        },
+        {
+          "article_id": "20260423g00095:0005:0",
+          "title": "破産、免責、再生関係",
+          "url": "https://www.kanpo.go.jp/20260423/20260423g00095/20260423g000950005f.html",
+          "section": "公告 / 諸事項 / 裁判所",
+          "parent_issue_id": "20260423g00095",
+          "page_number": 5
+        },
+        {
+          "article_id": "20260423g00095:0032:0",
+          "title": "国土交通省共済組合定款の一部変更、日本弁護士連合会懲戒処分関係",
+          "url": "https://www.kanpo.go.jp/20260423/20260423g00095/20260423g000950032f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20260423g00095",
+          "page_number": 32
+        },
+        {
+          "article_id": "20260423g00095:0033:0",
+          "title": "会社その他",
+          "url": "https://www.kanpo.go.jp/20260423/20260423g00095/20260423g000950033f.html",
+          "section": "公告 / 諸事項 / 会社その他",
+          "parent_issue_id": "20260423g00095",
+          "page_number": 33
+        },
+        {
+          "article_id": "20260423g00095:0039:0",
+          "title": "会社決算公告",
+          "url": "https://www.kanpo.go.jp/20260423/20260423g00095/20260423g000950039f.html",
+          "section": "公告 / 諸事項 / 会社決算公告",
+          "parent_issue_id": "20260423g00095",
+          "page_number": 39
+        }
+      ]
+    },
+    {
+      "date": "2026-04-23",
+      "gazette_type": "c",
+      "issue_number": 75,
+      "issue_id": "20260423c00075",
+      "url": "https://www.kanpo.go.jp/20260423/20260423c00075/20260423c000750000f.html",
+      "title": "2026-04-23 政府調達 第75号",
+      "articles": [
+        {
+          "article_id": "20260423c00075:0001:0",
+          "title": "入札公告",
+          "url": "https://www.kanpo.go.jp/20260423/20260423c00075/20260423c000750001f.html",
+          "section": "入札公告",
+          "parent_issue_id": "20260423c00075",
+          "page_number": 1
+        },
+        {
+          "article_id": "20260423c00075:0014:0",
+          "title": "入札公告の変更",
+          "url": "https://www.kanpo.go.jp/20260423/20260423c00075/20260423c000750014f.html",
+          "section": "入札公告",
+          "parent_issue_id": "20260423c00075",
+          "page_number": 14
+        },
+        {
+          "article_id": "20260423c00075:0015:0",
+          "title": "意見招請に関する公示",
+          "url": "https://www.kanpo.go.jp/20260423/20260423c00075/20260423c000750015f.html",
+          "section": "招請",
+          "parent_issue_id": "20260423c00075",
+          "page_number": 15
+        },
+        {
+          "article_id": "20260423c00075:0015:1",
+          "title": "随意契約に関する公示",
+          "url": "https://www.kanpo.go.jp/20260423/20260423c00075/20260423c000750015f.html",
+          "section": "随意契約",
+          "parent_issue_id": "20260423c00075",
+          "page_number": 15
+        },
+        {
+          "article_id": "20260423c00075:0016:0",
+          "title": "落札者等の公示",
+          "url": "https://www.kanpo.go.jp/20260423/20260423c00075/20260423c000750016f.html",
+          "section": "落札",
+          "parent_issue_id": "20260423c00075",
+          "page_number": 16
+        }
+      ]
+    },
     {
       "date": "2026-04-22",
       "gazette_type": "h",
