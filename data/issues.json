@@ -1,7 +1,447 @@
 {
   "version": 1,
-  "last_updated": "2026-07-28T09:43:03.758525+09:00",
+  "last_updated": "2026-07-29T09:42:34.868265+09:00",
   "issues": [
+    {
+      "date": "2026-07-29",
+      "gazette_type": "h",
+      "issue_number": 1757,
+      "issue_id": "20260729h01757",
+      "url": "https://www.kanpo.go.jp/20260729/20260729h01757/20260729h017570000f.html",
+      "title": "2026-07-29 本紙 第1757号",
+      "articles": [
+        {
+          "article_id": "20260729h01757:0001:0",
+          "title": "建設関係職種等に属する作業について外国人の技能実習の適正な実施及び技能実習生の保護に関する法律施行規則に規定する特定の職種及び作業に特有の事情に鑑みて事業所管大臣が定める基準等の一部を改正する件（国土交通一〇〇四）",
+          "url": "https://www.kanpo.go.jp/20260729/20260729h01757/20260729h017570001f.html",
+          "section": "法規的告示",
+          "parent_issue_id": "20260729h01757",
+          "page_number": 1
+        },
+        {
+          "article_id": "20260729h01757:0002:0",
+          "title": "感染症の予防の総合的な推進を図るための基本的な指針の一部を改正する件（厚生労働二七八）",
+          "url": "https://www.kanpo.go.jp/20260729/20260729h01757/20260729h017570002f.html",
+          "section": "その他告示",
+          "parent_issue_id": "20260729h01757",
+          "page_number": 2
+        },
+        {
+          "article_id": "20260729h01757:0002:1",
+          "title": "保安林の指定をする件（農林水産一〇七九～一〇八八）",
+          "url": "https://www.kanpo.go.jp/20260729/20260729h01757/20260729h017570002f.html",
+          "section": "その他告示",
+          "parent_issue_id": "20260729h01757",
+          "page_number": 2
+        },
+        {
+          "article_id": "20260729h01757:0003:0",
+          "title": "保安林の指定施業要件を変更する件（同一〇八九、一〇九〇）",
+          "url": "https://www.kanpo.go.jp/20260729/20260729h01757/20260729h017570003f.html",
+          "section": "その他告示",
+          "parent_issue_id": "20260729h01757",
+          "page_number": 3
+        },
+        {
+          "article_id": "20260729h01757:0004:0",
+          "title": "中小企業信用保険法第二条第五項第四号の災害及び地域を指定する件（経済産業九一）",
+          "url": "https://www.kanpo.go.jp/20260729/20260729h01757/20260729h017570004f.html",
+          "section": "その他告示",
+          "parent_issue_id": "20260729h01757",
+          "page_number": 4
+        },
+        {
+          "article_id": "20260729h01757:0004:1",
+          "title": "令和六年国土交通省告示第六十八号の一部を改正する告示（国土交通一〇〇五）",
+          "url": "https://www.kanpo.go.jp/20260729/20260729h01757/20260729h017570004f.html",
+          "section": "その他告示",
+          "parent_issue_id": "20260729h01757",
+          "page_number": 4
+        },
+        {
+          "article_id": "20260729h01757:0004:2",
+          "title": "海上における射撃訓練を実施する件（防衛二〇〇～二〇五）",
+          "url": "https://www.kanpo.go.jp/20260729/20260729h01757/20260729h017570004f.html",
+          "section": "その他告示",
+          "parent_issue_id": "20260729h01757",
+          "page_number": 4
+        },
+        {
+          "article_id": "20260729h01757:0005:0",
+          "title": "道路に関する件（関東地方整備局一九三～一九五）",
+          "url": "https://www.kanpo.go.jp/20260729/20260729h01757/20260729h017570005f.html",
+          "section": "その他告示",
+          "parent_issue_id": "20260729h01757",
+          "page_number": 5
+        },
+        {
+          "article_id": "20260729h01757:0005:1",
+          "title": "道路に関する件（九州地方整備局七九）",
+          "url": "https://www.kanpo.go.jp/20260729/20260729h01757/20260729h017570005f.html",
+          "section": "その他告示",
+          "parent_issue_id": "20260729h01757",
+          "page_number": 5
+        },
+        {
+          "article_id": "20260729h01757:0005:2",
+          "title": "内閣",
+          "url": "https://www.kanpo.go.jp/20260729/20260729h01757/20260729h017570005f.html",
+          "section": "人事異動",
+          "parent_issue_id": "20260729h01757",
+          "page_number": 5
+        },
+        {
+          "article_id": "20260729h01757:0006:0",
+          "title": "叙位・叙勲",
+          "url": "https://www.kanpo.go.jp/20260729/20260729h01757/20260729h017570006f.html",
+          "section": "叙位・叙勲",
+          "parent_issue_id": "20260729h01757",
+          "page_number": 6
+        },
+        {
+          "article_id": "20260729h01757:0006:1",
+          "title": "皇室事項",
+          "url": "https://www.kanpo.go.jp/20260729/20260729h01757/20260729h017570006f.html",
+          "section": "皇室事項",
+          "parent_issue_id": "20260729h01757",
+          "page_number": 6
+        },
+        {
+          "article_id": "20260729h01757:0006:2",
+          "title": "最低工賃の改正決定に関する公示（熊本労働局最低工賃公示二）",
+          "url": "https://www.kanpo.go.jp/20260729/20260729h01757/20260729h017570006f.html",
+          "section": "官庁報告 / 労働",
+          "parent_issue_id": "20260729h01757",
+          "page_number": 6
+        },
+        {
+          "article_id": "20260729h01757:0006:3",
+          "title": "財団、金融商品取引業者に対する行政処分、財部町土地改良区の定款変更の認可関係",
+          "url": "https://www.kanpo.go.jp/20260729/20260729h01757/20260729h017570006f.html",
+          "section": "公告 / 諸事項 / 官庁",
+          "parent_issue_id": "20260729h01757",
+          "page_number": 6
+        },
+        {
+          "article_id": "20260729h01757:0007:0",
+          "title": "相続、公示催告、失踪、除権決定、破産、免責、特別清算、会社更生、再生、所有者不明関係",
+          "url": "https://www.kanpo.go.jp/20260729/20260729h01757/20260729h017570007f.html",
+          "section": "公告 / 諸事項 / 裁判所",
+          "parent_issue_id": "20260729h01757",
+          "page_number": 7
+        },
+        {
+          "article_id": "20260729h01757:0029:0",
+          "title": "会社その他",
+          "url": "https://www.kanpo.go.jp/20260729/20260729h01757/20260729h017570029f.html",
+          "section": "公告 / 諸事項 / 会社その他",
+          "parent_issue_id": "20260729h01757",
+          "page_number": 29
+        }
+      ]
+    },
+    {
+      "date": "2026-07-29",
+      "gazette_type": "g",
+      "issue_number": 170,
+      "issue_id": "20260729g00170",
+      "url": "https://www.kanpo.go.jp/20260729/20260729g00170/20260729g001700000f.html",
+      "title": "2026-07-29 号外 第170号",
+      "articles": [
+        {
+          "article_id": "20260729g00170:0001:0",
+          "title": "被害回復給付金裁定表記載関係",
+          "url": "https://www.kanpo.go.jp/20260729/20260729g00170/20260729g001700001f.html",
+          "section": "公告 / 諸事項 / 官庁",
+          "parent_issue_id": "20260729g00170",
+          "page_number": 1
+        },
+        {
+          "article_id": "20260729g00170:0001:1",
+          "title": "破産、免責、再生関係",
+          "url": "https://www.kanpo.go.jp/20260729/20260729g00170/20260729g001700001f.html",
+          "section": "公告 / 諸事項 / 裁判所",
+          "parent_issue_id": "20260729g00170",
+          "page_number": 1
+        },
+        {
+          "article_id": "20260729g00170:0040:0",
+          "title": "令和七年度共済組合の決算（防衛省・日本たばこ産業）、独立行政法人統計センター令和七年度財務諸表関係",
+          "url": "https://www.kanpo.go.jp/20260729/20260729g00170/20260729g001700040f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20260729g00170",
+          "page_number": 40
+        },
+        {
+          "article_id": "20260729g00170:0046:0",
+          "title": "行旅死亡人関係",
+          "url": "https://www.kanpo.go.jp/20260729/20260729g00170/20260729g001700046f.html",
+          "section": "公告 / 諸事項 / 地方公共団体",
+          "parent_issue_id": "20260729g00170",
+          "page_number": 46
+        },
+        {
+          "article_id": "20260729g00170:0046:1",
+          "title": "会社その他",
+          "url": "https://www.kanpo.go.jp/20260729/20260729g00170/20260729g001700046f.html",
+          "section": "公告 / 諸事項 / 会社その他",
+          "parent_issue_id": "20260729g00170",
+          "page_number": 46
+        },
+        {
+          "article_id": "20260729g00170:0052:0",
+          "title": "会社決算公告",
+          "url": "https://www.kanpo.go.jp/20260729/20260729g00170/20260729g001700052f.html",
+          "section": "公告 / 諸事項 / 会社決算公告",
+          "parent_issue_id": "20260729g00170",
+          "page_number": 52
+        }
+      ]
+    },
+    {
+      "date": "2026-07-29",
+      "gazette_type": "g",
+      "issue_number": 169,
+      "issue_id": "20260729g00169",
+      "url": "https://www.kanpo.go.jp/20260729/20260729g00169/20260729g001690000f.html",
+      "title": "2026-07-29 号外 第169号",
+      "articles": [
+        {
+          "article_id": "20260729g00169:0003:0",
+          "title": "国家情報会議設置法の施行期日を定める政令（二三三）",
+          "url": "https://www.kanpo.go.jp/20260729/20260729g00169/20260729g001690003f.html",
+          "section": "政令",
+          "parent_issue_id": "20260729g00169",
+          "page_number": 3
+        },
+        {
+          "article_id": "20260729g00169:0003:1",
+          "title": "国家情報会議設置法の施行に伴う関係政令の整備等に関する政令（二三四）",
+          "url": "https://www.kanpo.go.jp/20260729/20260729g00169/20260729g001690003f.html",
+          "section": "政令",
+          "parent_issue_id": "20260729g00169",
+          "page_number": 3
+        },
+        {
+          "article_id": "20260729g00169:0004:0",
+          "title": "環境省組織令の一部を改正する政令（二三五）",
+          "url": "https://www.kanpo.go.jp/20260729/20260729g00169/20260729g001690004f.html",
+          "section": "政令",
+          "parent_issue_id": "20260729g00169",
+          "page_number": 4
+        },
+        {
+          "article_id": "20260729g00169:0004:1",
+          "title": "沖縄振興特別措置法施行令の一部を改正する政令（二三六）",
+          "url": "https://www.kanpo.go.jp/20260729/20260729g00169/20260729g001690004f.html",
+          "section": "政令",
+          "parent_issue_id": "20260729g00169",
+          "page_number": 4
+        },
+        {
+          "article_id": "20260729g00169:0004:2",
+          "title": "令和六年能登半島地震による災害についての激甚災害及びこれに対し適用すべき措置の指定に関する政令の一部を改正する政令（二三七）",
+          "url": "https://www.kanpo.go.jp/20260729/20260729g00169/20260729g001690004f.html",
+          "section": "政令",
+          "parent_issue_id": "20260729g00169",
+          "page_number": 4
+        },
+        {
+          "article_id": "20260729g00169:0005:0",
+          "title": "金融商品取引法及び資金決済に関する法律の一部を改正する法律の一部の施行に伴う関係政令の整備に関する政令（二三八）",
+          "url": "https://www.kanpo.go.jp/20260729/20260729g00169/20260729g001690005f.html",
+          "section": "政令",
+          "parent_issue_id": "20260729g00169",
+          "page_number": 5
+        },
+        {
+          "article_id": "20260729g00169:0005:1",
+          "title": "中小企業退職金共済法施行令の一部を改正する政令（二三九）",
+          "url": "https://www.kanpo.go.jp/20260729/20260729g00169/20260729g001690005f.html",
+          "section": "政令",
+          "parent_issue_id": "20260729g00169",
+          "page_number": 5
+        },
+        {
+          "article_id": "20260729g00169:0008:0",
+          "title": "健康保険法施行令等の一部を改正する政令（二四〇）",
+          "url": "https://www.kanpo.go.jp/20260729/20260729g00169/20260729g001690008f.html",
+          "section": "政令",
+          "parent_issue_id": "20260729g00169",
+          "page_number": 8
+        },
+        {
+          "article_id": "20260729g00169:0071:0",
+          "title": "外国人の技能実習の適正な実施及び技能実習生の保護に関する法律施行規則の一部を改正する省令（法務・厚生労働五）",
+          "url": "https://www.kanpo.go.jp/20260729/20260729g00169/20260729g001690071f.html",
+          "section": "省令",
+          "parent_issue_id": "20260729g00169",
+          "page_number": 71
+        },
+        {
+          "article_id": "20260729g00169:0073:0",
+          "title": "労働安全衛生法及び作業環境測定法の一部を改正する法律の一部の施行に伴う厚生労働省関係省令の整備等に関する省令（厚生労働一一六）",
+          "url": "https://www.kanpo.go.jp/20260729/20260729g00169/20260729g001690073f.html",
+          "section": "省令",
+          "parent_issue_id": "20260729g00169",
+          "page_number": 73
+        },
+        {
+          "article_id": "20260729g00169:0150:0",
+          "title": "健康保険法施行規則等の一部を改正する省令（同一一七）",
+          "url": "https://www.kanpo.go.jp/20260729/20260729g00169/20260729g001690150f.html",
+          "section": "省令",
+          "parent_issue_id": "20260729g00169",
+          "page_number": 150
+        },
+        {
+          "article_id": "20260729g00169:0179:0",
+          "title": "外国人の技能実習の適正な実施及び技能実習生の保護に関する法律施行規則の規定に基づき法務大臣及び厚生労働大臣が定める特定の職種及び作業の一部を改正する件（法務・厚生労働五）",
+          "url": "https://www.kanpo.go.jp/20260729/20260729g00169/20260729g001690179f.html",
+          "section": "法規的告示",
+          "parent_issue_id": "20260729g00169",
+          "page_number": 179
+        },
+        {
+          "article_id": "20260729g00169:0180:0",
+          "title": "作業環境測定法施行規則第五条の二の二の規定に基づき厚生労働大臣が定める者（厚生労働二七九）",
+          "url": "https://www.kanpo.go.jp/20260729/20260729g00169/20260729g001690180f.html",
+          "section": "法規的告示",
+          "parent_issue_id": "20260729g00169",
+          "page_number": 180
+        },
+        {
+          "article_id": "20260729g00169:0181:0",
+          "title": "肥料の登録の有効期間を更新した件（農林水産一〇九一）",
+          "url": "https://www.kanpo.go.jp/20260729/20260729g00169/20260729g001690181f.html",
+          "section": "その他告示",
+          "parent_issue_id": "20260729g00169",
+          "page_number": 181
+        },
+        {
+          "article_id": "20260729g00169:0184:0",
+          "title": "輸入業者の住所及び肥料の名称の変更に係る届出があった件（同一〇九二）",
+          "url": "https://www.kanpo.go.jp/20260729/20260729g00169/20260729g001690184f.html",
+          "section": "その他告示",
+          "parent_issue_id": "20260729g00169",
+          "page_number": 184
+        },
+        {
+          "article_id": "20260729g00169:0184:1",
+          "title": "肥料の登録が失効した件（同一〇九三）",
+          "url": "https://www.kanpo.go.jp/20260729/20260729g00169/20260729g001690184f.html",
+          "section": "その他告示",
+          "parent_issue_id": "20260729g00169",
+          "page_number": 184
+        },
+        {
+          "article_id": "20260729g00169:0184:2",
+          "title": "国家情報局に調査官を置く規則（内閣官房）",
+          "url": "https://www.kanpo.go.jp/20260729/20260729g00169/20260729g001690184f.html",
+          "section": "官庁報告 / 官庁事項",
+          "parent_issue_id": "20260729g00169",
+          "page_number": 184
+        },
+        {
+          "article_id": "20260729g00169:0184:3",
+          "title": "内閣衛星情報センター組織規則の一部を改正する規則（同）",
+          "url": "https://www.kanpo.go.jp/20260729/20260729g00169/20260729g001690184f.html",
+          "section": "官庁報告 / 官庁事項",
+          "parent_issue_id": "20260729g00169",
+          "page_number": 184
+        },
+        {
+          "article_id": "20260729g00169:0184:4",
+          "title": "内閣情報調査室に内閣情報分析官等を置く規則を廃止する規則（同）",
+          "url": "https://www.kanpo.go.jp/20260729/20260729g00169/20260729g001690184f.html",
+          "section": "官庁報告 / 官庁事項",
+          "parent_issue_id": "20260729g00169",
+          "page_number": 184
+        },
+        {
+          "article_id": "20260729g00169:0184:5",
+          "title": "内閣官房の保有する行政文書の開示に係る権限又は事務の一部について委任をした件の一部を改正する件（同）",
+          "url": "https://www.kanpo.go.jp/20260729/20260729g00169/20260729g001690184f.html",
+          "section": "官庁報告 / 官庁事項",
+          "parent_issue_id": "20260729g00169",
+          "page_number": 184
+        },
+        {
+          "article_id": "20260729g00169:0184:6",
+          "title": "個人情報の保護に関する法律第百二十六条及び個人情報の保護に関する法律施行令第三十二条第一項の規定に基づき、内閣官房における内閣総理大臣の所掌に係る権限又は事務の一部について委任した件の一部を改正する件（同）",
+          "url": "https://www.kanpo.go.jp/20260729/20260729g00169/20260729g001690184f.html",
+          "section": "官庁報告 / 官庁事項",
+          "parent_issue_id": "20260729g00169",
+          "page_number": 184
+        }
+      ]
+    },
+    {
+      "date": "2026-07-29",
+      "gazette_type": "c",
+      "issue_number": 139,
+      "issue_id": "20260729c00139",
+      "url": "https://www.kanpo.go.jp/20260729/20260729c00139/20260729c001390000f.html",
+      "title": "2026-07-29 政府調達 第139号",
+      "articles": [
+        {
+          "article_id": "20260729c00139:0001:0",
+          "title": "入札公告",
+          "url": "https://www.kanpo.go.jp/20260729/20260729c00139/20260729c001390001f.html",
+          "section": "入札公告",
+          "parent_issue_id": "20260729c00139",
+          "page_number": 1
+        },
+        {
+          "article_id": "20260729c00139:0034:0",
+          "title": "入札公告（建設工事）",
+          "url": "https://www.kanpo.go.jp/20260729/20260729c00139/20260729c001390034f.html",
+          "section": "入札公告",
+          "parent_issue_id": "20260729c00139",
+          "page_number": 34
+        },
+        {
+          "article_id": "20260729c00139:0036:0",
+          "title": "医療技術製品及びサービスの調達予定の公示",
+          "url": "https://www.kanpo.go.jp/20260729/20260729c00139/20260729c001390036f.html",
+          "section": "調達予定",
+          "parent_issue_id": "20260729c00139",
+          "page_number": 36
+        },
+        {
+          "article_id": "20260729c00139:0036:1",
+          "title": "意見招請に関する公示",
+          "url": "https://www.kanpo.go.jp/20260729/20260729c00139/20260729c001390036f.html",
+          "section": "招請",
+          "parent_issue_id": "20260729c00139",
+          "page_number": 36
+        },
+        {
+          "article_id": "20260729c00139:0037:0",
+          "title": "随意契約に関する公示",
+          "url": "https://www.kanpo.go.jp/20260729/20260729c00139/20260729c001390037f.html",
+          "section": "随意契約",
+          "parent_issue_id": "20260729c00139",
+          "page_number": 37
+        },
+        {
+          "article_id": "20260729c00139:0037:1",
+          "title": "落札者等の公示",
+          "url": "https://www.kanpo.go.jp/20260729/20260729c00139/20260729c001390037f.html",
+          "section": "落札",
+          "parent_issue_id": "20260729c00139",
+          "page_number": 37
+        }
+      ]
+    },
+    {
+      "date": "2026-07-28",
+      "gazette_type": "t",
+      "issue_number": 34,
+      "issue_id": "20260728t00034",
+      "url": "https://www.kanpo.go.jp/20260728/20260728t00034/20260728t000340000f.html",
+      "title": "2026-07-28 特別号外 第34号"
+    },
     {
       "date": "2026-07-28",
       "gazette_type": "h",
