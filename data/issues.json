@@ -1,7 +1,271 @@
 {
   "version": 1,
-  "last_updated": "2026-08-12T11:17:39.811015+09:00",
+  "last_updated": "2026-08-13T11:20:31.099084+09:00",
   "issues": [
+    {
+      "date": "2026-08-13",
+      "gazette_type": "t",
+      "issue_number": 40,
+      "issue_id": "20260813t00040",
+      "url": "https://www.kanpo.go.jp/20260813/20260813t00040/20260813t000400000f.html",
+      "title": "2026-08-13 特別号外 第40号",
+      "articles": [
+        {
+          "article_id": "20260813t00040:0001:0",
+          "title": "特定非常災害の被害者の権利利益の保全等を図るための特別措置に関する法律第三条第二項の規定に基づき同項の措置の対象となる特定権利利益の根拠となる法令の条項等を指定する件（農林水産一一六四）",
+          "url": "https://www.kanpo.go.jp/20260813/20260813t00040/20260813t000400001f.html",
+          "section": "その他告示",
+          "parent_issue_id": "20260813t00040",
+          "page_number": 1
+        }
+      ]
+    },
+    {
+      "date": "2026-08-13",
+      "gazette_type": "h",
+      "issue_number": 1767,
+      "issue_id": "20260813h01767",
+      "url": "https://www.kanpo.go.jp/20260813/20260813h01767/20260813h017670000f.html",
+      "title": "2026-08-13 本紙 第1767号",
+      "articles": [
+        {
+          "article_id": "20260813h01767:0001:0",
+          "title": "農業の担い手に対する経営安定のための交付金の交付に関する法律施行規則の一部を改正する省令（農林水産六五）",
+          "url": "https://www.kanpo.go.jp/20260813/20260813h01767/20260813h017670001f.html",
+          "section": "省令",
+          "parent_issue_id": "20260813h01767",
+          "page_number": 1
+        },
+        {
+          "article_id": "20260813h01767:0001:1",
+          "title": "金融庁組織令第八条第一項第一号イの規定に基づき金融庁長官が定める者を定める件（金融庁五一）",
+          "url": "https://www.kanpo.go.jp/20260813/20260813h01767/20260813h017670001f.html",
+          "section": "法規的告示",
+          "parent_issue_id": "20260813h01767",
+          "page_number": 1
+        },
+        {
+          "article_id": "20260813h01767:0002:0",
+          "title": "インバランスリスク単価等を定める告示の一部を改正する告示（経済産業一〇一）",
+          "url": "https://www.kanpo.go.jp/20260813/20260813h01767/20260813h017670002f.html",
+          "section": "法規的告示",
+          "parent_issue_id": "20260813h01767",
+          "page_number": 2
+        },
+        {
+          "article_id": "20260813h01767:0002:1",
+          "title": "社債、株式等の振替に関する法律第四十四条第一項第十三号の規定に基づき口座管理機関を指定する件の一部を改正する件（金融庁・法務・財務二）",
+          "url": "https://www.kanpo.go.jp/20260813/20260813h01767/20260813h017670002f.html",
+          "section": "その他告示",
+          "parent_issue_id": "20260813h01767",
+          "page_number": 2
+        },
+        {
+          "article_id": "20260813h01767:0002:2",
+          "title": "特定利用者情報を適正に取り扱うべき電気通信事業者を指定する件の一部を改正する件（総務三一〇）",
+          "url": "https://www.kanpo.go.jp/20260813/20260813h01767/20260813h017670002f.html",
+          "section": "その他告示",
+          "parent_issue_id": "20260813h01767",
+          "page_number": 2
+        },
+        {
+          "article_id": "20260813h01767:0003:0",
+          "title": "種苗法第十八条第一項及び第二十一条の二第三項の規定に基づき品種登録及び届出に係る事項を公示する件（農林水産一一六二）",
+          "url": "https://www.kanpo.go.jp/20260813/20260813h01767/20260813h017670003f.html",
+          "section": "その他告示",
+          "parent_issue_id": "20260813h01767",
+          "page_number": 3
+        },
+        {
+          "article_id": "20260813h01767:0006:0",
+          "title": "租税特別措置法施行令第十七条第二項第四号及び第三十九条の二十六第二項第四号の規定に基づき、農林水産大臣が認定する市場として認定した件の一部を改正する件（同一一六三）",
+          "url": "https://www.kanpo.go.jp/20260813/20260813h01767/20260813h017670006f.html",
+          "section": "その他告示",
+          "parent_issue_id": "20260813h01767",
+          "page_number": 6
+        },
+        {
+          "article_id": "20260813h01767:0006:1",
+          "title": "砂防法第二条の土地の指定を解除する件（国土交通一〇四九）",
+          "url": "https://www.kanpo.go.jp/20260813/20260813h01767/20260813h017670006f.html",
+          "section": "その他告示",
+          "parent_issue_id": "20260813h01767",
+          "page_number": 6
+        },
+        {
+          "article_id": "20260813h01767:0007:0",
+          "title": "砂防法第二条の土地を指定する件（同一〇五〇）",
+          "url": "https://www.kanpo.go.jp/20260813/20260813h01767/20260813h017670007f.html",
+          "section": "その他告示",
+          "parent_issue_id": "20260813h01767",
+          "page_number": 7
+        },
+        {
+          "article_id": "20260813h01767:0010:0",
+          "title": "道路に関する件（中部地方整備局六二）",
+          "url": "https://www.kanpo.go.jp/20260813/20260813h01767/20260813h017670010f.html",
+          "section": "その他告示",
+          "parent_issue_id": "20260813h01767",
+          "page_number": 10
+        },
+        {
+          "article_id": "20260813h01767:0010:1",
+          "title": "道路に関する件（北海道開発局五六）",
+          "url": "https://www.kanpo.go.jp/20260813/20260813h01767/20260813h017670010f.html",
+          "section": "その他告示",
+          "parent_issue_id": "20260813h01767",
+          "page_number": 10
+        },
+        {
+          "article_id": "20260813h01767:0010:2",
+          "title": "内閣　復興庁　財務省　農林水産省　林野庁　運輸安全委員会",
+          "url": "https://www.kanpo.go.jp/20260813/20260813h01767/20260813h017670010f.html",
+          "section": "人事異動",
+          "parent_issue_id": "20260813h01767",
+          "page_number": 10
+        },
+        {
+          "article_id": "20260813h01767:0012:0",
+          "title": "叙位・叙勲",
+          "url": "https://www.kanpo.go.jp/20260813/20260813h01767/20260813h017670012f.html",
+          "section": "叙位・叙勲",
+          "parent_issue_id": "20260813h01767",
+          "page_number": 12
+        },
+        {
+          "article_id": "20260813h01767:0012:1",
+          "title": "公証人任免（法務省）",
+          "url": "https://www.kanpo.go.jp/20260813/20260813h01767/20260813h017670012f.html",
+          "section": "官庁報告 / 法務",
+          "parent_issue_id": "20260813h01767",
+          "page_number": 12
+        },
+        {
+          "article_id": "20260813h01767:0012:2",
+          "title": "相続、公示催告、失踪、除権決定、破産、免責、特別清算、再生、所有者不明関係",
+          "url": "https://www.kanpo.go.jp/20260813/20260813h01767/20260813h017670012f.html",
+          "section": "公告 / 諸事項 / 裁判所",
+          "parent_issue_id": "20260813h01767",
+          "page_number": 12
+        },
+        {
+          "article_id": "20260813h01767:0030:0",
+          "title": "会社その他",
+          "url": "https://www.kanpo.go.jp/20260813/20260813h01767/20260813h017670030f.html",
+          "section": "公告 / 諸事項 / 会社その他",
+          "parent_issue_id": "20260813h01767",
+          "page_number": 30
+        }
+      ]
+    },
+    {
+      "date": "2026-08-13",
+      "gazette_type": "g",
+      "issue_number": 181,
+      "issue_id": "20260813g00181",
+      "url": "https://www.kanpo.go.jp/20260813/20260813g00181/20260813g001810000f.html",
+      "title": "2026-08-13 号外 第181号",
+      "articles": [
+        {
+          "article_id": "20260813g00181:0001:0",
+          "title": "破産、免責、再生関係",
+          "url": "https://www.kanpo.go.jp/20260813/20260813g00181/20260813g001810001f.html",
+          "section": "公告 / 諸事項 / 裁判所",
+          "parent_issue_id": "20260813g00181",
+          "page_number": 1
+        },
+        {
+          "article_id": "20260813g00181:0044:0",
+          "title": "参議院共済組合定款の一部変更、令和七年度国家公務員共済組合連合会の決算、日本弁護士連合会公示送達関係",
+          "url": "https://www.kanpo.go.jp/20260813/20260813g00181/20260813g001810044f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20260813g00181",
+          "page_number": 44
+        },
+        {
+          "article_id": "20260813g00181:0051:0",
+          "title": "教育職員免許状失効、行旅死亡人関係",
+          "url": "https://www.kanpo.go.jp/20260813/20260813g00181/20260813g001810051f.html",
+          "section": "公告 / 諸事項 / 地方公共団体",
+          "parent_issue_id": "20260813g00181",
+          "page_number": 51
+        },
+        {
+          "article_id": "20260813g00181:0051:1",
+          "title": "会社その他",
+          "url": "https://www.kanpo.go.jp/20260813/20260813g00181/20260813g001810051f.html",
+          "section": "公告 / 諸事項 / 会社その他",
+          "parent_issue_id": "20260813g00181",
+          "page_number": 51
+        },
+        {
+          "article_id": "20260813g00181:0056:0",
+          "title": "会社決算公告",
+          "url": "https://www.kanpo.go.jp/20260813/20260813g00181/20260813g001810056f.html",
+          "section": "公告 / 諸事項 / 会社決算公告",
+          "parent_issue_id": "20260813g00181",
+          "page_number": 56
+        }
+      ]
+    },
+    {
+      "date": "2026-08-13",
+      "gazette_type": "c",
+      "issue_number": 149,
+      "issue_id": "20260813c00149",
+      "url": "https://www.kanpo.go.jp/20260813/20260813c00149/20260813c001490000f.html",
+      "title": "2026-08-13 政府調達 第149号",
+      "articles": [
+        {
+          "article_id": "20260813c00149:0001:0",
+          "title": "入札公告",
+          "url": "https://www.kanpo.go.jp/20260813/20260813c00149/20260813c001490001f.html",
+          "section": "入札公告",
+          "parent_issue_id": "20260813c00149",
+          "page_number": 1
+        },
+        {
+          "article_id": "20260813c00149:0015:0",
+          "title": "入札公告の訂正",
+          "url": "https://www.kanpo.go.jp/20260813/20260813c00149/20260813c001490015f.html",
+          "section": "入札公告",
+          "parent_issue_id": "20260813c00149",
+          "page_number": 15
+        },
+        {
+          "article_id": "20260813c00149:0015:1",
+          "title": "入札公告の取消",
+          "url": "https://www.kanpo.go.jp/20260813/20260813c00149/20260813c001490015f.html",
+          "section": "入札公告",
+          "parent_issue_id": "20260813c00149",
+          "page_number": 15
+        },
+        {
+          "article_id": "20260813c00149:0015:2",
+          "title": "意見招請に関する公示",
+          "url": "https://www.kanpo.go.jp/20260813/20260813c00149/20260813c001490015f.html",
+          "section": "招請",
+          "parent_issue_id": "20260813c00149",
+          "page_number": 15
+        },
+        {
+          "article_id": "20260813c00149:0016:0",
+          "title": "随意契約に関する公示",
+          "url": "https://www.kanpo.go.jp/20260813/20260813c00149/20260813c001490016f.html",
+          "section": "随意契約",
+          "parent_issue_id": "20260813c00149",
+          "page_number": 16
+        },
+        {
+          "article_id": "20260813c00149:0016:1",
+          "title": "落札者等の公示",
+          "url": "https://www.kanpo.go.jp/20260813/20260813c00149/20260813c001490016f.html",
+          "section": "落札",
+          "parent_issue_id": "20260813c00149",
+          "page_number": 16
+        }
+      ]
+    },
     {
       "date": "2026-08-12",
       "gazette_type": "t",
