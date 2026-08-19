@@ -1,7 +1,245 @@
 {
   "version": 1,
-  "last_updated": "2026-08-18T10:25:27.049516+09:00",
+  "last_updated": "2026-08-19T10:27:01.795975+09:00",
   "issues": [
+    {
+      "date": "2026-08-19",
+      "gazette_type": "h",
+      "issue_number": 1771,
+      "issue_id": "20260819h01771",
+      "url": "https://www.kanpo.go.jp/20260819/20260819h01771/20260819h017710000f.html",
+      "title": "2026-08-19 本紙 第1771号",
+      "articles": [
+        {
+          "article_id": "20260819h01771:0001:0",
+          "title": "国家公務員退職手当法の規定に基づく意見の聴取の手続に関する規則の一部を改正する内閣官房令（内閣官房九）",
+          "url": "https://www.kanpo.go.jp/20260819/20260819h01771/20260819h017710001f.html",
+          "section": "内閣官房令",
+          "parent_issue_id": "20260819h01771",
+          "page_number": 1
+        },
+        {
+          "article_id": "20260819h01771:0001:1",
+          "title": "保安林の指定施業要件を変更する件（農林水産一一九三～一二〇三）",
+          "url": "https://www.kanpo.go.jp/20260819/20260819h01771/20260819h017710001f.html",
+          "section": "その他告示",
+          "parent_issue_id": "20260819h01771",
+          "page_number": 1
+        },
+        {
+          "article_id": "20260819h01771:0004:0",
+          "title": "高速自動車国道に関する件（国土交通一〇六八）",
+          "url": "https://www.kanpo.go.jp/20260819/20260819h01771/20260819h017710004f.html",
+          "section": "その他告示",
+          "parent_issue_id": "20260819h01771",
+          "page_number": 4
+        },
+        {
+          "article_id": "20260819h01771:0004:1",
+          "title": "登録貨物軽自動車安全管理者講習機関の登録の件（同一〇六九～一〇七一）",
+          "url": "https://www.kanpo.go.jp/20260819/20260819h01771/20260819h017710004f.html",
+          "section": "その他告示",
+          "parent_issue_id": "20260819h01771",
+          "page_number": 4
+        },
+        {
+          "article_id": "20260819h01771:0004:2",
+          "title": "航路標識に関する件（海上保安庁二六）",
+          "url": "https://www.kanpo.go.jp/20260819/20260819h01771/20260819h017710004f.html",
+          "section": "その他告示",
+          "parent_issue_id": "20260819h01771",
+          "page_number": 4
+        },
+        {
+          "article_id": "20260819h01771:0006:0",
+          "title": "道路に関する件（関東地方整備局二〇四、二〇五）",
+          "url": "https://www.kanpo.go.jp/20260819/20260819h01771/20260819h017710006f.html",
+          "section": "その他告示",
+          "parent_issue_id": "20260819h01771",
+          "page_number": 6
+        },
+        {
+          "article_id": "20260819h01771:0006:1",
+          "title": "道路に関する件（北陸地方整備局三四）",
+          "url": "https://www.kanpo.go.jp/20260819/20260819h01771/20260819h017710006f.html",
+          "section": "その他告示",
+          "parent_issue_id": "20260819h01771",
+          "page_number": 6
+        },
+        {
+          "article_id": "20260819h01771:0006:2",
+          "title": "内閣　人事院　法務省　国税庁",
+          "url": "https://www.kanpo.go.jp/20260819/20260819h01771/20260819h017710006f.html",
+          "section": "人事異動",
+          "parent_issue_id": "20260819h01771",
+          "page_number": 6
+        },
+        {
+          "article_id": "20260819h01771:0006:3",
+          "title": "叙位・叙勲",
+          "url": "https://www.kanpo.go.jp/20260819/20260819h01771/20260819h017710006f.html",
+          "section": "叙位・叙勲",
+          "parent_issue_id": "20260819h01771",
+          "page_number": 6
+        },
+        {
+          "article_id": "20260819h01771:0007:0",
+          "title": "皇室事項",
+          "url": "https://www.kanpo.go.jp/20260819/20260819h01771/20260819h017710007f.html",
+          "section": "皇室事項",
+          "parent_issue_id": "20260819h01771",
+          "page_number": 7
+        },
+        {
+          "article_id": "20260819h01771:0007:1",
+          "title": "登録低引火点燃料船学科講習実施機関の登録（国土交通省）",
+          "url": "https://www.kanpo.go.jp/20260819/20260819h01771/20260819h017710007f.html",
+          "section": "官庁報告 / 官庁事項",
+          "parent_issue_id": "20260819h01771",
+          "page_number": 7
+        },
+        {
+          "article_id": "20260819h01771:0007:2",
+          "title": "登録低引火点燃料船安全担当者講習実施機関の登録（同）",
+          "url": "https://www.kanpo.go.jp/20260819/20260819h01771/20260819h017710007f.html",
+          "section": "官庁報告 / 官庁事項",
+          "parent_issue_id": "20260819h01771",
+          "page_number": 7
+        },
+        {
+          "article_id": "20260819h01771:0007:3",
+          "title": "中央労働委員会の委員の候補者の推薦（内閣府公告一）",
+          "url": "https://www.kanpo.go.jp/20260819/20260819h01771/20260819h017710007f.html",
+          "section": "官庁報告 / 官庁事項",
+          "parent_issue_id": "20260819h01771",
+          "page_number": 7
+        },
+        {
+          "article_id": "20260819h01771:0008:0",
+          "title": "社会保険労務士懲戒処分関係",
+          "url": "https://www.kanpo.go.jp/20260819/20260819h01771/20260819h017710008f.html",
+          "section": "公告 / 諸事項 / 官庁",
+          "parent_issue_id": "20260819h01771",
+          "page_number": 8
+        },
+        {
+          "article_id": "20260819h01771:0008:1",
+          "title": "相続、公示催告、失踪、除権決定、破産、免責、特別清算、再生、所有者不明関係",
+          "url": "https://www.kanpo.go.jp/20260819/20260819h01771/20260819h017710008f.html",
+          "section": "公告 / 諸事項 / 裁判所",
+          "parent_issue_id": "20260819h01771",
+          "page_number": 8
+        },
+        {
+          "article_id": "20260819h01771:0030:0",
+          "title": "会社その他",
+          "url": "https://www.kanpo.go.jp/20260819/20260819h01771/20260819h017710030f.html",
+          "section": "公告 / 諸事項 / 会社その他",
+          "parent_issue_id": "20260819h01771",
+          "page_number": 30
+        }
+      ]
+    },
+    {
+      "date": "2026-08-19",
+      "gazette_type": "g",
+      "issue_number": 185,
+      "issue_id": "20260819g00185",
+      "url": "https://www.kanpo.go.jp/20260819/20260819g00185/20260819g001850000f.html",
+      "title": "2026-08-19 号外 第185号",
+      "articles": [
+        {
+          "article_id": "20260819g00185:0001:0",
+          "title": "押収物還付、旅券法第十九条の二第一項の規定に基づく一般旅券の返納命令に関する通知関係",
+          "url": "https://www.kanpo.go.jp/20260819/20260819g00185/20260819g001850001f.html",
+          "section": "公告 / 諸事項 / 官庁",
+          "parent_issue_id": "20260819g00185",
+          "page_number": 1
+        },
+        {
+          "article_id": "20260819g00185:0002:0",
+          "title": "破産、免責、会社更生、再生関係",
+          "url": "https://www.kanpo.go.jp/20260819/20260819g00185/20260819g001850002f.html",
+          "section": "公告 / 諸事項 / 裁判所",
+          "parent_issue_id": "20260819g00185",
+          "page_number": 2
+        },
+        {
+          "article_id": "20260819g00185:0034:0",
+          "title": "公認会計士等の登録及び登録抹消関係",
+          "url": "https://www.kanpo.go.jp/20260819/20260819g00185/20260819g001850034f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20260819g00185",
+          "page_number": 34
+        },
+        {
+          "article_id": "20260819g00185:0036:0",
+          "title": "教育職員免許状取上げ処分、行旅死亡人関係",
+          "url": "https://www.kanpo.go.jp/20260819/20260819g00185/20260819g001850036f.html",
+          "section": "公告 / 諸事項 / 地方公共団体",
+          "parent_issue_id": "20260819g00185",
+          "page_number": 36
+        },
+        {
+          "article_id": "20260819g00185:0037:0",
+          "title": "会社その他",
+          "url": "https://www.kanpo.go.jp/20260819/20260819g00185/20260819g001850037f.html",
+          "section": "公告 / 諸事項 / 会社その他",
+          "parent_issue_id": "20260819g00185",
+          "page_number": 37
+        },
+        {
+          "article_id": "20260819g00185:0047:0",
+          "title": "会社決算公告",
+          "url": "https://www.kanpo.go.jp/20260819/20260819g00185/20260819g001850047f.html",
+          "section": "公告 / 諸事項 / 会社決算公告",
+          "parent_issue_id": "20260819g00185",
+          "page_number": 47
+        }
+      ]
+    },
+    {
+      "date": "2026-08-19",
+      "gazette_type": "c",
+      "issue_number": 153,
+      "issue_id": "20260819c00153",
+      "url": "https://www.kanpo.go.jp/20260819/20260819c00153/20260819c001530000f.html",
+      "title": "2026-08-19 政府調達 第153号",
+      "articles": [
+        {
+          "article_id": "20260819c00153:0001:0",
+          "title": "入札公告",
+          "url": "https://www.kanpo.go.jp/20260819/20260819c00153/20260819c001530001f.html",
+          "section": "入札公告",
+          "parent_issue_id": "20260819c00153",
+          "page_number": 1
+        },
+        {
+          "article_id": "20260819c00153:0018:0",
+          "title": "公募型プロポーザル方式に係る手続開始の公示の訂正",
+          "url": "https://www.kanpo.go.jp/20260819/20260819c00153/20260819c001530018f.html",
+          "section": "入札公示",
+          "parent_issue_id": "20260819c00153",
+          "page_number": 18
+        },
+        {
+          "article_id": "20260819c00153:0018:1",
+          "title": "意見招請に関する公示",
+          "url": "https://www.kanpo.go.jp/20260819/20260819c00153/20260819c001530018f.html",
+          "section": "招請",
+          "parent_issue_id": "20260819c00153",
+          "page_number": 18
+        },
+        {
+          "article_id": "20260819c00153:0018:2",
+          "title": "随意契約に関する公示",
+          "url": "https://www.kanpo.go.jp/20260819/20260819c00153/20260819c001530018f.html",
+          "section": "随意契約",
+          "parent_issue_id": "20260819c00153",
+          "page_number": 18
+        }
+      ]
+    },
     {
       "date": "2026-08-18",
       "gazette_type": "h",
