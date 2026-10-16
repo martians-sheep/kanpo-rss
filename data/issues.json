@@ -1,7 +1,1143 @@
 {
   "version": 1,
-  "last_updated": "2026-10-15T12:58:00.718959+09:00",
+  "last_updated": "2026-10-16T12:54:14.798698+09:00",
   "issues": [
+    {
+      "date": "2026-10-16",
+      "gazette_type": "h",
+      "issue_number": 1809,
+      "issue_id": "20261016h01809",
+      "url": "https://www.kanpo.go.jp/20261016/20261016h01809/20261016h018090000f.html",
+      "title": "2026-10-16 本紙 第1809号",
+      "articles": [
+        {
+          "article_id": "20261016h01809:0002:0",
+          "title": "本庁監理金融商品取引業者等を指定する件の一部を改正する件（金融庁七六）",
+          "url": "https://www.kanpo.go.jp/20261016/20261016h01809/20261016h018090002f.html",
+          "section": "法規的告示",
+          "parent_issue_id": "20261016h01809",
+          "page_number": 2
+        },
+        {
+          "article_id": "20261016h01809:0002:1",
+          "title": "令和八管理年度における特定水産資源（にたりくじら）の採捕の停止に関する件（農林水産一五七三）",
+          "url": "https://www.kanpo.go.jp/20261016/20261016h01809/20261016h018090002f.html",
+          "section": "法規的告示",
+          "parent_issue_id": "20261016h01809",
+          "page_number": 2
+        },
+        {
+          "article_id": "20261016h01809:0002:2",
+          "title": "特定国外派遣組織を指定する件（総務三八四）",
+          "url": "https://www.kanpo.go.jp/20261016/20261016h01809/20261016h018090002f.html",
+          "section": "その他告示",
+          "parent_issue_id": "20261016h01809",
+          "page_number": 2
+        },
+        {
+          "article_id": "20261016h01809:0002:3",
+          "title": "道路運送車両の保安基準第五十八条の三第一項の規定により、自動車を認定した件（国土交通一二七三）",
+          "url": "https://www.kanpo.go.jp/20261016/20261016h01809/20261016h018090002f.html",
+          "section": "その他告示",
+          "parent_issue_id": "20261016h01809",
+          "page_number": 2
+        },
+        {
+          "article_id": "20261016h01809:0003:0",
+          "title": "信号符字を点附した件（同一二七四）",
+          "url": "https://www.kanpo.go.jp/20261016/20261016h01809/20261016h018090003f.html",
+          "section": "その他告示",
+          "parent_issue_id": "20261016h01809",
+          "page_number": 3
+        },
+        {
+          "article_id": "20261016h01809:0004:0",
+          "title": "信号符字を取り消した件（同一二七五）",
+          "url": "https://www.kanpo.go.jp/20261016/20261016h01809/20261016h018090004f.html",
+          "section": "その他告示",
+          "parent_issue_id": "20261016h01809",
+          "page_number": 4
+        },
+        {
+          "article_id": "20261016h01809:0004:1",
+          "title": "船舶国籍証書を無効とした件（同一二七六）",
+          "url": "https://www.kanpo.go.jp/20261016/20261016h01809/20261016h018090004f.html",
+          "section": "その他告示",
+          "parent_issue_id": "20261016h01809",
+          "page_number": 4
+        },
+        {
+          "article_id": "20261016h01809:0004:2",
+          "title": "船舶国籍証書が無効となった件（同一二七七）",
+          "url": "https://www.kanpo.go.jp/20261016/20261016h01809/20261016h018090004f.html",
+          "section": "その他告示",
+          "parent_issue_id": "20261016h01809",
+          "page_number": 4
+        },
+        {
+          "article_id": "20261016h01809:0004:3",
+          "title": "登録基幹技能者講習実施機関の登録事項の変更の届出があった件（同一二七八）",
+          "url": "https://www.kanpo.go.jp/20261016/20261016h01809/20261016h018090004f.html",
+          "section": "その他告示",
+          "parent_issue_id": "20261016h01809",
+          "page_number": 4
+        },
+        {
+          "article_id": "20261016h01809:0004:4",
+          "title": "砂防法第二条の土地を指定する件（同一二七九、一二八〇）",
+          "url": "https://www.kanpo.go.jp/20261016/20261016h01809/20261016h018090004f.html",
+          "section": "その他告示",
+          "parent_issue_id": "20261016h01809",
+          "page_number": 4
+        },
+        {
+          "article_id": "20261016h01809:0004:5",
+          "title": "航路標識に関する件（海上保安庁三八）",
+          "url": "https://www.kanpo.go.jp/20261016/20261016h01809/20261016h018090004f.html",
+          "section": "その他告示",
+          "parent_issue_id": "20261016h01809",
+          "page_number": 4
+        },
+        {
+          "article_id": "20261016h01809:0005:0",
+          "title": "道路に関する件（九州地方整備局九九）",
+          "url": "https://www.kanpo.go.jp/20261016/20261016h01809/20261016h018090005f.html",
+          "section": "その他告示",
+          "parent_issue_id": "20261016h01809",
+          "page_number": 5
+        },
+        {
+          "article_id": "20261016h01809:0005:1",
+          "title": "国会事項",
+          "url": "https://www.kanpo.go.jp/20261016/20261016h01809/20261016h018090005f.html",
+          "section": "国会事項",
+          "parent_issue_id": "20261016h01809",
+          "page_number": 5
+        },
+        {
+          "article_id": "20261016h01809:0005:2",
+          "title": "法務省",
+          "url": "https://www.kanpo.go.jp/20261016/20261016h01809/20261016h018090005f.html",
+          "section": "人事異動",
+          "parent_issue_id": "20261016h01809",
+          "page_number": 5
+        },
+        {
+          "article_id": "20261016h01809:0005:3",
+          "title": "叙位・叙勲",
+          "url": "https://www.kanpo.go.jp/20261016/20261016h01809/20261016h018090005f.html",
+          "section": "叙位・叙勲",
+          "parent_issue_id": "20261016h01809",
+          "page_number": 5
+        },
+        {
+          "article_id": "20261016h01809:0006:0",
+          "title": "九州地方整備局公示（九州地方整備局）",
+          "url": "https://www.kanpo.go.jp/20261016/20261016h01809/20261016h018090006f.html",
+          "section": "官庁報告 / 官庁事項",
+          "parent_issue_id": "20261016h01809",
+          "page_number": 6
+        },
+        {
+          "article_id": "20261016h01809:0006:1",
+          "title": "最低賃金の改正決定に関する公示（北海道労働局最低賃金公示二、兵庫同三）",
+          "url": "https://www.kanpo.go.jp/20261016/20261016h01809/20261016h018090006f.html",
+          "section": "官庁報告 / 労働",
+          "parent_issue_id": "20261016h01809",
+          "page_number": 6
+        },
+        {
+          "article_id": "20261016h01809:0006:2",
+          "title": "船員の特定最低賃金の改正の決定に関し、関係船員及び関係使用者の意見聴取に関する公示（九州地方交通審議会）",
+          "url": "https://www.kanpo.go.jp/20261016/20261016h01809/20261016h018090006f.html",
+          "section": "官庁報告 / 労働",
+          "parent_issue_id": "20261016h01809",
+          "page_number": 6
+        },
+        {
+          "article_id": "20261016h01809:0007:0",
+          "title": "令和八年度の衛生管理者試験の実施に関する公示（国土交通省）",
+          "url": "https://www.kanpo.go.jp/20261016/20261016h01809/20261016h018090007f.html",
+          "section": "官庁報告 / 国家試験",
+          "parent_issue_id": "20261016h01809",
+          "page_number": 7
+        },
+        {
+          "article_id": "20261016h01809:0007:1",
+          "title": "国土調査法に基づく国土調査と同一の効果があるものとしての指定の公告（国土交通省）",
+          "url": "https://www.kanpo.go.jp/20261016/20261016h01809/20261016h018090007f.html",
+          "section": "官庁報告 / 国家試験",
+          "parent_issue_id": "20261016h01809",
+          "page_number": 7
+        },
+        {
+          "article_id": "20261016h01809:0007:2",
+          "title": "日本国に帰化を許可する件（法務省告示配一五二）",
+          "url": "https://www.kanpo.go.jp/20261016/20261016h01809/20261016h018090007f.html",
+          "section": "官庁報告 / 国家試験",
+          "parent_issue_id": "20261016h01809",
+          "page_number": 7
+        },
+        {
+          "article_id": "20261016h01809:0008:0",
+          "title": "除籍が滅失した件（同一五三）",
+          "url": "https://www.kanpo.go.jp/20261016/20261016h01809/20261016h018090008f.html",
+          "section": "官庁報告 / 国家試験",
+          "parent_issue_id": "20261016h01809",
+          "page_number": 8
+        },
+        {
+          "article_id": "20261016h01809:0008:1",
+          "title": "戸籍が滅失した件（同一五四）",
+          "url": "https://www.kanpo.go.jp/20261016/20261016h01809/20261016h018090008f.html",
+          "section": "官庁報告 / 国家試験",
+          "parent_issue_id": "20261016h01809",
+          "page_number": 8
+        },
+        {
+          "article_id": "20261016h01809:0008:2",
+          "title": "重要無形文化財の指定及び保持者の認定の件（文部科学省告示配三）",
+          "url": "https://www.kanpo.go.jp/20261016/20261016h01809/20261016h018090008f.html",
+          "section": "官庁報告 / 国家試験",
+          "parent_issue_id": "20261016h01809",
+          "page_number": 8
+        },
+        {
+          "article_id": "20261016h01809:0008:3",
+          "title": "重要無形文化財の保持者の追加認定の件（同四）",
+          "url": "https://www.kanpo.go.jp/20261016/20261016h01809/20261016h018090008f.html",
+          "section": "官庁報告 / 国家試験",
+          "parent_issue_id": "20261016h01809",
+          "page_number": 8
+        },
+        {
+          "article_id": "20261016h01809:0008:4",
+          "title": "重要無形文化財の保持者死亡による指定解除及び認定解除の件（同五、六）",
+          "url": "https://www.kanpo.go.jp/20261016/20261016h01809/20261016h018090008f.html",
+          "section": "官庁報告 / 国家試験",
+          "parent_issue_id": "20261016h01809",
+          "page_number": 8
+        },
+        {
+          "article_id": "20261016h01809:0009:0",
+          "title": "信託会社等営業保証金取戻し、財団、公示送達、犯罪被害財産支給手続開始決定関係",
+          "url": "https://www.kanpo.go.jp/20261016/20261016h01809/20261016h018090009f.html",
+          "section": "公告 / 諸事項 / 官庁",
+          "parent_issue_id": "20261016h01809",
+          "page_number": 9
+        },
+        {
+          "article_id": "20261016h01809:0010:0",
+          "title": "相続、公示催告、失踪、除権決定、破産、免責、特別清算、会社更生、再生、所有者不明関係",
+          "url": "https://www.kanpo.go.jp/20261016/20261016h01809/20261016h018090010f.html",
+          "section": "公告 / 諸事項 / 裁判所",
+          "parent_issue_id": "20261016h01809",
+          "page_number": 10
+        },
+        {
+          "article_id": "20261016h01809:0028:0",
+          "title": "会社その他",
+          "url": "https://www.kanpo.go.jp/20261016/20261016h01809/20261016h018090028f.html",
+          "section": "公告 / 諸事項 / 会社その他",
+          "parent_issue_id": "20261016h01809",
+          "page_number": 28
+        }
+      ]
+    },
+    {
+      "date": "2026-10-16",
+      "gazette_type": "g",
+      "issue_number": 228,
+      "issue_id": "20261016g00228",
+      "url": "https://www.kanpo.go.jp/20261016/20261016g00228/20261016g002280000f.html",
+      "title": "2026-10-16 号外 第228号",
+      "articles": [
+        {
+          "article_id": "20261016g00228:0002:0",
+          "title": "北海道大学",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00228/20261016g002280002f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261016g00228",
+          "page_number": 2
+        },
+        {
+          "article_id": "20261016g00228:0011:0",
+          "title": "北海道教育大学",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00228/20261016g002280011f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261016g00228",
+          "page_number": 11
+        },
+        {
+          "article_id": "20261016g00228:0020:0",
+          "title": "室蘭工業大学",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00228/20261016g002280020f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261016g00228",
+          "page_number": 20
+        },
+        {
+          "article_id": "20261016g00228:0027:0",
+          "title": "北海道国立大学機構",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00228/20261016g002280027f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261016g00228",
+          "page_number": 27
+        },
+        {
+          "article_id": "20261016g00228:0035:0",
+          "title": "旭川医科大学",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00228/20261016g002280035f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261016g00228",
+          "page_number": 35
+        },
+        {
+          "article_id": "20261016g00228:0043:0",
+          "title": "弘前大学",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00228/20261016g002280043f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261016g00228",
+          "page_number": 43
+        },
+        {
+          "article_id": "20261016g00228:0051:0",
+          "title": "岩手大学",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00228/20261016g002280051f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261016g00228",
+          "page_number": 51
+        },
+        {
+          "article_id": "20261016g00228:0058:0",
+          "title": "東北大学",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00228/20261016g002280058f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261016g00228",
+          "page_number": 58
+        },
+        {
+          "article_id": "20261016g00228:0072:0",
+          "title": "宮城教育大学",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00228/20261016g002280072f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261016g00228",
+          "page_number": 72
+        },
+        {
+          "article_id": "20261016g00228:0078:0",
+          "title": "秋田大学",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00228/20261016g002280078f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261016g00228",
+          "page_number": 78
+        },
+        {
+          "article_id": "20261016g00228:0087:0",
+          "title": "山形大学",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00228/20261016g002280087f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261016g00228",
+          "page_number": 87
+        },
+        {
+          "article_id": "20261016g00228:0095:0",
+          "title": "福島大学",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00228/20261016g002280095f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261016g00228",
+          "page_number": 95
+        },
+        {
+          "article_id": "20261016g00228:0101:0",
+          "title": "茨城大学",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00228/20261016g002280101f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261016g00228",
+          "page_number": 101
+        },
+        {
+          "article_id": "20261016g00228:0108:0",
+          "title": "筑波大学",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00228/20261016g002280108f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261016g00228",
+          "page_number": 108
+        },
+        {
+          "article_id": "20261016g00228:0119:0",
+          "title": "筑波技術大学",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00228/20261016g002280119f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261016g00228",
+          "page_number": 119
+        },
+        {
+          "article_id": "20261016g00228:0126:0",
+          "title": "宇都宮大学",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00228/20261016g002280126f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261016g00228",
+          "page_number": 126
+        },
+        {
+          "article_id": "20261016g00228:0133:0",
+          "title": "群馬大学",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00228/20261016g002280133f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261016g00228",
+          "page_number": 133
+        },
+        {
+          "article_id": "20261016g00228:0140:0",
+          "title": "埼玉大学",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00228/20261016g002280140f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261016g00228",
+          "page_number": 140
+        },
+        {
+          "article_id": "20261016g00228:0146:0",
+          "title": "千葉大学",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00228/20261016g002280146f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261016g00228",
+          "page_number": 146
+        },
+        {
+          "article_id": "20261016g00228:0157:0",
+          "title": "東京大学",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00228/20261016g002280157f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261016g00228",
+          "page_number": 157
+        },
+        {
+          "article_id": "20261016g00228:0168:0",
+          "title": "東京外国語大学",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00228/20261016g002280168f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261016g00228",
+          "page_number": 168
+        },
+        {
+          "article_id": "20261016g00228:0174:0",
+          "title": "東京学芸大学",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00228/20261016g002280174f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261016g00228",
+          "page_number": 174
+        },
+        {
+          "article_id": "20261016g00228:0180:0",
+          "title": "東京農工大学",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00228/20261016g002280180f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261016g00228",
+          "page_number": 180
+        },
+        {
+          "article_id": "20261016g00228:0188:0",
+          "title": "東京芸術大学",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00228/20261016g002280188f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261016g00228",
+          "page_number": 188
+        },
+        {
+          "article_id": "20261016g00228:0196:0",
+          "title": "東京科学大学",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00228/20261016g002280196f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261016g00228",
+          "page_number": 196
+        },
+        {
+          "article_id": "20261016g00228:0209:0",
+          "title": "東京海洋大学",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00228/20261016g002280209f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261016g00228",
+          "page_number": 209
+        },
+        {
+          "article_id": "20261016g00228:0216:0",
+          "title": "お茶の水女子大学",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00228/20261016g002280216f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261016g00228",
+          "page_number": 216
+        },
+        {
+          "article_id": "20261016g00228:0222:0",
+          "title": "電気通信大学",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00228/20261016g002280222f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261016g00228",
+          "page_number": 222
+        },
+        {
+          "article_id": "20261016g00228:0229:0",
+          "title": "一橋大学",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00228/20261016g002280229f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261016g00228",
+          "page_number": 229
+        },
+        {
+          "article_id": "20261016g00228:0237:0",
+          "title": "横浜国立大学",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00228/20261016g002280237f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261016g00228",
+          "page_number": 237
+        },
+        {
+          "article_id": "20261016g00228:0244:0",
+          "title": "新潟大学",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00228/20261016g002280244f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261016g00228",
+          "page_number": 244
+        },
+        {
+          "article_id": "20261016g00228:0253:0",
+          "title": "長岡技術科学大学",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00228/20261016g002280253f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261016g00228",
+          "page_number": 253
+        },
+        {
+          "article_id": "20261016g00228:0261:0",
+          "title": "上越教育大学",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00228/20261016g002280261f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261016g00228",
+          "page_number": 261
+        },
+        {
+          "article_id": "20261016g00228:0267:0",
+          "title": "富山大学",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00228/20261016g002280267f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261016g00228",
+          "page_number": 267
+        },
+        {
+          "article_id": "20261016g00228:0278:0",
+          "title": "金沢大学",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00228/20261016g002280278f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261016g00228",
+          "page_number": 278
+        },
+        {
+          "article_id": "20261016g00228:0288:0",
+          "title": "福井大学",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00228/20261016g002280288f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261016g00228",
+          "page_number": 288
+        },
+        {
+          "article_id": "20261016g00228:0296:0",
+          "title": "山梨大学",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00228/20261016g002280296f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261016g00228",
+          "page_number": 296
+        },
+        {
+          "article_id": "20261016g00228:0303:0",
+          "title": "信州大学",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00228/20261016g002280303f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261016g00228",
+          "page_number": 303
+        },
+        {
+          "article_id": "20261016g00228:0312:0",
+          "title": "静岡大学",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00228/20261016g002280312f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261016g00228",
+          "page_number": 312
+        },
+        {
+          "article_id": "20261016g00228:0319:0",
+          "title": "浜松医科大学",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00228/20261016g002280319f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261016g00228",
+          "page_number": 319
+        },
+        {
+          "article_id": "20261016g00228:0327:0",
+          "title": "東海国立大学機構",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00228/20261016g002280327f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261016g00228",
+          "page_number": 327
+        },
+        {
+          "article_id": "20261016g00228:0339:0",
+          "title": "愛知教育大学",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00228/20261016g002280339f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261016g00228",
+          "page_number": 339
+        },
+        {
+          "article_id": "20261016g00228:0345:0",
+          "title": "名古屋工業大学",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00228/20261016g002280345f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261016g00228",
+          "page_number": 345
+        },
+        {
+          "article_id": "20261016g00228:0351:0",
+          "title": "豊橋技術科学大学",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00228/20261016g002280351f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261016g00228",
+          "page_number": 351
+        },
+        {
+          "article_id": "20261016g00228:0357:0",
+          "title": "三重大学",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00228/20261016g002280357f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261016g00228",
+          "page_number": 357
+        },
+        {
+          "article_id": "20261016g00228:0366:0",
+          "title": "滋賀大学",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00228/20261016g002280366f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261016g00228",
+          "page_number": 366
+        },
+        {
+          "article_id": "20261016g00228:0372:0",
+          "title": "滋賀医科大学",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00228/20261016g002280372f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261016g00228",
+          "page_number": 372
+        },
+        {
+          "article_id": "20261016g00228:0380:0",
+          "title": "京都大学",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00228/20261016g002280380f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261016g00228",
+          "page_number": 380
+        },
+        {
+          "article_id": "20261016g00228:0390:0",
+          "title": "京都教育大学",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00228/20261016g002280390f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261016g00228",
+          "page_number": 390
+        },
+        {
+          "article_id": "20261016g00228:0397:0",
+          "title": "京都工芸繊維大学",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00228/20261016g002280397f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261016g00228",
+          "page_number": 397
+        },
+        {
+          "article_id": "20261016g00228:0402:0",
+          "title": "大阪大学",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00228/20261016g002280402f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261016g00228",
+          "page_number": 402
+        },
+        {
+          "article_id": "20261016g00228:0413:0",
+          "title": "大阪教育大学",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00228/20261016g002280413f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261016g00228",
+          "page_number": 413
+        },
+        {
+          "article_id": "20261016g00228:0420:0",
+          "title": "兵庫教育大学",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00228/20261016g002280420f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261016g00228",
+          "page_number": 420
+        },
+        {
+          "article_id": "20261016g00228:0426:0",
+          "title": "神戸大学",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00228/20261016g002280426f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261016g00228",
+          "page_number": 426
+        },
+        {
+          "article_id": "20261016g00228:0437:0",
+          "title": "奈良国立大学機構",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00228/20261016g002280437f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261016g00228",
+          "page_number": 437
+        },
+        {
+          "article_id": "20261016g00228:0443:0",
+          "title": "和歌山大学",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00228/20261016g002280443f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261016g00228",
+          "page_number": 443
+        },
+        {
+          "article_id": "20261016g00228:0450:0",
+          "title": "鳥取大学",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00228/20261016g002280450f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261016g00228",
+          "page_number": 450
+        },
+        {
+          "article_id": "20261016g00228:0459:0",
+          "title": "島根大学",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00228/20261016g002280459f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261016g00228",
+          "page_number": 459
+        },
+        {
+          "article_id": "20261016g00228:0469:0",
+          "title": "岡山大学",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00228/20261016g002280469f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261016g00228",
+          "page_number": 469
+        },
+        {
+          "article_id": "20261016g00228:0477:0",
+          "title": "広島大学",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00228/20261016g002280477f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261016g00228",
+          "page_number": 477
+        },
+        {
+          "article_id": "20261016g00228:0486:0",
+          "title": "山口大学",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00228/20261016g002280486f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261016g00228",
+          "page_number": 486
+        },
+        {
+          "article_id": "20261016g00228:0495:0",
+          "title": "徳島大学",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00228/20261016g002280495f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261016g00228",
+          "page_number": 495
+        },
+        {
+          "article_id": "20261016g00228:0504:0",
+          "title": "鳴門教育大学",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00228/20261016g002280504f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261016g00228",
+          "page_number": 504
+        },
+        {
+          "article_id": "20261016g00228:0511:0",
+          "title": "香川大学",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00228/20261016g002280511f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261016g00228",
+          "page_number": 511
+        },
+        {
+          "article_id": "20261016g00228:0521:0",
+          "title": "愛媛大学",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00228/20261016g002280521f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261016g00228",
+          "page_number": 521
+        },
+        {
+          "article_id": "20261016g00228:0530:0",
+          "title": "高知大学",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00228/20261016g002280530f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261016g00228",
+          "page_number": 530
+        },
+        {
+          "article_id": "20261016g00228:0538:0",
+          "title": "福岡教育大学",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00228/20261016g002280538f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261016g00228",
+          "page_number": 538
+        },
+        {
+          "article_id": "20261016g00228:0543:0",
+          "title": "九州大学",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00228/20261016g002280543f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261016g00228",
+          "page_number": 543
+        },
+        {
+          "article_id": "20261016g00228:0553:0",
+          "title": "九州工業大学",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00228/20261016g002280553f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261016g00228",
+          "page_number": 553
+        },
+        {
+          "article_id": "20261016g00228:0560:0",
+          "title": "佐賀大学",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00228/20261016g002280560f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261016g00228",
+          "page_number": 560
+        },
+        {
+          "article_id": "20261016g00228:0568:0",
+          "title": "長崎大学",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00228/20261016g002280568f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261016g00228",
+          "page_number": 568
+        },
+        {
+          "article_id": "20261016g00228:0577:0",
+          "title": "熊本大学",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00228/20261016g002280577f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261016g00228",
+          "page_number": 577
+        },
+        {
+          "article_id": "20261016g00228:0587:0",
+          "title": "大分大学",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00228/20261016g002280587f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261016g00228",
+          "page_number": 587
+        },
+        {
+          "article_id": "20261016g00228:0595:0",
+          "title": "宮崎大学",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00228/20261016g002280595f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261016g00228",
+          "page_number": 595
+        },
+        {
+          "article_id": "20261016g00228:0604:0",
+          "title": "鹿児島大学",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00228/20261016g002280604f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261016g00228",
+          "page_number": 604
+        },
+        {
+          "article_id": "20261016g00228:0612:0",
+          "title": "鹿屋体育大学",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00228/20261016g002280612f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261016g00228",
+          "page_number": 612
+        },
+        {
+          "article_id": "20261016g00228:0617:0",
+          "title": "琉球大学",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00228/20261016g002280617f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261016g00228",
+          "page_number": 617
+        },
+        {
+          "article_id": "20261016g00228:0628:0",
+          "title": "総合研究大学院大学",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00228/20261016g002280628f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261016g00228",
+          "page_number": 628
+        },
+        {
+          "article_id": "20261016g00228:0633:0",
+          "title": "政策研究大学院大学",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00228/20261016g002280633f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261016g00228",
+          "page_number": 633
+        },
+        {
+          "article_id": "20261016g00228:0638:0",
+          "title": "北陸先端科学技術大学院大学",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00228/20261016g002280638f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261016g00228",
+          "page_number": 638
+        },
+        {
+          "article_id": "20261016g00228:0645:0",
+          "title": "奈良先端科学技術大学院大学",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00228/20261016g002280645f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261016g00228",
+          "page_number": 645
+        },
+        {
+          "article_id": "20261016g00228:0652:0",
+          "title": "人間文化研究機構",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00228/20261016g002280652f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261016g00228",
+          "page_number": 652
+        },
+        {
+          "article_id": "20261016g00228:0659:0",
+          "title": "自然科学研究機構",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00228/20261016g002280659f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261016g00228",
+          "page_number": 659
+        },
+        {
+          "article_id": "20261016g00228:0667:0",
+          "title": "高エネルギー加速器研究機構",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00228/20261016g002280667f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261016g00228",
+          "page_number": 667
+        },
+        {
+          "article_id": "20261016g00228:0675:0",
+          "title": "情報・システム研究機構",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00228/20261016g002280675f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261016g00228",
+          "page_number": 675
+        }
+      ]
+    },
+    {
+      "date": "2026-10-16",
+      "gazette_type": "g",
+      "issue_number": 227,
+      "issue_id": "20261016g00227",
+      "url": "https://www.kanpo.go.jp/20261016/20261016g00227/20261016g002270000f.html",
+      "title": "2026-10-16 号外 第227号",
+      "articles": [
+        {
+          "article_id": "20261016g00227:0001:0",
+          "title": "総務省組織規則の一部を改正する省令（総務一一八）",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00227/20261016g002270001f.html",
+          "section": "省令",
+          "parent_issue_id": "20261016g00227",
+          "page_number": 1
+        },
+        {
+          "article_id": "20261016g00227:0003:0",
+          "title": "地域における医療及び介護の総合的な確保の促進に関する法律施行規則の一部を改正する省令（厚生労働一四八）",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00227/20261016g002270003f.html",
+          "section": "省令",
+          "parent_issue_id": "20261016g00227",
+          "page_number": 3
+        },
+        {
+          "article_id": "20261016g00227:0005:0",
+          "title": "自衛隊法施行規則の一部を改正する省令（防衛二六）",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00227/20261016g002270005f.html",
+          "section": "省令",
+          "parent_issue_id": "20261016g00227",
+          "page_number": 5
+        },
+        {
+          "article_id": "20261016g00227:0014:0",
+          "title": "食用塩の表示に関する公正競争規約の一部変更を認定した件（公正取引委・消費者庁六）",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00227/20261016g002270014f.html",
+          "section": "その他告示",
+          "parent_issue_id": "20261016g00227",
+          "page_number": 14
+        },
+        {
+          "article_id": "20261016g00227:0015:0",
+          "title": "中華人民共和国産二酸化チタンルチル型をもととした顔料及び調製品に対する関税定率法第八条第五項に規定する調査開始の件（財務二九二）",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00227/20261016g002270015f.html",
+          "section": "その他告示",
+          "parent_issue_id": "20261016g00227",
+          "page_number": 15
+        },
+        {
+          "article_id": "20261016g00227:0017:0",
+          "title": "日本語教育の適正かつ確実な実施を図るための日本語教育機関の認定等に関する法律に基づく登録実践研修機関の登録事項の変更に関する件（文部科学一一七）",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00227/20261016g002270017f.html",
+          "section": "その他告示",
+          "parent_issue_id": "20261016g00227",
+          "page_number": 17
+        },
+        {
+          "article_id": "20261016g00227:0017:1",
+          "title": "日本語教育の適正かつ確実な実施を図るための日本語教育機関の認定等に関する法律に基づく登録日本語教員養成機関の登録事項の変更に関する件（同一一八）",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00227/20261016g002270017f.html",
+          "section": "その他告示",
+          "parent_issue_id": "20261016g00227",
+          "page_number": 17
+        },
+        {
+          "article_id": "20261016g00227:0017:2",
+          "title": "公示送達関係",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00227/20261016g002270017f.html",
+          "section": "公告 / 諸事項 / 官庁",
+          "parent_issue_id": "20261016g00227",
+          "page_number": 17
+        },
+        {
+          "article_id": "20261016g00227:0018:0",
+          "title": "破産、免責、再生関係",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00227/20261016g002270018f.html",
+          "section": "公告 / 諸事項 / 裁判所",
+          "parent_issue_id": "20261016g00227",
+          "page_number": 18
+        },
+        {
+          "article_id": "20261016g00227:0056:0",
+          "title": "令和七事業年度財務諸表（独立行政法人国立特別支援教育総合研究所・国立美術館・日本スポーツ振興センター）、料金の額及び徴収期間の変更（中日本高速道路株式会社・阪神高速道路株式会社）、西日本高速道路株式会社工事一部完了、公認会計士等の登録及び登録抹消関係",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00227/20261016g002270056f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261016g00227",
+          "page_number": 56
+        },
+        {
+          "article_id": "20261016g00227:0072:0",
+          "title": "教育職員免許状取上げ処分、行旅死亡人関係",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00227/20261016g002270072f.html",
+          "section": "公告 / 諸事項 / 地方公共団体",
+          "parent_issue_id": "20261016g00227",
+          "page_number": 72
+        },
+        {
+          "article_id": "20261016g00227:0072:1",
+          "title": "会社その他",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00227/20261016g002270072f.html",
+          "section": "公告 / 諸事項 / 会社その他",
+          "parent_issue_id": "20261016g00227",
+          "page_number": 72
+        },
+        {
+          "article_id": "20261016g00227:0080:0",
+          "title": "会社決算公告",
+          "url": "https://www.kanpo.go.jp/20261016/20261016g00227/20261016g002270080f.html",
+          "section": "公告 / 諸事項 / 会社決算公告",
+          "parent_issue_id": "20261016g00227",
+          "page_number": 80
+        }
+      ]
+    },
+    {
+      "date": "2026-10-16",
+      "gazette_type": "c",
+      "issue_number": 191,
+      "issue_id": "20261016c00191",
+      "url": "https://www.kanpo.go.jp/20261016/20261016c00191/20261016c001910000f.html",
+      "title": "2026-10-16 政府調達 第191号",
+      "articles": [
+        {
+          "article_id": "20261016c00191:0001:0",
+          "title": "入札公告",
+          "url": "https://www.kanpo.go.jp/20261016/20261016c00191/20261016c001910001f.html",
+          "section": "入札公告",
+          "parent_issue_id": "20261016c00191",
+          "page_number": 1
+        },
+        {
+          "article_id": "20261016c00191:0062:0",
+          "title": "入札公告の訂正",
+          "url": "https://www.kanpo.go.jp/20261016/20261016c00191/20261016c001910062f.html",
+          "section": "入札公告",
+          "parent_issue_id": "20261016c00191",
+          "page_number": 62
+        },
+        {
+          "article_id": "20261016c00191:0062:1",
+          "title": "入札公告の取消",
+          "url": "https://www.kanpo.go.jp/20261016/20261016c00191/20261016c001910062f.html",
+          "section": "入札公告",
+          "parent_issue_id": "20261016c00191",
+          "page_number": 62
+        },
+        {
+          "article_id": "20261016c00191:0062:2",
+          "title": "入札公告（建設工事）",
+          "url": "https://www.kanpo.go.jp/20261016/20261016c00191/20261016c001910062f.html",
+          "section": "入札公告",
+          "parent_issue_id": "20261016c00191",
+          "page_number": 62
+        },
+        {
+          "article_id": "20261016c00191:0076:0",
+          "title": "公募型プロポーザル方式に係る手続開始の公示",
+          "url": "https://www.kanpo.go.jp/20261016/20261016c00191/20261016c001910076f.html",
+          "section": "入札公示",
+          "parent_issue_id": "20261016c00191",
+          "page_number": 76
+        },
+        {
+          "article_id": "20261016c00191:0077:0",
+          "title": "競争参加者の資格に関する公示",
+          "url": "https://www.kanpo.go.jp/20261016/20261016c00191/20261016c001910077f.html",
+          "section": "資格",
+          "parent_issue_id": "20261016c00191",
+          "page_number": 77
+        },
+        {
+          "article_id": "20261016c00191:0080:0",
+          "title": "資料提供招請に関する公表",
+          "url": "https://www.kanpo.go.jp/20261016/20261016c00191/20261016c001910080f.html",
+          "section": "招請",
+          "parent_issue_id": "20261016c00191",
+          "page_number": 80
+        },
+        {
+          "article_id": "20261016c00191:0083:0",
+          "title": "意見招請に関する公示",
+          "url": "https://www.kanpo.go.jp/20261016/20261016c00191/20261016c001910083f.html",
+          "section": "招請",
+          "parent_issue_id": "20261016c00191",
+          "page_number": 83
+        },
+        {
+          "article_id": "20261016c00191:0086:0",
+          "title": "随意契約に関する公示",
+          "url": "https://www.kanpo.go.jp/20261016/20261016c00191/20261016c001910086f.html",
+          "section": "随意契約",
+          "parent_issue_id": "20261016c00191",
+          "page_number": 86
+        },
+        {
+          "article_id": "20261016c00191:0088:0",
+          "title": "落札者等の公示",
+          "url": "https://www.kanpo.go.jp/20261016/20261016c00191/20261016c001910088f.html",
+          "section": "落札",
+          "parent_issue_id": "20261016c00191",
+          "page_number": 88
+        }
+      ]
+    },
     {
       "date": "2026-10-15",
       "gazette_type": "h",
