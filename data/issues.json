@@ -1,7 +1,253 @@
 {
   "version": 1,
-  "last_updated": "2026-10-16T12:54:14.798698+09:00",
+  "last_updated": "2026-10-19T12:59:48.289967+09:00",
   "issues": [
+    {
+      "date": "2026-10-19",
+      "gazette_type": "h",
+      "issue_number": 1810,
+      "issue_id": "20261019h01810",
+      "url": "https://www.kanpo.go.jp/20261019/20261019h01810/20261019h018100000f.html",
+      "title": "2026-10-19 本紙 第1810号",
+      "articles": [
+        {
+          "article_id": "20261019h01810:0001:0",
+          "title": "ハム・ソーセージ類の表示に関する公正競争規約の一部変更を認定した件（公正取引委・消費者庁七）",
+          "url": "https://www.kanpo.go.jp/20261019/20261019h01810/20261019h018100001f.html",
+          "section": "その他告示",
+          "parent_issue_id": "20261019h01810",
+          "page_number": 1
+        },
+        {
+          "article_id": "20261019h01810:0002:0",
+          "title": "砂防法第二条の土地を指定する件（国土交通一二八一～一二八四）",
+          "url": "https://www.kanpo.go.jp/20261019/20261019h01810/20261019h018100002f.html",
+          "section": "その他告示",
+          "parent_issue_id": "20261019h01810",
+          "page_number": 2
+        },
+        {
+          "article_id": "20261019h01810:0004:0",
+          "title": "航路標識に関する件（海上保安庁三九）",
+          "url": "https://www.kanpo.go.jp/20261019/20261019h01810/20261019h018100004f.html",
+          "section": "その他告示",
+          "parent_issue_id": "20261019h01810",
+          "page_number": 4
+        },
+        {
+          "article_id": "20261019h01810:0006:0",
+          "title": "道路に関する件（関東地方整備局二二八～二三〇）",
+          "url": "https://www.kanpo.go.jp/20261019/20261019h01810/20261019h018100006f.html",
+          "section": "その他告示",
+          "parent_issue_id": "20261019h01810",
+          "page_number": 6
+        },
+        {
+          "article_id": "20261019h01810:0007:0",
+          "title": "国会事項",
+          "url": "https://www.kanpo.go.jp/20261019/20261019h01810/20261019h018100007f.html",
+          "section": "国会事項",
+          "parent_issue_id": "20261019h01810",
+          "page_number": 7
+        },
+        {
+          "article_id": "20261019h01810:0007:1",
+          "title": "内閣",
+          "url": "https://www.kanpo.go.jp/20261019/20261019h01810/20261019h018100007f.html",
+          "section": "人事異動",
+          "parent_issue_id": "20261019h01810",
+          "page_number": 7
+        },
+        {
+          "article_id": "20261019h01810:0007:2",
+          "title": "叙位・叙勲",
+          "url": "https://www.kanpo.go.jp/20261019/20261019h01810/20261019h018100007f.html",
+          "section": "叙位・叙勲",
+          "parent_issue_id": "20261019h01810",
+          "page_number": 7
+        },
+        {
+          "article_id": "20261019h01810:0007:3",
+          "title": "皇室事項",
+          "url": "https://www.kanpo.go.jp/20261019/20261019h01810/20261019h018100007f.html",
+          "section": "皇室事項",
+          "parent_issue_id": "20261019h01810",
+          "page_number": 7
+        },
+        {
+          "article_id": "20261019h01810:0007:4",
+          "title": "水先人試験の施行（国土交通省）",
+          "url": "https://www.kanpo.go.jp/20261019/20261019h01810/20261019h018100007f.html",
+          "section": "官庁報告 / 国家試験",
+          "parent_issue_id": "20261019h01810",
+          "page_number": 7
+        },
+        {
+          "article_id": "20261019h01810:0008:0",
+          "title": "第六十八回原子炉主任技術者試験口答試験合格者（原子力規制委員会）",
+          "url": "https://www.kanpo.go.jp/20261019/20261019h01810/20261019h018100008f.html",
+          "section": "官庁報告 / 国家試験",
+          "parent_issue_id": "20261019h01810",
+          "page_number": 8
+        },
+        {
+          "article_id": "20261019h01810:0008:1",
+          "title": "除籍の一部が滅失した件（法務省告示配一五五）",
+          "url": "https://www.kanpo.go.jp/20261019/20261019h01810/20261019h018100008f.html",
+          "section": "官庁報告 / 国家試験",
+          "parent_issue_id": "20261019h01810",
+          "page_number": 8
+        },
+        {
+          "article_id": "20261019h01810:0008:2",
+          "title": "除籍が滅失した件（同一五六、一五七）",
+          "url": "https://www.kanpo.go.jp/20261019/20261019h01810/20261019h018100008f.html",
+          "section": "官庁報告 / 国家試験",
+          "parent_issue_id": "20261019h01810",
+          "page_number": 8
+        },
+        {
+          "article_id": "20261019h01810:0009:0",
+          "title": "相続、公示催告、失踪、除権決定、破産、免責、特別清算、再生、所有者不明関係",
+          "url": "https://www.kanpo.go.jp/20261019/20261019h01810/20261019h018100009f.html",
+          "section": "公告 / 諸事項 / 裁判所",
+          "parent_issue_id": "20261019h01810",
+          "page_number": 9
+        },
+        {
+          "article_id": "20261019h01810:0029:0",
+          "title": "警察共済組合役員の就・退職関係",
+          "url": "https://www.kanpo.go.jp/20261019/20261019h01810/20261019h018100029f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261019h01810",
+          "page_number": 29
+        },
+        {
+          "article_id": "20261019h01810:0030:0",
+          "title": "会社その他",
+          "url": "https://www.kanpo.go.jp/20261019/20261019h01810/20261019h018100030f.html",
+          "section": "公告 / 諸事項 / 会社その他",
+          "parent_issue_id": "20261019h01810",
+          "page_number": 30
+        }
+      ]
+    },
+    {
+      "date": "2026-10-19",
+      "gazette_type": "g",
+      "issue_number": 229,
+      "issue_id": "20261019g00229",
+      "url": "https://www.kanpo.go.jp/20261019/20261019g00229/20261019g002290000f.html",
+      "title": "2026-10-19 号外 第229号",
+      "articles": [
+        {
+          "article_id": "20261019g00229:0001:0",
+          "title": "昭和四十六年農林省告示第千九百九十七号（平成二十九年農林水産省告示第三百六号の表の農林水産大臣が指定する施設を定める件）の一部を改正する告示（農林水産一五七四）",
+          "url": "https://www.kanpo.go.jp/20261019/20261019g00229/20261019g002290001f.html",
+          "section": "法規的告示",
+          "parent_issue_id": "20261019g00229",
+          "page_number": 1
+        },
+        {
+          "article_id": "20261019g00229:0004:0",
+          "title": "破産、免責、再生関係",
+          "url": "https://www.kanpo.go.jp/20261019/20261019g00229/20261019g002290004f.html",
+          "section": "公告 / 諸事項 / 裁判所",
+          "parent_issue_id": "20261019g00229",
+          "page_number": 4
+        },
+        {
+          "article_id": "20261019g00229:0032:0",
+          "title": "独立行政法人酒類総合研究所令和七年度財務諸表、国立研究開発法人新エネルギー・産業技術総合開発機構令和七事業年度財務諸表、弁理士登録・特定侵害訴訟代理業務の付記関係",
+          "url": "https://www.kanpo.go.jp/20261019/20261019g00229/20261019g002290032f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261019g00229",
+          "page_number": 32
+        },
+        {
+          "article_id": "20261019g00229:0043:0",
+          "title": "会社その他",
+          "url": "https://www.kanpo.go.jp/20261019/20261019g00229/20261019g002290043f.html",
+          "section": "公告 / 諸事項 / 会社その他",
+          "parent_issue_id": "20261019g00229",
+          "page_number": 43
+        },
+        {
+          "article_id": "20261019g00229:0051:0",
+          "title": "会社決算公告",
+          "url": "https://www.kanpo.go.jp/20261019/20261019g00229/20261019g002290051f.html",
+          "section": "公告 / 諸事項 / 会社決算公告",
+          "parent_issue_id": "20261019g00229",
+          "page_number": 51
+        }
+      ]
+    },
+    {
+      "date": "2026-10-19",
+      "gazette_type": "c",
+      "issue_number": 192,
+      "issue_id": "20261019c00192",
+      "url": "https://www.kanpo.go.jp/20261019/20261019c00192/20261019c001920000f.html",
+      "title": "2026-10-19 政府調達 第192号",
+      "articles": [
+        {
+          "article_id": "20261019c00192:0001:0",
+          "title": "入札公告",
+          "url": "https://www.kanpo.go.jp/20261019/20261019c00192/20261019c001920001f.html",
+          "section": "入札公告",
+          "parent_issue_id": "20261019c00192",
+          "page_number": 1
+        },
+        {
+          "article_id": "20261019c00192:0017:0",
+          "title": "入札公告（建設工事）",
+          "url": "https://www.kanpo.go.jp/20261019/20261019c00192/20261019c001920017f.html",
+          "section": "入札公告",
+          "parent_issue_id": "20261019c00192",
+          "page_number": 17
+        },
+        {
+          "article_id": "20261019c00192:0026:0",
+          "title": "入札公告（建設工事）の訂正",
+          "url": "https://www.kanpo.go.jp/20261019/20261019c00192/20261019c001920026f.html",
+          "section": "入札公告",
+          "parent_issue_id": "20261019c00192",
+          "page_number": 26
+        },
+        {
+          "article_id": "20261019c00192:0026:1",
+          "title": "資料提供招請に関する公表",
+          "url": "https://www.kanpo.go.jp/20261019/20261019c00192/20261019c001920026f.html",
+          "section": "招請",
+          "parent_issue_id": "20261019c00192",
+          "page_number": 26
+        },
+        {
+          "article_id": "20261019c00192:0030:0",
+          "title": "意見招請に関する公示",
+          "url": "https://www.kanpo.go.jp/20261019/20261019c00192/20261019c001920030f.html",
+          "section": "招請",
+          "parent_issue_id": "20261019c00192",
+          "page_number": 30
+        },
+        {
+          "article_id": "20261019c00192:0031:0",
+          "title": "随意契約に関する公示",
+          "url": "https://www.kanpo.go.jp/20261019/20261019c00192/20261019c001920031f.html",
+          "section": "随意契約",
+          "parent_issue_id": "20261019c00192",
+          "page_number": 31
+        },
+        {
+          "article_id": "20261019c00192:0032:0",
+          "title": "落札者等の公示",
+          "url": "https://www.kanpo.go.jp/20261019/20261019c00192/20261019c001920032f.html",
+          "section": "落札",
+          "parent_issue_id": "20261019c00192",
+          "page_number": 32
+        }
+      ]
+    },
     {
       "date": "2026-10-16",
       "gazette_type": "h",
