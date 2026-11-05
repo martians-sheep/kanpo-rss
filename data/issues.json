@@ -1,7 +1,311 @@
 {
   "version": 1,
-  "last_updated": "2026-11-04T14:36:24.559030+09:00",
+  "last_updated": "2026-11-05T14:55:01.032033+09:00",
   "issues": [
+    {
+      "date": "2026-11-05",
+      "gazette_type": "t",
+      "issue_number": 61,
+      "issue_id": "20261105t00061",
+      "url": "https://www.kanpo.go.jp/20261105/20261105t00061/20261105t000610000f.html",
+      "title": "2026-11-05 特別号外 第61号",
+      "articles": [
+        {
+          "article_id": "20261105t00061:0001:0",
+          "title": "国際連合安全保障理事会決議第千二百六十七号等を踏まえ我が国が実施する財産の凍結等に関する特別措置法第三条第四項の規定に基づき公告事項に変更があった公告国際テロリストを公告する件（国家公安委五〇）",
+          "url": "https://www.kanpo.go.jp/20261105/20261105t00061/20261105t000610001f.html",
+          "section": "その他告示",
+          "parent_issue_id": "20261105t00061",
+          "page_number": 1
+        },
+        {
+          "article_id": "20261105t00061:0003:0",
+          "title": "国際連合安全保障理事会決議に基づく資産凍結等の措置の対象となるタリバーン関係者等を指定する件の一部を改正する件（外務三三一）",
+          "url": "https://www.kanpo.go.jp/20261105/20261105t00061/20261105t000610003f.html",
+          "section": "その他告示",
+          "parent_issue_id": "20261105t00061",
+          "page_number": 3
+        }
+      ]
+    },
+    {
+      "date": "2026-11-05",
+      "gazette_type": "h",
+      "issue_number": 1822,
+      "issue_id": "20261105h01822",
+      "url": "https://www.kanpo.go.jp/20261105/20261105h01822/20261105h018220000f.html",
+      "title": "2026-11-05 本紙 第1822号",
+      "articles": [
+        {
+          "article_id": "20261105h01822:0002:0",
+          "title": "規制改革推進会議令の一部を改正する政令（三四三）",
+          "url": "https://www.kanpo.go.jp/20261105/20261105h01822/20261105h018220002f.html",
+          "section": "政令",
+          "parent_issue_id": "20261105h01822",
+          "page_number": 2
+        },
+        {
+          "article_id": "20261105h01822:0002:1",
+          "title": "独立行政法人鉄道建設・運輸施設整備支援機構法施行令の一部を改正する政令（三四四）",
+          "url": "https://www.kanpo.go.jp/20261105/20261105h01822/20261105h018220002f.html",
+          "section": "政令",
+          "parent_issue_id": "20261105h01822",
+          "page_number": 2
+        },
+        {
+          "article_id": "20261105h01822:0002:2",
+          "title": "電波法施行令の一部を改正する政令（三四五）",
+          "url": "https://www.kanpo.go.jp/20261105/20261105h01822/20261105h018220002f.html",
+          "section": "政令",
+          "parent_issue_id": "20261105h01822",
+          "page_number": 2
+        },
+        {
+          "article_id": "20261105h01822:0002:3",
+          "title": "消費生活協同組合法施行規則の一部を改正する省令（厚生労働一五二）",
+          "url": "https://www.kanpo.go.jp/20261105/20261105h01822/20261105h018220002f.html",
+          "section": "省令",
+          "parent_issue_id": "20261105h01822",
+          "page_number": 2
+        },
+        {
+          "article_id": "20261105h01822:0006:0",
+          "title": "消費生活協同組合法施行規程の一部を改正する件（厚生労働三八三）",
+          "url": "https://www.kanpo.go.jp/20261105/20261105h01822/20261105h018220006f.html",
+          "section": "法規的告示",
+          "parent_issue_id": "20261105h01822",
+          "page_number": 6
+        },
+        {
+          "article_id": "20261105h01822:0006:1",
+          "title": "医薬品、医療機器等の品質、有効性及び安全性の確保等に関する法律第二条第五項から第七項までの規定により厚生労働大臣が指定する高度管理医療機器、管理医療機器及び一般医療機器の一部を改正する件（同三八四）",
+          "url": "https://www.kanpo.go.jp/20261105/20261105h01822/20261105h018220006f.html",
+          "section": "法規的告示",
+          "parent_issue_id": "20261105h01822",
+          "page_number": 6
+        },
+        {
+          "article_id": "20261105h01822:0006:2",
+          "title": "医薬品、医療機器等の品質、有効性及び安全性の確保等に関する法律関係手数料令第十二条第一項第一号イ⑴の規定に基づき特別の注意を要するものとして厚生労働大臣の指定する高度管理医療機器の一部を改正する件（同三八五）",
+          "url": "https://www.kanpo.go.jp/20261105/20261105h01822/20261105h018220006f.html",
+          "section": "法規的告示",
+          "parent_issue_id": "20261105h01822",
+          "page_number": 6
+        },
+        {
+          "article_id": "20261105h01822:0006:3",
+          "title": "医薬品、医療機器等の品質、有効性及び安全性の確保等に関する法律施行規則別表第四の二の規定により厚生労働大臣が指定する医療機器の一部を改正する件（同三八六）",
+          "url": "https://www.kanpo.go.jp/20261105/20261105h01822/20261105h018220006f.html",
+          "section": "法規的告示",
+          "parent_issue_id": "20261105h01822",
+          "page_number": 6
+        },
+        {
+          "article_id": "20261105h01822:0007:0",
+          "title": "道路に関する件（九州地方整備局一〇四～一〇六）",
+          "url": "https://www.kanpo.go.jp/20261105/20261105h01822/20261105h018220007f.html",
+          "section": "その他告示",
+          "parent_issue_id": "20261105h01822",
+          "page_number": 7
+        },
+        {
+          "article_id": "20261105h01822:0007:1",
+          "title": "国会事項",
+          "url": "https://www.kanpo.go.jp/20261105/20261105h01822/20261105h018220007f.html",
+          "section": "国会事項",
+          "parent_issue_id": "20261105h01822",
+          "page_number": 7
+        },
+        {
+          "article_id": "20261105h01822:0007:2",
+          "title": "内閣　財務省",
+          "url": "https://www.kanpo.go.jp/20261105/20261105h01822/20261105h018220007f.html",
+          "section": "人事異動",
+          "parent_issue_id": "20261105h01822",
+          "page_number": 7
+        },
+        {
+          "article_id": "20261105h01822:0008:0",
+          "title": "皇室事項",
+          "url": "https://www.kanpo.go.jp/20261105/20261105h01822/20261105h018220008f.html",
+          "section": "皇室事項",
+          "parent_issue_id": "20261105h01822",
+          "page_number": 8
+        },
+        {
+          "article_id": "20261105h01822:0008:1",
+          "title": "最低賃金の改正決定に関する公示（宮城労働局最低賃金公示三、島根同三、山口同二）",
+          "url": "https://www.kanpo.go.jp/20261105/20261105h01822/20261105h018220008f.html",
+          "section": "官庁報告 / 労働",
+          "parent_issue_id": "20261105h01822",
+          "page_number": 8
+        },
+        {
+          "article_id": "20261105h01822:0008:2",
+          "title": "原戸籍の一部が滅失した件（法務省告示配一七五）",
+          "url": "https://www.kanpo.go.jp/20261105/20261105h01822/20261105h018220008f.html",
+          "section": "官庁報告 / 労働",
+          "parent_issue_id": "20261105h01822",
+          "page_number": 8
+        },
+        {
+          "article_id": "20261105h01822:0008:3",
+          "title": "相続、公示催告、失踪、除権決定、破産、特別清算、再生、所有者不明関係",
+          "url": "https://www.kanpo.go.jp/20261105/20261105h01822/20261105h018220008f.html",
+          "section": "公告 / 諸事項 / 裁判所",
+          "parent_issue_id": "20261105h01822",
+          "page_number": 8
+        },
+        {
+          "article_id": "20261105h01822:0030:0",
+          "title": "会社その他",
+          "url": "https://www.kanpo.go.jp/20261105/20261105h01822/20261105h018220030f.html",
+          "section": "公告 / 諸事項 / 会社その他",
+          "parent_issue_id": "20261105h01822",
+          "page_number": 30
+        }
+      ]
+    },
+    {
+      "date": "2026-11-05",
+      "gazette_type": "g",
+      "issue_number": 242,
+      "issue_id": "20261105g00242",
+      "url": "https://www.kanpo.go.jp/20261105/20261105g00242/20261105g002420000f.html",
+      "title": "2026-11-05 号外 第242号",
+      "articles": [
+        {
+          "article_id": "20261105g00242:0001:0",
+          "title": "試験研究の用に供する原子炉等の設置、運転等に関する規則等の一部を改正する規則（原子力規制委八）",
+          "url": "https://www.kanpo.go.jp/20261105/20261105g00242/20261105g002420001f.html",
+          "section": "規則",
+          "parent_issue_id": "20261105g00242",
+          "page_number": 1
+        },
+        {
+          "article_id": "20261105g00242:0013:0",
+          "title": "政治資金規正法の規定による政治団体の届出事項の異動の届出があったので公表する件（総務四〇〇）",
+          "url": "https://www.kanpo.go.jp/20261105/20261105g00242/20261105g002420013f.html",
+          "section": "その他告示",
+          "parent_issue_id": "20261105g00242",
+          "page_number": 13
+        },
+        {
+          "article_id": "20261105g00242:0030:0",
+          "title": "最高裁判所",
+          "url": "https://www.kanpo.go.jp/20261105/20261105g00242/20261105g002420030f.html",
+          "section": "人事異動",
+          "parent_issue_id": "20261105g00242",
+          "page_number": 30
+        },
+        {
+          "article_id": "20261105g00242:0031:0",
+          "title": "犯罪被害財産支給手続開始決定関係",
+          "url": "https://www.kanpo.go.jp/20261105/20261105g00242/20261105g002420031f.html",
+          "section": "公告 / 諸事項 / 官庁",
+          "parent_issue_id": "20261105g00242",
+          "page_number": 31
+        },
+        {
+          "article_id": "20261105g00242:0032:0",
+          "title": "破産、免責、再生関係",
+          "url": "https://www.kanpo.go.jp/20261105/20261105g00242/20261105g002420032f.html",
+          "section": "公告 / 諸事項 / 裁判所",
+          "parent_issue_id": "20261105g00242",
+          "page_number": 32
+        },
+        {
+          "article_id": "20261105g00242:0087:0",
+          "title": "公文書等の管理に関する独立行政法人農林水産消費安全技術センター公示、東日本高速道路株式会社工事一部完了関係",
+          "url": "https://www.kanpo.go.jp/20261105/20261105g00242/20261105g002420087f.html",
+          "section": "公告 / 諸事項 / 特殊法人等",
+          "parent_issue_id": "20261105g00242",
+          "page_number": 87
+        },
+        {
+          "article_id": "20261105g00242:0087:1",
+          "title": "教育職員免許状失効、行旅死亡人、特定空家等の除去命令、農業協同組合法第六十四条の二の届出、押収物還付関係",
+          "url": "https://www.kanpo.go.jp/20261105/20261105g00242/20261105g002420087f.html",
+          "section": "公告 / 諸事項 / 地方公共団体",
+          "parent_issue_id": "20261105g00242",
+          "page_number": 87
+        },
+        {
+          "article_id": "20261105g00242:0088:0",
+          "title": "会社その他",
+          "url": "https://www.kanpo.go.jp/20261105/20261105g00242/20261105g002420088f.html",
+          "section": "公告 / 諸事項 / 会社その他",
+          "parent_issue_id": "20261105g00242",
+          "page_number": 88
+        },
+        {
+          "article_id": "20261105g00242:0093:0",
+          "title": "会社決算公告",
+          "url": "https://www.kanpo.go.jp/20261105/20261105g00242/20261105g002420093f.html",
+          "section": "公告 / 諸事項 / 会社決算公告",
+          "parent_issue_id": "20261105g00242",
+          "page_number": 93
+        }
+      ]
+    },
+    {
+      "date": "2026-11-05",
+      "gazette_type": "c",
+      "issue_number": 204,
+      "issue_id": "20261105c00204",
+      "url": "https://www.kanpo.go.jp/20261105/20261105c00204/20261105c002040000f.html",
+      "title": "2026-11-05 政府調達 第204号",
+      "articles": [
+        {
+          "article_id": "20261105c00204:0001:0",
+          "title": "入札公告",
+          "url": "https://www.kanpo.go.jp/20261105/20261105c00204/20261105c002040001f.html",
+          "section": "入札公告",
+          "parent_issue_id": "20261105c00204",
+          "page_number": 1
+        },
+        {
+          "article_id": "20261105c00204:0014:0",
+          "title": "入札公告の取消",
+          "url": "https://www.kanpo.go.jp/20261105/20261105c00204/20261105c002040014f.html",
+          "section": "入札公告",
+          "parent_issue_id": "20261105c00204",
+          "page_number": 14
+        },
+        {
+          "article_id": "20261105c00204:0014:1",
+          "title": "入札公告（建設工事）の訂正",
+          "url": "https://www.kanpo.go.jp/20261105/20261105c00204/20261105c002040014f.html",
+          "section": "入札公告",
+          "parent_issue_id": "20261105c00204",
+          "page_number": 14
+        },
+        {
+          "article_id": "20261105c00204:0014:2",
+          "title": "意見招請に関する公示",
+          "url": "https://www.kanpo.go.jp/20261105/20261105c00204/20261105c002040014f.html",
+          "section": "招請",
+          "parent_issue_id": "20261105c00204",
+          "page_number": 14
+        },
+        {
+          "article_id": "20261105c00204:0015:0",
+          "title": "随意契約に関する公示",
+          "url": "https://www.kanpo.go.jp/20261105/20261105c00204/20261105c002040015f.html",
+          "section": "随意契約",
+          "parent_issue_id": "20261105c00204",
+          "page_number": 15
+        },
+        {
+          "article_id": "20261105c00204:0016:0",
+          "title": "落札者等の公示",
+          "url": "https://www.kanpo.go.jp/20261105/20261105c00204/20261105c002040016f.html",
+          "section": "落札",
+          "parent_issue_id": "20261105c00204",
+          "page_number": 16
+        }
+      ]
+    },
     {
       "date": "2026-11-04",
       "gazette_type": "h",
